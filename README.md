@@ -54,7 +54,7 @@ Root:
 # Local System Requirements
 ## Setup Database
 Database (Psql/Vector) runs in a Docker Container
-  - Setup: see "root/docker-compose.yml"
+  - Setup: see "/docker-compose.yml"
   - Initiate: "docker-compose up -d"
 
 ## Local Backend Compiler (PHP)

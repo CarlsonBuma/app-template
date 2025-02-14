@@ -38,7 +38,7 @@ export default class ResponseHandler {
         this.durationError = 5500;
         this.class = "toaster-container"
         this.defaultLoadMessage = "Processing data. Please wait..."
-        this.defaultSuccessMessage = "Response success.";
+        this.defaultSuccessMessage = "Success.";
         this.defaultErrorMessage = "Ops, some error occured.";
     }
 

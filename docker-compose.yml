@@ -11,50 +11,54 @@
 ### PG Admin create new server
 #### Hostname: Provided IP Adress
 ######################################
+# Curl
+## docker exec -it ollama_container /bin/sh
+## Exit
 
 version: "3.9"
 
 services:
-    # php_8_2:
-    #     image: php:8.2-fpm
-    #     restart: always
-    #     container_name: php_8_2_container
-    #     volumes:
-    #         - php_8_2:/var/www/html
-    #     ports:
-    #         - "8000:9003"
-    #     networks:
-    #         - php_network
-    pgvector:
-        image: pgvector/pgvector:latest
-        restart: always
-        environment:
-            POSTGRES_DB: postgres
-            POSTGRES_PASSWORD: postgres
-            POSTGRES_USER: postgres
-        ports: 
-            - "5555:5432"
-        volumes:
-            - pgvector:/var/lib/postgresql/data
-    pgadmin:
-        image: dpage/pgadmin4:latest
-        restart: always
-        environment:
-            PGADMIN_DEFAULT_EMAIL: admin@admin.com
-            PGADMIN_DEFAULT_PASSWORD: admin
-            PGADMIN_LISTEN_PORT: 80
-        ports:
-            - 5050:80
-        volumes:
-            - pgadmin:/var/lib/pgadmin
-        depends_on:
-            - pgvector
+  # php_8_2:
+  #     image: php:8.2-fpm
+  #     restart: always
+  #     container_name: php_8_2_container
+  #     volumes:
+  #         - php_8_2:/var/www/html
+  #     ports:
+  #         - "8000:9003"
+  #     networks:
+  #         - php_network
+  pgvector:
+    image: ankane/pgvector:latest
+    restart: always
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+    ports: 
+      - "5555:5432"
+    volumes:
+      - pg_vector:/var/lib/postgresql/data
+
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+      PGADMIN_LISTEN_PORT: 80
+    ports:
+      - 5050:80
+    volumes:
+      - pg_admin:/var/lib/pgadmin
+    depends_on:
+      - pgvector
 
 volumes:
-  pgvector:
-  pgadmin:
-  php_8_2:
+  pg_vector:
+  pg_admin:
+  #php_8_2:
 
-networks:
-  php_network:
-    driver: bridge
+#networks:
+  #php_network:
+    #driver: bridge

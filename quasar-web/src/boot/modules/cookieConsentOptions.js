@@ -20,6 +20,7 @@
  *  > See Cookie preferences
  *  > May adjust options as well
  */
+
 import initTranslationPackage from '../translations/index.js'
 
 const setRequiredCookies = () => {
