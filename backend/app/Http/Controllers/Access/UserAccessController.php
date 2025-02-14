@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\User\Access;
+namespace App\Http\Controllers\Access;
 
 use Exception;
 use App\Models\UserAccess;
@@ -14,8 +14,8 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Collections\UserCollection;
 use GuzzleHttp\Exception\GuzzleException;
 use App\Http\Collections\AccessCollection;
-use App\Http\Controllers\User\Access\AccessHandler;
-use App\Http\Controllers\User\Access\PaddleTransactionHandler;
+use App\Http\Controllers\Access\AccessHandler;
+use App\Http\Controllers\Access\PaddleTransactionHandler;
 
 class UserAccessController extends Controller
 {

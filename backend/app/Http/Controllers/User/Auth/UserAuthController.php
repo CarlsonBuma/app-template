@@ -2,13 +2,12 @@
 
 namespace App\Http\Controllers\User\Auth;
 
-use Exception;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Collections\UserCollection;
-use App\Http\Controllers\User\Access\AccessHandler;
+use App\Http\Controllers\Access\AccessHandler;
 
 class UserAuthController extends Controller
 {

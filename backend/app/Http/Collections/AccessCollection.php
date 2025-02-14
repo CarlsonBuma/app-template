@@ -4,7 +4,7 @@ namespace App\Http\Collections;
 
 use Carbon\Carbon;
 use App\Models\PaddleSubscriptions;
-use App\Http\Controllers\User\Access\AccessHandler;
+use App\Http\Controllers\Access\AccessHandler;
 
 abstract class AccessCollection
 {   

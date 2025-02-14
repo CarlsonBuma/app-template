@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\User\Access\UserAccessController;
-use App\Http\Controllers\User\Access\AdminAccessController;
+use App\Http\Controllers\Access\UserAccessController;
+use App\Http\Controllers\Access\AdminAccessController;
 
 Route::middleware(['auth:api', 'email_verified'])->group(function () {
 

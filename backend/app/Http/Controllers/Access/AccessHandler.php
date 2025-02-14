@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\User\Access;
+namespace App\Http\Controllers\Access;
 
 use App\Models\UserAccess;
 

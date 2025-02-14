@@ -56,7 +56,7 @@ return [
 
     'url' => env('CLIENT_URL', 'http://localhost'),
 
-    'asset_url' => env('ASSET_URL', 'http://localhost'),
+    'asset_url' => env('CLIENT_ASSET_URL', 'http://localhost'),
 
     /*
     |--------------------------------------------------------------------------

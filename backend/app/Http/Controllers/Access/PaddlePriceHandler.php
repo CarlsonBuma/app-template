@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\User\Access;
+namespace App\Http\Controllers\Access;
 
 use App\Models\PaddlePrices;
-use App\Http\Controllers\User\Access\AccessHandler;
+use App\Http\Controllers\Access\AccessHandler;
 
 class PaddlePriceHandler
 {

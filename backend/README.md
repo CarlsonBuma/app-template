@@ -1,5 +1,5 @@
 # Project Overview
-## Setup: Laravel 12 - Framework
+## Setup: Laravel 11 - Framework
 Website: https://laravel.com/
 
 ## Initialization

@@ -7,7 +7,7 @@ use App\Models\Cockpit;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
-use App\Http\Controllers\User\Access\AccessHandler;
+use App\Http\Controllers\Access\AccessHandler;
 
 class UserSeeder extends Seeder
 {

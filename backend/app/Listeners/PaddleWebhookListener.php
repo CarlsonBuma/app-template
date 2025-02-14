@@ -6,10 +6,10 @@ use Exception;
 use Illuminate\Http\Request;
 use App\Models\PaddleTransactions;
 use App\Http\Controllers\Controller;
-use App\Http\Controllers\User\Access\AccessHandler;
-use App\Http\Controllers\User\Access\PaddlePriceHandler;
-use App\Http\Controllers\User\Access\PaddleSubscriptionHandler;
-use App\Http\Controllers\User\Access\PaddleTransactionHandler;
+use App\Http\Controllers\Access\AccessHandler;
+use App\Http\Controllers\Access\PaddlePriceHandler;
+use App\Http\Controllers\Access\PaddleSubscriptionHandler;
+use App\Http\Controllers\Access\PaddleTransactionHandler;
 
 class PaddleWebhookListener extends Controller
 {

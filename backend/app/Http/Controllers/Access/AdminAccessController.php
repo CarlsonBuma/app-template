@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\User\Access;
+namespace App\Http\Controllers\Access;
 
 use App\Models\User;
 use App\Models\UserAccess;
@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 use App\Models\PaddleTransactions;
 use App\Http\Controllers\Controller;
 use App\Http\Collections\AccessCollection;
-use App\Http\Controllers\User\Access\AccessHandler;
+use App\Http\Controllers\Access\AccessHandler;
 
 class AdminAccessController extends Controller
 {

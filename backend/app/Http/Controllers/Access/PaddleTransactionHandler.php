@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\User\Access;
+namespace App\Http\Controllers\Access;
 
 use Carbon\Carbon;
 use App\Models\PaddlePrices;
 use App\Models\PaddleTransactions;
-use App\Http\Controllers\User\Access\AccessHandler;
+use App\Http\Controllers\Access\AccessHandler;
 use App\Models\PaddleSubscriptions;
 
 class PaddleTransactionHandler
