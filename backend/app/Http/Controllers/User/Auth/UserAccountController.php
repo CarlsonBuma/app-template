@@ -4,12 +4,14 @@ namespace App\Http\Controllers\User\Auth;
 
 use App\Models\User;
 use Illuminate\Support\Str;
+use Laravel\Passport\Token;
 use Illuminate\Http\Request;
+use App\Http\Classes\Modulate;
+use App\Mail\SendPasswordReset;
+use App\Http\Classes\FileStorage;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Storage;
-use Illuminate\Validation\Rules\Password;
+use Illuminate\Support\Facades\Mail;
 
 class UserAccountController extends Controller
 {
@@ -27,36 +29,24 @@ class UserAccountController extends Controller
      */
     public function changeAvatar(Request $request) {
         
-        $data = $request->validate([
-            'avatar' => ['nullable', 'mimes:jpg,jpeg,png', 'max:2048'],
-            'avatar_delete' => ['required', 'boolean'],
+        $request->validate([
+            'file' => ['nullable', 'mimes:jpg,jpeg,png', 'max:10240'],
         ]);
 
-        // Set
-        $img_src = null;
         $user = User::find(Auth::id());
-        $userImgSrc = $user->avatar;
+        $imgSrc = FileStorage::storeFile(
+            $request->file('file'),
+            FileStorage::$userLocation,
+            $user->avatar,
+            $user->id,
+        );
         
-        // Delete Avatar
-        if($data['avatar_delete'] && $user->avatar) {
-            Storage::disk('user')->delete($userImgSrc);
-        } 
-        
-        // Change Image: Existing vs. non existing
-        else if ($data['avatar']) {   
-            $fileExtension = $request->file('avatar')->extension();
-            $img_src = Auth::id() . '-' . Str::random(32) . '.' . $fileExtension;
-            if($userImgSrc) Storage::disk('user')->delete($userImgSrc);       
-            Storage::putFileAs('public/user', $request->file('avatar'), $img_src);
-        }
-
-        $user->avatar = $img_src;
+        $user->avatar = $imgSrc;
+        $user->google_avatar = null;
         $user->save();
 
         return response()->json([
-            'message' => $data['avatar_delete']
-                ? 'Avatar deleted.'
-                : 'Avatar updated.',
+            'message' => 'Avatar updated.',
         ], 200);
     }
 
@@ -83,70 +73,65 @@ class UserAccountController extends Controller
 
     /**
      * Update Password
-     *  > Check Password requirements
-     *  > Confirm old Password
+     * via Email Token Request.
      *
      * @param Request $request
      * @return void
      */
-    public function changePassword(Request $request)
+    public function changePassword()
     {
+        $token = Str::random(64);
         $user = User::find(Auth::id());
-        $data = $request->validate([
-            'password_current' => ['required', 'string', 'max:255'],
-            'password' => ['required', 'string', 'max:255', 'confirmed', Password::defaults()],
+        $verificationLink = Modulate::signedLink('password.reset', [
+            'email' => $user->email,
+            'token' => $token
         ]);
-            
-        // Check Current Password
-        if(Hash::check($data['password_current'], $user->password)) {
-            
-            $user->update([
-                'password' => Hash::make($data['password'])
-            ]);
 
-            return response()->json([
-                'message' => 'Password updated.',
-            ], 200);
-        }
+        // Send Mail
+        Mail::to($user)->send(new SendPasswordReset($verificationLink, $user));
+        $user->token = $token;
+        $user->save();
+
+        $user = (object) Auth::user();
+        $user->token()->delete();
 
         return response()->json([
-            'message' => 'Ups, the given password is incorrect.',
-        ], 422);
+            'message' => 'The token has been sent to your email.',
+        ], 200); 
     }
 
     /**
-     * Delete User Account
-     *  > Remove Avatar
-     *  > Logout User
+     * Undocumented function
      *
-     * @param Request $request
      * @return void
      */
-    public function deleteAccount(Request $request)
+    public function invalidateTokens()
     {
-        $user = User::find(Auth::id());
-        $data = $request->validate([
-            'password' => ['required', 'string', 'max:255'],
+        Token::where('user_id', Auth::id())?->delete();
+        return response()->json([
+            'message' => 'Access tokens removed.',
+        ], 200); 
+    }
+
+    /**
+     * Ref. GoogleLoginController
+     * Add Google Login
+     *
+     * @return void
+     */
+    public function invalidateEmail()
+    {
+        User::find(Auth::id())->update([
+            'email_verified_at' => null,
+            'google_id' => null,
+            'google_avatar' => null,
         ]);
 
-        if(Hash::check($data['password'], $user->password)) {
-            
-            // Remove Files
-            if($userImgSrc = $user->avatar) 
-                Storage::disk('user')->delete($userImgSrc);
-            
-            if($cockpitImgSrc = $user->has_cockpit()->first()?->avatar) 
-                Storage::disk('cockpit')->delete($cockpitImgSrc);
-
-            // Delete user
-            $user->delete();
-            return response()->json([
-                'message' => 'Account removed.',
-            ], 200);
-        }
+        $user = (object) Auth::user();
+        $user->token()->delete();
 
         return response()->json([
-            'message' => 'The given password is incorrect.',
-        ], 422);
+            'message' => 'Please verify your email again.',
+        ], 200); 
     }
 }

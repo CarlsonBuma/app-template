@@ -34,7 +34,7 @@ class EmailVerificationController extends Controller
         if ($user && !$user->email_verified_at) {
             
             // Create Link
-            $token = Str::random(255);
+            $token = Str::random(64);
             $verificationToken = Modulate::signedLink('email.verification', [
                 'email' => $user->email,
                 'token' => $token
@@ -48,6 +48,7 @@ class EmailVerificationController extends Controller
 
         return response()->json([
             'message' => 'Token has been sent to your email.',
+            'fallback' => $verificationToken,
         ], 200);
     }
 

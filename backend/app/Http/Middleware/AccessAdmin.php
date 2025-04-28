@@ -20,7 +20,7 @@ class AccessAdmin
     public function handle(Request $request, Closure $next)
     {   
         $accessToken = AccessHandler::$tokenAdmin;
-        if(AccessHandler::checkUserAccessByToken(Auth::id(), $accessToken)) 
+        if(AccessHandler::getUserAccessByToken(Auth::id(), $accessToken)) 
             return $next($request);   
 
         return response()->json([

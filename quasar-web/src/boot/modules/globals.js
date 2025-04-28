@@ -11,12 +11,11 @@
  */
 
 export const redirects = {
-    linkLegal: '/legal',
     linkGoolgeMaps: 'https://www.google.com/maps/search/?api=1&query=',
-    linkYoutube: 'https://youtube.com',
-    linkLinkedin: 'https://www.linkedin.com/company/123456789',
-    emailContact: 'hello@template.io',
-    emailLegal: 'hello@template.io',
+    linkYoutube: process.env.APP_REDIRECT_YOUTUBE,
+    linkLinkedin: process.env.APP_REDIRECT_LINKEDIN,
+    emailContact: process.env.APP_EMAIL_CONTACT,
+    emailLegal: process.env.APP_EMAIL_LEGAL,
 };
 
 export const regRules = {

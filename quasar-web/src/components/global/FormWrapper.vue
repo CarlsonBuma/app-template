@@ -1,6 +1,7 @@
 <template>
 
-    <q-form @submit="$emit('submit')" class="q-gutter-md" aria-autocomplete="off">
+    <q-form @submit="$emit('submit')" class="q-gutter-md">
+        
         <!-- Content -->
         <slot />
 

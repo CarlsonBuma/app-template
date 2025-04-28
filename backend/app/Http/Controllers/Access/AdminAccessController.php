@@ -71,21 +71,21 @@ class AdminAccessController extends Controller
                 });
 
             $userTransactions = PaddleTransactions::where('user_id', $user->id)
-                ->orderBy('updated_at', 'desc')
+                ->orderBy('created_at', 'desc')
                 ->get()
-                ->map(function($transaction) use($user) {
+                ->map(function($transaction) {
                     return AccessCollection::renderUserTransaction($transaction);
                 });
             
             return response()->json([
                 'latest_access' => $userAccess,
                 'transactions' => $userTransactions,
-                'message' => 'User found.',
+                'message' => 'User access loaded.',
             ], 200);
         }
 
         return response()->json([
-            'message' => 'No user found.',
+            'message' => 'Email does not exist.',
         ], 422);
     }
 
@@ -105,25 +105,35 @@ class AdminAccessController extends Controller
             'email' => ['required', 'string'],
             'access_token' => ['required', 'string'],
             'quantity' => ['nullable', 'numeric'],
-            'expiration_date' => ['required', 'string'],
+            'expiration_date' => ['nullable', 'string'],
         ]);
 
         if($user = User::where('email', $data['email'])->first()) {
 
             // Restrictions
-            if($this->hasActiveSubription($user->id, $data['access_token'])) {
+            if($this->hasActiveSubscription($user->id, $data['access_token'])) {
                 return response()->json([
                     'message' => 'User has active subscriptions.',
                 ], 422);
             }
 
             // Add Access
+            $userAccess = UserAccess::firstOrNew([
+                'user_id' => $user->id,
+                'access_token' => $data['access_token'],
+            ]);
+
+            // Update expiration_date only if expiration is set already
+            $expirationDate = $userAccess->expiration_date && $data['expiration_date']
+                ? $data['expiration_date']
+                : null;
+
             $access = AccessHandler::addUserAccess(
                 $user->id,
                 null,
                 $data['access_token'],
                 $data['quantity'] ?? 0,
-                $data['expiration_date'],
+                $expirationDate,
                 'created.by.admin'
             );
             
@@ -154,9 +164,35 @@ class AdminAccessController extends Controller
         UserAccess::find($data['access_id'])?->update([
             'is_active' => $data['is_active']
         ]);
+
         return response()->json([
             'message' => 'Access updated.',
         ], 200);
+    }
+
+    /**
+     * Undocumented function
+     *
+     * @param Request $request
+     * @return void
+     */
+    public function cancelTransaction(Request $request)
+    {
+        $data = $request->validate([
+            'transaction_id' => ['required', 'numeric'],
+        ]);
+
+        if($transaction = PaddleTransactions::where('id', $data['transaction_id'])->whereNull('canceled_at')->first()) {
+            AccessHandler::cancelTransactionAccess($transaction, 'canceled.by.admin');
+            return response()->json([
+                'canceled_at' => now(),
+                'message' => 'Transaction canceled.',
+            ], 200);
+        }
+
+        return response()->json([
+            'message' => 'Transaction not found or already canceled.',
+        ], 422);
     }
 
     /**
@@ -166,7 +202,7 @@ class AdminAccessController extends Controller
      * @param string $token
      * @return bool
      */
-    private function hasActiveSubription(int $userID, string $token): bool
+    private function hasActiveSubscription(int $userID, string $token): bool
     {
         // Retrieve UserAccess records that match the user ID and access token.
         $accessRecords = UserAccess::where([

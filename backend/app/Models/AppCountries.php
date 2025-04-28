@@ -6,9 +6,7 @@ use App\Models\Cockpit;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-/**
- * DB seeder
- */
+
 class AppCountries extends Model
 {
     use HasFactory;

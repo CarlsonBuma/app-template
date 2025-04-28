@@ -2,7 +2,7 @@
 
     <div 
         class="w-100 flex justify-center q-py-xl"
-        :class="$q.dark.isActive ? 'bg-dark text-white' : 'bg-grey-1 text-dark'"
+        :class="$tp.client_preferences.value.darkmode ? 'bg-dark text-white' : 'bg-grey-1 text-dark'"
     >
         <div class="w-content row justify-center q-py-md-md">
             <slot />

@@ -2,7 +2,7 @@
 
     <PageWrapper>
         <CardWrapper
-            class="w-card-lg"
+            class="w-card"
             title="Password reset"
             iconHeader="lock_person"
             note="*You are able to change your password now. Afterwards, you are able to login with your new password."
@@ -110,7 +110,7 @@ export default {
 
                 // Login
                 this.$user.setBearerToken(response.data.token);
-                this.$emit('authorize', '/user/dashboard');
+                this.$emit('authorize', '/user');
                 this.password = '';
                 this.password_confirm = '';
             } catch (error) {

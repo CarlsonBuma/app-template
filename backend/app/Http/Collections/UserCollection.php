@@ -2,19 +2,19 @@
 
 namespace App\Http\Collections;
 
-use Carbon\Carbon;
+use App\Http\Classes\FileStorage;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\Storage;
 
 abstract class UserCollection
 {
-    static public function render_public_user(object $user = null): array
+    static public function render_public_user(?object $user): array
     {
         if(!$user) return [];
         return [
             '_type' => 'Collection $publicUser',
             'id' => $user->id,
-            'avatar_src' => SELF::render_avatar_src($user->avatar),
+            'avatar_src' => SELF::render_avatar_src($user),
             'name' => $user->name
         ];
     }
@@ -31,7 +31,7 @@ abstract class UserCollection
             '_type' => 'Collection $user',
             'id' => $user->id,
             'name' => $user->name,
-            'avatar' => SELF::render_avatar_src($user->avatar),
+            'avatar' => SELF::render_avatar_src($user),
             'email' => $user->email,
         ];
     }
@@ -49,20 +49,20 @@ abstract class UserCollection
         return [
             'access_token' => $access->access_token,
             'quantity' => $access->quantity,
-            'expiration_date' => Carbon::parse($access->expiration_date)->format('Y-m-d')
+            'expiration_date' => $access->expiration_date
         ];
     }
 
     /**
      * Undocumented function
      *
-     * @param string|null $avatarSrc
+     * @param object $user
      * @return string
      */
-    static private function render_avatar_src(string $avatarSrc = null): string
+    static private function render_avatar_src(object $user): string
     {
-        return $avatarSrc
-            ? URL::to(Storage::url('user')) . '/' . $avatarSrc
-            : '';
+        return $user->avatar
+            ? URL::to(Storage::url(FileStorage::$userLocation)) . '/' . $user->avatar
+            : $user->google_avatar ?? '';
     }
 }

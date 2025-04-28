@@ -5,8 +5,8 @@ namespace App\Http\Controllers\Access;
 use Carbon\Carbon;
 use App\Models\PaddlePrices;
 use App\Models\PaddleTransactions;
-use App\Http\Controllers\Access\AccessHandler;
 use App\Models\PaddleSubscriptions;
+use App\Http\Controllers\Access\AccessHandler;
 
 class PaddleTransactionHandler
 {
@@ -29,9 +29,9 @@ class PaddleTransactionHandler
     
     // Access
     public $access_token = 'default-token';
-    public $access_quantity = 1;
     public $expiration_date = null;
     public $quantity = 1;
+    public $quantityFactor = 1;
     
     // Meta
     public $status = 'processing...';
@@ -46,7 +46,7 @@ class PaddleTransactionHandler
      *
      * @param object|null $transactionEntry
      */
-    function __construct(object $transactionEntry = null)
+    function __construct(?object $transactionEntry)
     {
         if(!$transactionEntry) return;
         $this->transaction = $transactionEntry;
@@ -56,12 +56,12 @@ class PaddleTransactionHandler
 
     /**
      * Sets attributes, to verify transaction and define user access
-     * Transaction webhook doc: https://developer.paddle.com/webhooks/overview
+     * Docs: https://developer.paddle.com/webhooks/overview
      * 
      * Logic: User access
      * User gains access, according transaction data
      *  - Important: The transaction-price-object defines the user access
-     *      - ref. "\Access\PaddlePriceHandler"
+     *      - Ref.: "\Access\PaddlePriceHandler"
      * 
      * Logic: User access expiration
      * Access expiration will be defined either by quantity or expiration_date
@@ -92,16 +92,20 @@ class PaddleTransactionHandler
                 ?? $this->access_token;
         
         // Access quantity
-        $this->quantity = (int) $item['quantity'] ?? 0;
+        $this->quantityFactor = $item['price']['custom_data']['quantity_factor'] ?? 1;
+        $this->quantity = (int) $item['quantity'] * $this->quantityFactor ?? 0;
 
-        // Access expiration date
-        $defaultPeriod = $item['price']['custom_data']['duration_months'] ?? 0;
+        // Subscription access period
+        $this->subscription_token = $contentData['subscription_id'] ?? null;
         $this->expiration_date = $contentData['current_billing_period']['ends_at'] 
             ?? $contentData['billing_period']['ends_at']
-                ?? $this->calculateLatestUserExpirationDate($defaultPeriod);
+                ?? null;
 
-        // Subscription
-        $this->subscription_token = $contentData['subscription_id'] ?? null;
+        // One-time purchase access period, if set
+        $defaultPeriod = $item['price']['custom_data']['duration_months'] ?? 0;
+        if(!$this->expiration_date && $defaultPeriod) {
+            $this->expiration_date = $this->calculateLatestUserExpirationDate($defaultPeriod);
+        }
     }
 
     /**
@@ -178,6 +182,7 @@ class PaddleTransactionHandler
             'customer_token' => $this->customer_token,
             'price_id' => $this->price_id,
             'quantity' => $this->quantity,
+            'expiration_date' => $this->expiration_date ?? null,
             'total' => $this->total,
             'tax' => $this->tax,
             'currency_code' => $this->currencyCode,
@@ -205,16 +210,18 @@ class PaddleTransactionHandler
 
     /**
      * Calculate user access expiration date
-     * Note: This scenario only applies to one-time purchases
-     *  > Make sure 'custom_data' contains a "duration_period" 
+     * Note: This scenario only applies to one-time purchases with access Period
+     *  > Make sure 'custom_data' contains a "duration_period" within Paddle Price
+     *  > Return null, if one-time purchase, without period
      *
      * @param integer $accessPeriod
-     * @return string
+     * @return string|null
      */
-    private function calculateLatestUserExpirationDate(int $accessPeriod): string
+    private function calculateLatestUserExpirationDate(int $accessPeriod): ?string
     {
+        if(!$accessPeriod) return null;
         $expirationDate = Carbon::now()->addMonths($accessPeriod * $this->quantity);
-        $currentAccess = AccessHandler::checkUserAccessByToken($this->transaction->user_id, $this->access_token);
+        $currentAccess = AccessHandler::getUserAccessByToken($this->transaction->user_id, $this->access_token);
 
         // Current access is active
         // Add month to current expiration Date

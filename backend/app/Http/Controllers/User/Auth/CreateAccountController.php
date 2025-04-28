@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers\User\Auth;
 
-use Exception;
 use App\Models\User;
 use App\Models\Cockpit;
 use Illuminate\Support\Str;
@@ -29,26 +28,16 @@ class CreateAccountController extends Controller
             'privacy' => ['required', 'boolean'],
         ]);
 
-        try {
-            // Legal
-            if(!$data['terms'] || !$data['privacy']) 
-                throw new Exception('Please accept our terms-of-use.');
+        // Process
+        $userID = User::create([
+            'name' => $data['name'],
+            'email' => $data['email'],
+            'password' =>  Hash::make(Str::random(125))
+        ])->id;
 
-            // Process
-            $userID = User::create([
-                'name' => $data['name'],
-                'email' => $data['email'],
-                'password' =>  Hash::make(Str::random(125))
-            ])->id;
-
-            Cockpit::create([
-                'user_id' => $userID,
-            ]);
-        } catch (Exception $e) {
-            return response()->json([
-                'message' => $e->getMessage(),
-            ], 422);
-        }
+        Cockpit::create([
+            'user_id' => $userID,
+        ]);
         
         return response()->json([
             'message' => 'Success! Your account has been created.',

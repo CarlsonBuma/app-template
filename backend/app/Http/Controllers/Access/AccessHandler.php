@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Access;
 
+use App\Models\PaddleTransactions;
 use App\Models\UserAccess;
 
 class AccessHandler
@@ -10,108 +11,97 @@ class AccessHandler
      * User Access Management
      * Defines user access within our app
      * 
-     * Note: 
-     * Public Access Tokens: Allow users gain access via prices 
+     * Public Access Tokens: 
+     * Allow users gain access via price purchase 
      *  - ref. "\Access\PaddlePriceHandler"
-     * Private Access Tokens: can not be issued by user itself 
-     *  - eg. $tokenAdmin
      * 
-     * Logic References:
-     * Add logic to handle new access-token accordingly within app.
-     *  - Access Management: "\Controllers\Access\" 
-     *  - Middleware: eg. "\Middleware\"
-     *  - Webhook Listener: "\Listeners\PaddleWebhookListener"
-     *  - eg. $tokenCockpit
+     * Private Access Tokens: 
+     * Can not be issued by user itself 
+     *  - eg. $tokenAdmin
      */
+    public static $tokenAdmin = 'access-admin';     // Private
     public static $tokenCockpit = 'access-cockpit';
-    public static $tokenAdmin = 'access-admin';
 
     /**
      * Add user app access
      * 
      * Note: 
-     * For transpirancy purpose, we always add new access,
+     * For transpirancy purpose, we always create new access,
      * instead of updating existing access.
      *
      * @param integer $userID
      * @param integer|null $transactionID
-     * @param string $accessToken, defines access to app-features
-     * @param integer $quantity, amount of something (add logic)
-     * @param string $expirationDate, end of access
-     * @param string $message
+     * @param string|null $accessToken
+     * @param integer|null $quantity
+     * @param string|null $expirationDate
+     * @param string|null $message
      * @return object
      */
-    static public function addUserAccess(int $userID, int $transactionID = null, string $accessToken = 'undefined', int $quantity = 0, string $expirationDate, string $message): object
+    static public function addUserAccess(int $userID, ?int $transactionID, ?string $accessToken = 'undefined', ?int $quantity = 0, ?string $expirationDate, ?string $message = null): object
     {
-        return UserAccess::create([
-                'user_id' => $userID,
-                'access_token' => $accessToken,
-                'transaction_id' => $transactionID,
-                'quantity' => $quantity,
-                'expiration_date' => $expirationDate,
-                'is_active' => true,
-                'status' => 'access.granted',
-                'message' => $message
-            ]
-        );
-    }
-    
-    /**
-     * Check current access
-     *
-     * @param integer $accessID
-     * @return object|null
-     */
-    static public function checkAccessByID(int $accessID): ?object
-    {
-        return UserAccess::where([
-                'id' => $accessID,
-                'is_active' => true
-            ])->whereDate('expiration_date', '>=', date('Y-m-d'))
-            ->latest('expiration_date')
-            ->first();
+        $userAccess = UserAccess::firstOrNew([
+            'user_id' => $userID,
+            'access_token' => $accessToken,
+        ]);
+
+        // Add the new quantity to the existing quantity
+        $userAccess->quantity = ($userAccess->exists ? $userAccess->quantity : 0) + $quantity;
+
+        // Set expiration date
+        $userAccess->expiration_date = $expirationDate;
+
+        // Update other fields
+        $userAccess->transaction_id = $transactionID;
+        $userAccess->is_active = true;
+        $userAccess->status = 'access.granted';
+        $userAccess->message = $message;
+
+        // Save the record
+        $userAccess->save();
+        return $userAccess;
     }
 
     /**
      * Get latest access, by access token
+     * Check by expiration_date or quantity
+     *  > Reconsider quantity if no expiration_date is given
      *
      * @param integer $userID
      * @param string $accessToken
      * @return object|null
      */
-    static public function checkUserAccessByToken(int $userID, string $accessToken): ?object
+    static public function getUserAccessByToken(int $userID, string $accessToken): ?object
     {
-        if(!$accessToken) return null;
         return UserAccess::where([
                 'user_id' => $userID,
                 'access_token' => $accessToken,
                 'is_active' => true
-            ])->whereDate('expiration_date', '>=', date('Y-m-d'))
-            ->latest('expiration_date')
+            ])
+            ->where(function ($query) {
+                $query->whereNotNull('expiration_date')
+                    ->where('expiration_date', '>=', now()) // Valid subscription
+                    ->orWhere(function ($query) {
+                        $query->whereNull('expiration_date')
+                            ->where('quantity', '>', 0); // Valid one-time purchase
+                    });
+            })
+            ->orderByRaw("
+                CASE 
+                    WHEN expiration_date IS NOT NULL AND expiration_date >= CURRENT_DATE THEN 1 
+                    ELSE 2 
+                END ASC
+            ") // Give priority to valid subscriptions
+            ->orderByDesc('expiration_date') // Order by latest expiration date for subscriptions
+            ->orderByDesc('updated_at') // Order by last update for one-time purchases
             ->first();
     }
 
-    /**
-     * Get latest access, by transaction_id
-     *
-     * @param integer $userID
-     * @param integer $transactionID
-     * @return object|null
-     */
-    static public function checkUserAccessByTransactionID(int $userID, int $transactionID): ?object
-    {
-        return UserAccess::where([
-                'user_id' => $userID,
-                'transaction_id' => $transactionID,
-                'is_active' => true,
-            ])->whereDate('expiration_date', '>=', date('Y-m-d'))
-            ->latest('expiration_date')
-            ->first();
-    }
 
     /**
      * Get all active accesses by latest expiration_date
-     * Unified by access_token
+     * Check by expiration_date or quantity
+     *  > Reconsider quantity if no expiration_date is given
+     *  > Unified by access_token
      *
      * @param integer $userID
      * @return object
@@ -122,9 +112,28 @@ class AccessHandler
             ->where([
                 'user_id' => $userID,
                 'is_active' => true,
-            ])->whereDate('expiration_date', '>=', date('Y-m-d'))
-            ->orderBy('access_token')
-            ->orderBy('expiration_date', 'desc')
+            ])
+            ->where(function ($query) {
+                
+                // For active subscriptions with expiration_date
+                $query->whereNotNull('expiration_date')
+                    ->whereDate('expiration_date', '>=', now())
+
+                    // For one-time purchases where expiration_date is NULL and quantity > 0
+                    ->orWhere(function ($query) {
+                        $query->whereNull('expiration_date')
+                            ->where('quantity', '>', 0);
+                    });
+            })
+            ->orderBy('access_token')   // Ensure the distinct on access_token works
+            ->orderByRaw("
+                CASE 
+                    WHEN expiration_date IS NOT NULL AND expiration_date >= CURRENT_DATE THEN 1 
+                    ELSE 2 
+                END DESC
+            ")
+            ->orderByDesc('expiration_date')
+            ->orderByDesc('created_at')
             ->distinct('access_token')
             ->get();
     }
@@ -135,15 +144,51 @@ class AccessHandler
      * @param object $transaction
      * @return void
      */
-    static public function cancelUserAccessByTransaction(object $transaction, string $status, string $message): void
+    static public function cancelTransactionAccess(object $transaction, string $message): void
     {
-        UserAccess::where([
+        $id = $transaction->id;
+        $price = $transaction->belongs_to_price;
+        $quantity = $transaction->quantity;
+        $latestExpirationDate = null;
+
+        // Retrieve the latest UserAccess entry
+        $userAccess = UserAccess::where([
             'user_id' => $transaction->user_id,
-            'transaction_id' => $transaction->id,
-        ])->update([
-            'is_active' => false,
-            'status' => $status,
-            'message' => $message
+            'access_token' => $price->access_token,
+        ])->latest()->first();
+
+        if ($userAccess) {
+
+            // Latest expiration date
+            if ($transaction->expiration_date) {
+                $latestExpirationTransaction = PaddleTransactions::where([
+                        'user_id' => $transaction->user_id,
+                        'price_id' => $price->id,
+                        'is_verified' => true,
+                        'access_added' => true
+                    ])
+                    ->where('id', '!=', $transaction->id) // Exclude the current transaction
+                    ->latest('expiration_date')
+                    ->first();
+    
+                $latestExpirationDate = $latestExpirationTransaction?->expiration_date;
+            }
+
+            // Subtract the transaction quantity from the existing quantity
+            else {
+                $quantity = max(0, $userAccess->quantity - $quantity);
+            }
+            
+            $userAccess->update([
+                'expiration_date' => $latestExpirationDate,
+                'quantity' => $quantity
+            ]);
+        }
+
+        $transaction->update([
+            'canceled_at' => now(),
+            'status' => 'canceled',
+            'message' => $message,
         ]);
     }
 }

@@ -26,11 +26,11 @@
                     {{ props.row.price?.name ?? 'No price assigned.' }}<br>
                     <span class="text-caption"><em>"{{ props.row.price?.access_token ?? 'undefined' }}"</em></span>
                 </q-td>
-                <q-td key="status" :props="props">
-                    {{ props.row.status }}
-                </q-td>
                 <q-td key="quantity" :props="props">
                     {{ props.row.quantity }}<br>
+                </q-td>
+                <q-td key="expiration_date" :props="props">
+                    {{ $tp.date(props.row.access?.expiration_date ?? '-') }}
                 </q-td>
                 <q-td key="price" :props="props">
                     {{ props.row.currency_code + ' ' + props.row.total }}<br>
@@ -38,14 +38,14 @@
                 <q-td key="tax" :props="props">
                     {{ props.row.tax }}
                 </q-td>
-                <q-td key="updated_at" :props="props">
-                    {{ $tp.date(props.row.updated_at) }}
+                <q-td key="created_at" :props="props">
+                    {{ $tp.date(props.row.created_at) }}
                 </q-td>
-                <q-td key="expiration_date" :props="props">
-                    {{ $tp.date(props.row.access?.expiration_date ?? '-') }}
+                <q-td key="canceled_at" :props="props">
+                    {{ $tp.date(props.row.canceled_at ?? '-') }}
                 </q-td>
-                <q-td key="active" :props="props">
-                    <q-icon name="verified" :color="props.row.access ? 'green' : 'grey'" />
+                <q-td key="status" :props="props">
+                    {{ props.row.status }}
                 </q-td>
             </q-tr>
         </template>
@@ -76,14 +76,14 @@ export default {
                 field: 'name',
                 align: 'left',
             }, {
-                name: 'status',
-                label: 'Status',
-                field: 'status',
-                align: 'left',
-            }, {
                 name: 'quantity',
                 label: 'Quantity',
                 field: 'quantity',
+                align: 'left',
+            }, {
+                name: 'expiration_date',
+                label: 'Expiration date',
+                field: 'expiration_date',
                 align: 'left',
             }, {
                 name: 'price',
@@ -96,20 +96,21 @@ export default {
                 field: 'tax',
                 align: 'left',
             }, {
-                name: 'updated_at',
-                label: 'Latest update',
-                field: 'updated_at',
+                name: 'created_at',
+                label: 'Created at',
+                field: 'created_at',
                 align: 'left',
             }, {
-                name: 'expiration_date',
-                label: 'Expiration date',
-                field: 'expiration_date',
+                name: 'canceled_at',
+                label: 'Canceled at',
+                field: 'canceled_at',
                 align: 'left',
             }, {
-                name: 'active',
-                label: 'Access',
-                field: 'active',
-            },
+                name: 'status',
+                label: 'Status',
+                field: 'status',
+                align: 'left',
+            }
         ];
 
         return {

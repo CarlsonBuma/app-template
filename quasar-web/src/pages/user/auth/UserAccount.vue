@@ -2,23 +2,19 @@
 
     <PageWrapper>
         <template #navigation>
-            <NavUser />
+            <NavUser title="Account Settings"/>
         </template>
 
         <div class="row w-100 flex justify-center">
-            <div class="w-avatar">
-
+            <div class="w-card-sm">
                 <!-- Avatar -->
-                <CardUploadImage 
-                    allowUpdate
-                    :userAvatar="$user.user.avatar_src"
-                    @update="(src, avatar, deleteAvatar) => saveAvatar(src, avatar, deleteAvatar)"
-                    @upload="(src, avatar) => {
-                        $user.user.avatar_src = avatar;
-                    }"
+                <ImageUpload 
+                    :ratio="1" 
+                    v-model="avatarImage"
+                    @submit="(avatar) => saveAvatar(avatar)"
                 />
 
-                <!-- User -->
+                <!-- Credentials -->
                 <CardSimple>
                     <q-card-section>
                         <span class="text-caption"><b>ID:</b>&nbsp;#{{ $user.user.id }}</span><br>
@@ -27,105 +23,128 @@
                     </q-card-section>
                 </CardSimple>
             </div>
-            <div class="w-avatar">
 
+            <div class="w-avatar">
                 <!-- Username -->
                 <CardSimple title="Change username">
+                    <template #actions>
+                        <q-btn 
+                            label="Update"
+                            outline
+                            color="primary"
+                            size="sm"
+                            @click="submitUsername()"
+                        />
+                    </template>
                     <q-card-section >
-                        <FormWrapper
-                            buttonText="Change name"
-                            buttonIcon="person"
-                            @submit="submitUsername()"
-                        >
-                            <q-input v-model="$user.user.name" label="Username" />
-                        </FormWrapper>
+                        <q-input v-model="$user.user.name" />
                     </q-card-section>
                 </CardSimple> 
 
                 <!-- Password -->
-                <CardSimple title="Change password">
-                    <q-card-section >
-                        <FormWrapper
-                            buttonText="Change password"
-                            buttonIcon="lock"
-                            @submit="submitPassword(password.current, password.new, password.confirm)"
-                        >
-                            <q-input
-                                type="password"
-                                v-model="password.current"
-                                label="Confirm current password"
-                            />
-                            <div>
-                                <q-input type="password" v-model="password.new" label="Enter new password" >
-                                    <!-- Validation -->
-                                    <template v-slot:append>
-                                        <q-icon name="info">
-                                            <q-tooltip>
-                                                <PasswordCheck
-                                                    :password="password.new"
-                                                    :password_confirm="password.confirm"
-                                                />
-                                            </q-tooltip>
-                                        </q-icon>
-                                    </template>
-                                </q-input>
-                                <q-input type="password" label="Confirm new password" v-model="password.confirm"/>
-                            </div>
-                        </FormWrapper>
-                    </q-card-section>
+                <CardSimple 
+                    title="Reset password" 
+                    note="You will receive an email containing a token to reset your password."
+                >
+                    <template #actions>
+                        <q-btn 
+                            label="Send Token"
+                            outline
+                            color="primary"
+                            size="sm"
+                            @click="resetPasswordConfirmation()"
+                        />
+                    </template>
+                </CardSimple> 
+
+                <!-- Invalidate -->
+                <CardSimple 
+                    title="Invalidate Tokens" 
+                    note="Selecting this option will remove access from all devices and log you out."
+                >
+                    <template #actions>
+                        <q-btn 
+                            label="Invalidate"
+                            outline
+                            color="orange"
+                            size="sm"
+                            @click="invalidateTokenConfirmation()"
+                        />
+                    </template>
+                </CardSimple> 
+
+                <!-- Invalidate -->
+                <CardSimple 
+                    title="Invalidate Email" 
+                    note="This option is recommended only if you wish to connect your account with one of our login providers."
+                >
+                    <template #actions>
+                        <q-btn 
+                            label="Invalidate"
+                            outline
+                            color="orange"
+                            size="sm"
+                            @click="invalidateEmailConfirmation()"
+                        />
+                    </template>
                 </CardSimple> 
             </div>
 
-            <!-- Transfer Account -->
+            <!-- Account Managment -->
             <div class="w-avatar">
+                <!-- Transfer Account -->
                 <CardSimple 
                     title="Transfer account" 
-                    tooltip="Update your account email address. The new email must be verified by its owner to complete the change."
-                    tooltipIconColor="orange"
-                    note="To cancel the transfer process, log in with your previous credentials and follow the provided steps."
+                    tooltipColor="orange"
+                    note="Update the email address associated with your account. The new email must be verified by its owner to complete the update."
                 >
+                    <template #actions>
+                        <q-btn 
+                            label="Change owner"
+                            outline
+                            color="red"
+                            size="sm"
+                            @click="transferAccountConfirm(transferEmail, emailPassword)"
+                        />
+                    </template>
+
                     <q-card-section>
-                        <FormWrapper
-                            buttonText="Change owner"
-                            buttonIcon="people_alt"
-                            @submit="submitEmail(this.transferEmail, this.emailPassword)"
-                        >
-                            <q-input
-                                disable
-                                type="email"
-                                v-model="$user.user.email"
-                                label="Current owner"
-                            />
-                            <q-input
-                                type="email"
-                                v-model="transferEmail"
-                                label="Transfer account to"
-                                placeholder="Enter email"
-                            />
-                            <q-input
-                                type="password"
-                                v-model="emailPassword"
-                                label="Confirm by password"
-                            />
-                        </FormWrapper>
+                        <q-input
+                            disable
+                            type="email"
+                            v-model="$user.user.email"
+                            label="Current owner"
+                        />
+                        <q-input
+                            type="email"
+                            v-model="transferEmail"
+                            label="Transfer account to"
+                            placeholder="Enter email"
+                        />
+                        <q-input
+                            type="password"
+                            v-model="emailPassword"
+                            label="Confirm by password"
+                        />
                     </q-card-section>
                 </CardSimple>
 
                 <!-- Delete Account -->
                 <CardSimple 
                     title="Delete account"
-                    note="Account restoration is not possible. Your account will be permanently deleted."
-                    tooltip="Once the account is deleted, all your personal data and any associated information will be permanently removed from our system."
+                    note="Once the account is deleted, all your personal data and any associated information will be permanently removed from our system."
                 >
+                    <template #actions>
+                        <q-btn 
+                            label="Delete Account"
+                            outline
+                            color="red"
+                            size="sm"
+                            @click="deleteAccountConfirm(deletePassword)"
+                        />
+                    </template>
                     <q-card-section >
-                        <FormWrapper
-                            buttonText="Delete account"
-                            buttonIcon="delete"
-                            buttonColor="red"
-                            @submit="deleteAccountConfirm()"
-                        >
-                            <q-input type="password" label="Confirm by password" v-model="deletePassword" />
-                        </FormWrapper>
+                        <q-input type="password" label="Confirm by password" v-model="deletePassword" />
                     </q-card-section>
                 </CardSimple>
             </div>
@@ -135,13 +154,12 @@
 </template>
 
 <script>
-import PasswordCheck from 'components/PasswordCheck.vue';
-import CardUploadImage from 'components/CardUploadImage.vue';
+import ImageUpload from 'components/ImageUpload.vue';
 
 export default {
     name: 'UserAccountSettings',
     components: {
-        PasswordCheck, CardUploadImage
+        ImageUpload
     },
     
     emits: [
@@ -150,11 +168,16 @@ export default {
 
     data() {
         return {
+            avatarImage: {
+                img_src: this.$user.user.avatar_src,
+            },
+
             password: {
                 current: '',
                 new: '',
                 confirm: ''
             },
+
             emailPassword: '',
             transferEmail: '',
             deletePassword: ''
@@ -163,16 +186,14 @@ export default {
 
     methods: {
 
-        async saveAvatar(src, avatar, deleteAvatar) {
-            if(!src && !deleteAvatar ) return;
+        async saveAvatar(image) {
             try {
                 const formData = new FormData;
-                if(src) formData.append("avatar", src);
-                formData.append("avatar_delete", deleteAvatar ? '1' : '0');
+                if(image.file) formData.append("file", image.file);
                 this.$toast.load();
-                const response = await this.$axios.post('/update-user-avatar', formData);
+                const response = await this.$axios.post('/user-update-avatar', formData);
                 this.$toast.success(response.data.message);
-                this.$user.user.avatar_src = avatar;
+                this.$user.user.avatar_src = image.img_src;
             } catch (error) {
                 this.$toast.error(error.response ?? error);
             }
@@ -182,7 +203,7 @@ export default {
             try {
                 if(this.$user.user.name.length === 0) throw ('Please enter name.');
                 this.$toast.load();
-                const response = await this.$axios.post('/update-user-name', {
+                const response = await this.$axios.post('/user-update-name', {
                     name: this.$user.user.name
                 });
                 this.$toast.success(response.data.message);
@@ -191,21 +212,12 @@ export default {
             }
         },
 
-        async submitPassword(current, newPw, confirmed) {
+        async resetPassword() {
             try {
-                if(!current) throw 'Please enter new password.';
-                const passwordCheck = this.$globals.checkPasswordRequirements(newPw, confirmed);
-                if(passwordCheck) throw passwordCheck;
-                
-                // Request
                 this.$toast.load();
-                const response = await this.$axios.post('update-user-password', {
-                    'password_current': current,
-                    'password': newPw,
-                    'password_confirmation': confirmed
-                });
-                
+                const response = await this.$axios.post('user-reset-password');
                 this.$toast.success(response.data.message)
+                this.$emit('removeSession');
             } catch (error) {
                 this.$toast.error(error.response ?? error);
             } finally {
@@ -215,30 +227,100 @@ export default {
             }
         },
 
-        async submitEmail(transferMail, password) {
+        resetPasswordConfirmation() {
+            this.$q.dialog({
+                title: 'Reset Your Password',
+                message: 'An email containing a reset token will be sent to your registered email address. Please use it to securely reset your password.',
+                cancel: true,
+            }).onOk(() => {
+                this.resetPassword()
+            })
+        },
+
+        async invalidateTokens() {
+            try {
+                this.$toast.load();
+                const response = await this.$axios.post('user-invalidate-tokens');
+                this.$toast.success(response.data.message)
+                this.$emit('removeSession');
+            } catch (error) {
+                this.$toast.error(error.response ?? error);
+            } finally {
+                this.password.current = '';
+                this.password.new = '';
+                this.password.confirm = '';
+            }
+        },
+
+        invalidateTokenConfirmation() {
+            this.$q.dialog({
+                title: 'Invalidation your Tokens',
+                message: 'This action will remove access from all your devices. Are you sure you want to proceed?',
+                cancel: true,
+            }).onOk(() => {
+                this.invalidateTokens()
+            })
+        },
+
+        async invalidateEmail() {
+            try {
+                this.$toast.load();
+                const response = await this.$axios.post('user-invalidate-email');
+                this.$toast.success(response.data.message)
+                this.$emit('removeSession');
+            } catch (error) {
+                this.$toast.error(error.response ?? error);
+            } finally {
+                this.password.current = '';
+                this.password.new = '';
+                this.password.confirm = '';
+            }
+        },
+
+        invalidateEmailConfirmation() {
+            this.$q.dialog({
+                title: 'Email Invalidation',
+                message: 'You will need to verify your account again, either using the token sent to your email or through one of our login providers.',
+                cancel: true,
+            }).onOk(() => {
+                this.invalidateEmail()
+            })
+        },
+
+        async transferAccount(transferMail, password) {
             try {
                 if(!transferMail) throw 'Email field is required.';
                 if(!password) throw 'Please cofirm by password.';
                 this.$toast.load();
-                const response = await this.$axios.post('transfer-user-account', {
+                const response = await this.$axios.post('user-transfer-account', {
                     'email': transferMail,
                     'password': password,
                 })
                 this.$toast.success(response.data.message);
-                this.$emit('removeSession');
+                // this.$emit('removeSession');
             } catch (error) {
                 this.$toast.error(error.response ?? error);
             } finally {
                 this.emailPassword = '';
             }
         },
+
+        transferAccountConfirm(transferMail, password) {
+            this.$q.dialog({
+                title: 'Transfer Account to New Owner',
+                message: 'A token will be sent to the new owner for validation. You can continue using your account with your current credentials until the new owner verifies the transfer.',
+                cancel: true,
+            }).onOk(() => {
+                this.transferAccount(transferMail, password)
+            })
+        },
         
-        async deleteAccount() {
+        async deleteAccount(deletePassword) {
             try {
-                if(!this.deletePassword) throw 'Please confirm by your password.'
+                if(!deletePassword) throw 'Please confirm by your password.'
                 this.$toast.load();
                 const response = await this.$axios.post('user-delete-account', {
-                    'password': this.deletePassword,
+                    'password': deletePassword,
                 });
                 this.$toast.success(response.data.message);
                 this.$emit('removeSession');
@@ -249,13 +331,13 @@ export default {
             }
         },
 
-        deleteAccountConfirm() {
+        deleteAccountConfirm(deletePassword) {
             this.$q.dialog({
-                title: 'Confirm delete',
-                message: 'Sure you want to delete your account? Your data will be deleted permanently.',
+                title: 'Delete Account',
+                message: 'Are you sure you want to delete your account? This action is irreversible, and all your data will be permanently removed.',
                 cancel: true,
             }).onOk(() => {
-                this.deleteAccount()
+                this.deleteAccount(deletePassword)
             })
         }
     }

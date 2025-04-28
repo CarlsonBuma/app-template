@@ -9,7 +9,7 @@
         <div class="row w-100 justify-center">
             <PricesTable 
                 class="table-width"
-                title="Manage prices"
+                title="App Prices"
                 :prices="prices"
                 @update="(price) => updatePrice(price.id, price.is_active)"
             />
@@ -26,9 +26,9 @@
         <div class="row w-100 justify-center">
             <AccessTable 
                 class="table-width"
-                title="User access"
+                title="User App Access"
                 :access="userAccess"
-                @search="(email) => serachUser(email)"
+                @search="(email) => searchUser(email)"
                 @add="(email) => prepareAddNewAccess(email)"
                 @update="(access) => updateAccess(access.id, access.is_active)"
             />
@@ -38,8 +38,9 @@
         <div class="row q-mt-md w-100 justify-center">
             <TransactionsTable
                 class="table-width" 
-                title="User transactions"
+                title="User Transactions"
                 :transactions="userTransactions"
+                @cancel="(transaction) => cancelTransaction(transaction)"
             />
             <SectionNote>
                 Transactions are payments initiated either by "one-time purchases" or "subscriptions" charged periodically.<br>
@@ -138,11 +139,10 @@ export default {
         async loadPrices(){
             try {
                 this.loading = true;
-                const response = await this.$axios.get('get-app-prices')
+                const response = await this.$axios.get('admin-load-prices')
                 this.prices = response.data.prices;
             } catch (error) {
                 this.$toast.error(error.response ?? error);
-                console.log('admin.prices.error', error.response ?? error)
             } finally {
                 this.loading = false;
             }
@@ -151,22 +151,21 @@ export default {
         async updatePrice(priceID, status){
             try {
                 this.$toast.load();
-                const response = await this.$axios.post("/update-app-price", {
+                const response = await this.$axios.post("/admin-update-app-price", {
                     price_id: priceID,
                     is_active: status
                 });
                 this.$toast.success(response.data.message)
             } catch (error) {
                 this.$toast.error(error.response ?? error);
-                console.log('admin.user.access.error', error.response ?? error)
             }
         }, 
 
-        async serachUser(email) {
+        async searchUser(email) {
             try {
                 if(!email) throw 'Email field is required.'
                 this.$toast.load();
-                const response = await this.$axios.get("/get-app-user-access", { params: { 
+                const response = await this.$axios.get("/admin-get-user-access", { params: { 
                     email: email
                 }});
 
@@ -175,21 +174,19 @@ export default {
                 this.$toast.success(response.data.message)
             } catch (error) {
                 this.$toast.error(error.response ?? error);
-                console.log('admin.user.access.error', error.response ?? error)
             }
         },
 
         async updateAccess(accessID, status){
             try {
                 this.$toast.load();
-                const response = await this.$axios.post("/update-app-user-access", {
+                const response = await this.$axios.post("/admin-update-user-access", {
                     access_id: accessID,
                     is_active: status
                 });
                 this.$toast.success(response.data.message)
             } catch (error) {
                 this.$toast.error(error.response ?? error);
-                console.log('admin.user.access.error', error.response ?? error)
             }
         }, 
 
@@ -197,11 +194,9 @@ export default {
             try {
                 if(!requestedAccessEmail) throw 'Invalid email.'
                 if(!newAccess.access_token) throw 'Access toke is required.'
-                if(!newAccess.expiration_date) throw 'Expiration date is required.'
-                if(!newAccess.quantity || newAccess.quantity === 0) throw 'Value must be bigger than 0.'
 
                 this.$toast.load();
-                const response = await this.$axios.post("/create-app-user-access", {
+                const response = await this.$axios.post("/admin-create-user-access", {
                     email: requestedAccessEmail,
                     access_token: newAccess.access_token,
                     quantity: newAccess.quantity,
@@ -214,7 +209,20 @@ export default {
                 this.$toast.success(response.data.message);
             } catch (error) {
                 this.$toast.error(error.response ?? error);
-                console.log('admin.user.access.error', error.response ?? error)
+            }
+        },
+
+        async cancelTransaction(transaction) {
+            try {
+                this.$toast.load();
+                const response = await this.$axios.post("/admin-cancel-user-transaction", {
+                    transaction_id: transaction.id,
+                });
+
+                this.$toast.success(response.data.message)
+                transaction.canceled_at = response.data.canceled_at
+            } catch (error) {
+                this.$toast.error(error.response ?? error);
             }
         }
     },

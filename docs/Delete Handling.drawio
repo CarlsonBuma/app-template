@@ -1,0 +1,80 @@
+<mxfile host="Electron" modified="2025-02-15T00:21:53.256Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.15 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="b-WV9mLENOVKfU88zXYd" version="22.1.15" type="device" pages="2">
+  <diagram id="zQzWoQQZE2D7Y3lbiM3B" name="Delete Overview">
+    <mxGraphModel dx="1195" dy="1866" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="jJExvIB-3Cb2zFcHsTqu-2" value="&lt;b&gt;Middleware&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="554" y="80" width="1046" height="650" as="geometry" />
+        </mxCell>
+        <mxCell id="jeZlMYzHbekSfppVLT9O-1" value="&lt;h1&gt;Delete Entities&lt;/h1&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;Overview&lt;/b&gt;&lt;br style=&quot;border-color: var(--border-color); padding: 0px; margin: 0px;&quot;&gt;Handling delete entities and dependencies.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;Requirements&lt;/b&gt;:&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;Delete / Keep Data&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;GDPR Compliant&lt;/span&gt;&lt;br&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Manage Dependencies:&amp;nbsp;&lt;/span&gt;&lt;br&gt;&lt;/li&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Cascade / Restrict / Set Null&lt;/span&gt;&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Delete / Keep Files&lt;/span&gt;&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="30" y="-540" width="490" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="jJExvIB-3Cb2zFcHsTqu-1" value="&lt;b&gt;&quot;paddle_no_active_subscriptions&quot;: 422&lt;/b&gt;&lt;br&gt;User has active subscriptions ongoing &lt;br&gt;(see FTR. &quot;User Access Management&quot;)&lt;br&gt;&lt;ul&gt;&lt;li style=&quot;border-color: var(--border-color);&quot;&gt;Response&lt;/li&gt;&lt;ul style=&quot;border-color: var(--border-color);&quot;&gt;&lt;li style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;border-color: var(--border-color); color: rgb(51, 51, 51);&quot;&gt;status: &quot;active_subscriptions&quot;&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;Error Handling&lt;/li&gt;&lt;ul&gt;&lt;li style=&quot;border-color: var(--border-color);&quot;&gt;Redirect &quot;/account/access&quot;&lt;/li&gt;&lt;/ul&gt;&lt;/ul&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;align=left;verticalAlign=top;spacing=12;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="650" y="190" width="290" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="dkikrSbxpuVvN4mhOOpO-1" value="Entities" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="554" y="-540" width="1040" height="580" as="geometry" />
+        </mxCell>
+        <mxCell id="dkikrSbxpuVvN4mhOOpO-12" value="Delete User Account" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="660" y="-440" width="190" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="ALqniaUr9GzKv1GsAqx2" name="Delete User">
+    <mxGraphModel dx="1912" dy="-54" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="JkbKnRz5IxGsLWJk3qLi-1" value="User" style="swimlane;startSize=20;horizontal=0;html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="31" y="1449" width="766" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="JkbKnRz5IxGsLWJk3qLi-2" value="&quot;/account/settings&quot;" style="points=[[0.145,0.145,0],[0.5,0,0],[0.855,0.145,0],[1,0.5,0],[0.855,0.855,0],[0.5,1,0],[0.145,0.855,0],[0,0.5,0]];shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=standard;symbol=general;" parent="JkbKnRz5IxGsLWJk3qLi-1" vertex="1">
+          <mxGeometry x="110" y="85" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="JkbKnRz5IxGsLWJk3qLi-3" value="User delets account" style="points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];shape=mxgraph.bpmn.task;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=1;expand=0;collapsible=0;taskMarker=user;" parent="JkbKnRz5IxGsLWJk3qLi-1" vertex="1">
+          <mxGeometry x="260" y="70" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="JkbKnRz5IxGsLWJk3qLi-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="JkbKnRz5IxGsLWJk3qLi-1" source="JkbKnRz5IxGsLWJk3qLi-2" target="JkbKnRz5IxGsLWJk3qLi-3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JkbKnRz5IxGsLWJk3qLi-5" value="" style="points=[[0.145,0.145,0],[0.5,0,0],[0.855,0.145,0],[1,0.5,0],[0.855,0.855,0],[0.5,1,0],[0.145,0.855,0],[0,0.5,0]];shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=catching;symbol=signal;" parent="JkbKnRz5IxGsLWJk3qLi-1" vertex="1">
+          <mxGeometry x="480" y="85" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="JkbKnRz5IxGsLWJk3qLi-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="JkbKnRz5IxGsLWJk3qLi-1" source="JkbKnRz5IxGsLWJk3qLi-3" target="JkbKnRz5IxGsLWJk3qLi-5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JkbKnRz5IxGsLWJk3qLi-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="JkbKnRz5IxGsLWJk3qLi-1" source="JkbKnRz5IxGsLWJk3qLi-5" target="JkbKnRz5IxGsLWJk3qLi-8" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="630" y="110" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JkbKnRz5IxGsLWJk3qLi-8" value="logout()" style="points=[[0.145,0.145,0],[0.5,0,0],[0.855,0.145,0],[1,0.5,0],[0.855,0.855,0],[0.5,1,0],[0.145,0.855,0],[0,0.5,0]];shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=throwing;symbol=link;" parent="JkbKnRz5IxGsLWJk3qLi-1" vertex="1">
+          <mxGeometry x="620" y="85" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="JkbKnRz5IxGsLWJk3qLi-9" value="POST&lt;br&gt;&quot;user-delete-account&lt;span style=&quot;background-color: initial;&quot;&gt;&quot;&lt;/span&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="271" y="1850" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="JkbKnRz5IxGsLWJk3qLi-11" value="password: string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="JkbKnRz5IxGsLWJk3qLi-9" vertex="1">
+          <mxGeometry y="50" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="JkbKnRz5IxGsLWJk3qLi-12" value="&lt;ul&gt;&lt;li&gt;Verify password&lt;/li&gt;&lt;li&gt;Check if no active subscriptions within our Paddle Provider (see FTR &quot;Access Management&quot;)&lt;/li&gt;&lt;li&gt;Remove&lt;/li&gt;&lt;ul&gt;&lt;li&gt;User avatar image&lt;/li&gt;&lt;li&gt;Cockpit avatar image&lt;/li&gt;&lt;/ul&gt;&lt;/ul&gt;" style="points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];shape=mxgraph.bpmn.task;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=1;expand=0;collapsible=0;taskMarker=businessRule;verticalAlign=top;align=left;fontFamily=Helvetica;" parent="1" vertex="1">
+          <mxGeometry x="271" y="1940" width="330" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="JkbKnRz5IxGsLWJk3qLi-13" value="Response" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="471" y="1870" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="JkbKnRz5IxGsLWJk3qLi-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;" parent="1" source="JkbKnRz5IxGsLWJk3qLi-13" target="JkbKnRz5IxGsLWJk3qLi-5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JkbKnRz5IxGsLWJk3qLi-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;dashed=1;" parent="1" source="JkbKnRz5IxGsLWJk3qLi-3" target="JkbKnRz5IxGsLWJk3qLi-9" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JkbKnRz5IxGsLWJk3qLi-18" value="&quot;paddle_no_active_subscriptions&lt;span style=&quot;background-color: initial;&quot;&gt;&quot;&lt;/span&gt;" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="107" y="1810" width="234" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

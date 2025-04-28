@@ -7,20 +7,11 @@ use App\Http\Controllers\Cockpit\CockpitProfileController;
 Route::middleware(['auth:api', 'email_verified', 'access_cockpit'])->group(function () {
 
     //* Manage cockpit profile
-    Route::get('/load-cockpit-profile', [CockpitProfileController::class, 'loadProfile'])
-        ->name('load.cockpit.profile');
-    Route::post('/update-cockpit-public-access', [CockpitProfileController::class, 'updatePublicity'])
-        ->name('update.cockpit.public.access');
-    Route::post('/update-cockpit-avatar', [CockpitProfileController::class, 'updateAvatar'])
-        ->name('update.cockpit.avatar');
-    Route::post('/update-cockpit-credits', [CockpitProfileController::class, 'updateName'])
-        ->name('update.cockpit.credits');
-    Route::post('/update-cockpit-impressum', [CockpitProfileController::class, 'updateImpressum'])
-        ->name('update.cockpit.impressum');
-    Route::post('/update-cockpit-about', [CockpitProfileController::class, 'updateAbout'])
-        ->name('update.cockpit.about');
-    Route::post('/update-cockpit-bulletpoints', [CockpitProfileController::class, 'updateTags'])
-        ->name('update.cockpit.bulletpoints');
-    Route::post('/update-cockpit-location', [CockpitProfileController::class, 'updateLocation'])
-        ->name('update.cockpit.location');
+    Route::get('/cockpit-load-profile', [CockpitProfileController::class, 'loadProfile']);
+    Route::post('/cockpit-update-publicity', [CockpitProfileController::class, 'updatePublicity']);
+    Route::post('/cockpit-update-avatar', [CockpitProfileController::class, 'updateAvatar']);
+    Route::post('/cockpit-update-credits', [CockpitProfileController::class, 'updateName']);
+    Route::post('/cockpit-update-impressum', [CockpitProfileController::class, 'updateImpressum']);
+    Route::post('/cockpit-update-about', [CockpitProfileController::class, 'updateAbout']);
+    Route::post('/cockpit-update-bulletpoints', [CockpitProfileController::class, 'updateTags']);
 });

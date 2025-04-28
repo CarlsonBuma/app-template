@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers\User\Auth;
 
-use Carbon\Carbon;
+use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Collections\UserCollection;
 use App\Http\Controllers\Access\AccessHandler;
+
 
 class UserAuthController extends Controller
 {
@@ -31,6 +32,37 @@ class UserAuthController extends Controller
     }
 
     /**
+     * Undocumented function
+     *
+     * @param Request $request
+     * @return void
+     */
+    public function authenticateUser(String $email, String $token, Request $request)
+    {
+        if( // Verify Signature & email token
+            $request->hasValidSignature() 
+            && $user = User::where([
+                'email' => $email,
+                'token' => $token
+            ])->first()
+        ) {
+            $token = $user->createToken('client-access')->accessToken;
+            $user->email_verified_at = $user->email_verified_at ?? now();
+            $user->token = null;
+            $user->save();
+
+            return response()->json([
+                'token' => $token,
+                'message' => 'Session started.'
+            ], 200);
+        }
+
+        return response()->json([
+            'message' => 'Link has been expired.',
+        ], 422);
+    }
+
+    /**
      * User Login 
      *  > Attemps-Middleware: throttle:6,1
      *  > Check Token: $email_verified_at
@@ -46,7 +78,7 @@ class UserAuthController extends Controller
             
             // Check if Email is verified
             $user = (object) Auth::user();
-            if($user && !Auth::user()->email_verified_at instanceof Carbon) {
+            if($user && is_null($user->email_verified_at)) {
                 return response()->json([
                     'status' => 'email_not_verified',
                     'email' => $credentials['email'],
@@ -55,7 +87,8 @@ class UserAuthController extends Controller
             }
 
             // Create client-access token
-            $token = $user->createToken('user-client-access')->accessToken;
+            $token = $user->createToken('client-access')->accessToken;
+            
             return response()->json([
                 'token' => $token,
                 'message' => 'Session started.'
@@ -75,7 +108,11 @@ class UserAuthController extends Controller
     public function logoutUser()
     {
         $user = (object) Auth::user();
+        $user->token = null;
+        $user->save();
+        
         $user->token()->delete();
+        
         return response()->json([
             'message' => 'Session removed.'
         ], 200);

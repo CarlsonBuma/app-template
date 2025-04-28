@@ -27,27 +27,34 @@
                     {{ props.row.price?.name ?? 'No price assigned.' }}<br>
                     <span class="text-caption"><em>"{{ props.row.price?.access_token ?? 'undefined' }}"</em></span>
                 </q-td>
-                <q-td key="quantity" :props="props">
-                    {{ props.row.quantity }}
-                </q-td>
                 <q-td key="price" :props="props">
                     {{ props.row.currency_code + ' ' + props.row.total }}
                 </q-td>
                 <q-td key="tax" :props="props">
                     {{ props.row.tax }}
                 </q-td>
-                <q-td key="active" :props="props">
-                    <q-icon name="verified" :color="props.row.access ? 'green' : 'grey'" />
-                </q-td>
-                <q-td key="expiration_date" :props="props">
-                    {{ $tp.date(props.row.access?.expiration_date ?? '-') }}
-                </q-td>
                 <q-td key="status" :props="props">
                     {{ props.row.status }}<br>
                     <span class="text-caption">{{ props.row.message }}</span>
                 </q-td>
-                <q-td key="updated_at" :props="props">
-                    {{ $tp.date(props.row.updated_at) }}
+                <q-td key="quantity" :props="props">
+                    {{ props.row.quantity }}
+                </q-td>
+                <q-td key="expiration_date" :props="props">
+                    {{ $tp.date(props.row.expiration_date ?? '-') }}
+                </q-td>
+                <q-td key="canceled_at" :props="props">
+                    {{ $tp.date(props.row.canceled_at ?? '-') }}
+                </q-td>
+                <q-td key="actions" :props="props">
+                    <q-btn 
+                        icon="cancel"
+                        size="sm"
+                        outline
+                        color="red"
+                        :disable="props.row.canceled_at"
+                        @click="$emit('cancel', props.row)"
+                    />
                 </q-td>
             </q-tr>
         </template>
@@ -66,6 +73,10 @@ export default {
         transactions: Array
     },
 
+    emits: [
+        'cancel',
+    ],
+
     setup() {
         const columnsTransaction = [
             {
@@ -80,11 +91,6 @@ export default {
                 align: 'left',
                 sortable: false
             }, {
-                name: 'quantity',
-                label: 'Quantity',
-                field: 'quantity',
-                align: 'left',
-            }, {
                 name: 'price',
                 label: 'Total (incl. Tax)',
                 field: 'price',
@@ -95,9 +101,15 @@ export default {
                 field: 'tax',
                 align: 'left',
             }, {
-                name: 'active',
-                label: 'has access',
-                field: 'active',
+                name: 'status',
+                label: 'Status',
+                field: 'status',
+                align: 'left',
+            }, {
+                name: 'quantity',
+                label: 'Quantity',
+                field: 'quantity',
+                align: 'left',
             }, {
                 name: 'expiration_date',
                 label: 'Expiration date',
@@ -105,15 +117,14 @@ export default {
                 align: 'left',
                 sortable: false
             }, {
-                name: 'status',
-                label: 'Status',
-                field: 'status',
+                name: 'canceled_at',
+                label: 'Canceled',
+                field: 'canceled_at',
                 align: 'left',
             }, {
-                name: 'updated_at',
-                label: 'Latest update',
-                field: 'updated_at',
-                align: 'left',
+                name: 'actions',
+                label: 'Actions',
+                field: 'actions',
             },
         ];
 

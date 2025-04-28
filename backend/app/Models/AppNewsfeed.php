@@ -5,9 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-/**
- * Seed by admin
- */
+
 class AppNewsfeed extends Model
 {
     use HasFactory;

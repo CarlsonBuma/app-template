@@ -2,7 +2,7 @@
 
     <PageWrapper>
         <CardWrapper
-            class="w-card-lg"
+            class="w-card"
             title="Email verification"
             iconHeader="verified"
             note="*We send the verification token to the provided email. After successful verification you are able to login."
@@ -53,6 +53,7 @@ export default {
                     'email': email,
                 });
                 this.message = this.$toast.success(response.data.message);
+                
                 this.$router.push('/')
             } catch (error) {
                 this.message = this.$toast.error(error.response ?? error);

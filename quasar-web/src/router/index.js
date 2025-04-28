@@ -2,7 +2,6 @@
 import { defineRouter } from '#q-app/wrappers'
 import { createRouter, createMemoryHistory, createWebHistory, createWebHashHistory } from 'vue-router';
 import routesAuth from './auth';
-import routesAccess from './access';
 import routesUser from './user';
 import routesCockpit from './cockpit';
 import routesBackpanel from './admin';
@@ -21,7 +20,6 @@ export default defineRouter(function (/* { store, ssrContext } */) {
 
     // Routes
     routes.push(...routesAuth);
-    routes.push(...routesAccess);
     routes.push(...routesUser);
     routes.push(...routesCockpit);
     routes.push(...routesBackpanel);

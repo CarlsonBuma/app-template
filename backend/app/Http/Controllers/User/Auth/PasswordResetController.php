@@ -31,7 +31,7 @@ class PasswordResetController extends Controller
         if($user = User::where('email', $data['email'])->first()) {
 
             // Send verification Link
-            $token = Str::random(255);
+            $token = Str::random(64);
             $verificationLink = Modulate::signedLink('password.reset', [
                 'email' => $user->email,
                 'token' => $token
@@ -44,6 +44,7 @@ class PasswordResetController extends Controller
         }
 
         return response()->json([
+            'fallback' => $verificationLink,
             'message' => 'The token has been sent to your email.',
         ], 200); 
     }

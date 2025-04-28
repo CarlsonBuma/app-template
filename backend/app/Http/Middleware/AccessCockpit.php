@@ -20,7 +20,7 @@ class AccessCockpit
     public function handle(Request $request, Closure $next)
     {   
         $accessToken = AccessHandler::$tokenCockpit;
-        if($userAccess = AccessHandler::checkUserAccessByToken(Auth::id(), $accessToken)) {
+        if($userAccess = AccessHandler::getUserAccessByToken(Auth::id(), $accessToken)) {
             $cockpit = $userAccess->belongs_to_user->has_cockpit;
             $request->attributes->set('cockpit', $cockpit);
             return $next($request);  

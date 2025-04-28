@@ -2,7 +2,7 @@
 
     <PageWrapper>
         <CardWrapper
-            class="w-card-lg"
+            class="w-card"
             title="Transfer account"
             iconHeader="switch_account"
             note="*After verify your account, you will be able to login with your new credentials."
@@ -164,7 +164,7 @@ export default {
                 // Login
                 this.$toast.success(response.data.message)
                 this.$user.setBearerToken(response.data.token);
-                this.$emit('authorize', '/user/dashboard');
+                this.$emit('authorize', '/user');
                 this.password = '';
                 this.password_confirm = '';
             } catch (error) {

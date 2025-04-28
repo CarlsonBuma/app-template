@@ -53,7 +53,7 @@
                 <q-icon
                     :name="iconHeader"
                     color="primary" 
-                    size="150px" 
+                    size="142px" 
                 />
             </div>
         </q-card-section>
@@ -62,6 +62,8 @@
         <q-card-section>
             <slot />
         </q-card-section>
+
+        <slot name="footer" />
         
         <!-- Note -->
         <q-separator v-if="note" />

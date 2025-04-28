@@ -2,151 +2,114 @@
 
     <PageWrapper :rendering="loading" >
         <template #navigation>
-            <NavCockpit />
+            <NavCockpit title="Community Profile" />
         </template>
 
-        <div class="w-avatar">
-            <!-- Make public -->
-            <CardSimple 
-                title="Join our community" 
-                tooltip="No logic defined yet."
-                tooltipIconColor="primary"
-            >
-                <template #actions>
-                    <div class="flex justify-end w-100">
-                        <q-toggle 
-                            v-model="cockpit.is_public"
-                            class="q-ml-md q-mr-sm" 
-                            dense 
-                        />
-                        <q-btn 
-                            @click="updatePublicity(cockpit.is_public)" 
-                            :disabled="!cockpit.name || !cockpit.avatar"
-                            outline 
-                            rounded
-                            size="sm"
-                            color="primary" 
-                            label="Update" 
-                        >
-                            <q-tooltip v-if="!cockpit.name || !cockpit.avatar">
-                                Cockpit name &amp; avatar are required.
-                            </q-tooltip>
-                        </q-btn>
-                    </div>
-                </template>
+        <div class="w-card-sm">
+            <!-- Title -->
+            <CardSimple>
+                <q-card-section>
+                    <q-input label="Name" v-model="cockpit.name" >
+                        <template #append >
+                            <q-btn 
+                                dense
+                                outline
+                                size="sm"
+                                icon="update"
+                                color="primary"
+                                @click="updateName(cockpit.name)"
+                            />
+                        </template>
+                    </q-input>
+                </q-card-section>
             </CardSimple>
 
             <!-- Avatar -->
-            <CardUploadImage 
-                :userAvatar="cockpit.avatar" 
-                :name="cockpit.name" 
-                :slogan="cockpit.slogan"
-                allowUpdate
-                @update="(src, avatar, deleteAvatar) => udpateAvatar(src, deleteAvatar)"
-                @upload="(src, avatar) => {
-                    cockpit.avatar = avatar;
-                }"
+            <ImageUpload 
+                :ratio="1" 
+                v-model="avatarImage"
+                @submit="(avatar) => udpateAvatar(avatar)"
             />
-
-            <!-- Name -->
-            <CardSimple title="Cockpit name">           
-                <q-card-section>
-                    <FormWrapper
-                        buttonText="Update name"
-                        buttonIcon="update"
-                        @submit="updateName(cockpit.name)"
-                    >
-                        <q-input v-model="cockpit.name" label="Cockpit name"/>
-                    </FormWrapper>
-                </q-card-section>
-            </CardSimple>
         </div>
 
         <div class="w-card-lg">
 
             <!-- About -->
-            <CardSimple title="About us">            
+            <CardSimple title="About us">    
+                <template #actions>
+                    <q-btn 
+                        outline
+                        size="sm"
+                        label="Update" 
+                        color="primary" 
+                        @click="updateAbout(cockpit.about)" 
+                    />
+                </template>         
                 <q-card-section>
-                    <FormWrapper
-                        buttonText="Update about"
-                        buttonIcon="update"
-                        @submit="updateAbout(cockpit.about)"
-                    >
-                        <q-input
-                            class="q-mt-md"
-                            label="About us"
-                            v-model="cockpit.about"
-                            maxlength="999"
-                            type="textarea"
-                            placeholder="Tell us about your business..."
-                            counter
-                        />
-                    </FormWrapper>
+                    <q-input
+                        class="q-mt-md"
+                        label="About us"
+                        v-model="cockpit.about"
+                        maxlength="999"
+                        type="textarea"
+                        placeholder="Tell us about your business..."
+                        counter
+                    />
                 </q-card-section>
             </CardSimple>
 
             <!-- Impressum -->
-            <CardSimple title="Impressum">        
+            <CardSimple title="Impressum">  
+                <template #actions>
+                    <q-btn 
+                        outline
+                        size="sm"
+                        label="Update" 
+                        color="primary" 
+                        @click="updateImpressum(cockpit.website, cockpit.contact)" 
+                    />
+                </template>         
                 <q-card-section>
-                    <FormWrapper
-                        buttonText="Update Impressum"
-                        buttonIcon="update"
-                        @submit="updateImpressum(cockpit.website, cockpit.contact)"
-                    >
-                        <q-input 
-                            v-model="cockpit.website" 
-                            label="Website" 
-                            placeholder="www.website.io"
-                        />
-                        <q-input
-                            v-model="cockpit.contact"
-                            maxlength="199"
-                            label="Contact details"
-                            type="textarea"
-                            counter
-                            autogrow
-                        />
-                    </FormWrapper>
-                </q-card-section>
-            </CardSimple>
-        </div>
-
-        <!-- SEO -->
-        <div class="w-avatar">
-            <!-- Geolocation -->
-            <CardSimple v-if="cockpit.location" title="Location">
-                <q-card-section>
-                    <FormWrapper
-                        buttonText="Update Location"
-                        buttonIcon="update"
-                        @submit="updateLocation(cockpit.location)"
-                    >
-                        <GoogleLocation v-model="cockpit.location" />
-                    </FormWrapper>
+                    <q-input 
+                        v-model="cockpit.website" 
+                        label="Website" 
+                        placeholder="www.website.io"
+                    />
+                    <q-input
+                        v-model="cockpit.contact"
+                        maxlength="199"
+                        label="Contact details"
+                        type="textarea"
+                        counter
+                        autogrow
+                    />
                 </q-card-section>
             </CardSimple>
 
             <!-- Bulletpoints -->
-            <CardSimple title="Bulletpoints">            
+            <CardSimple title="Bulletpoints">  
+                <template #actions>
+                    <q-btn 
+                        outline
+                        size="sm"
+                        label="Update" 
+                        color="primary" 
+                        @click="updateBulletpoints(cockpit.tags)" 
+                    />
+                </template>         
                 <q-card-section>
-                    <FormWrapper
-                        buttonText="Update bulletpoints"
-                        buttonIcon="update"
-                        @submit="updateBulletpoints(cockpit.tags)"
-                    >
-                        <q-select
-                            label="Enter bulletpoints..."
-                            v-model="cockpit.tags"
-                            use-input
-                            use-chips
-                            multiple
-                            max-values="9"
-                            counter
-                            hide-dropdown-icon
-                            input-debounce="0"
-                            new-value-mode="add-unique"
-                        />
-                    </FormWrapper>
+                    <q-select
+                        label="Enter bulletpoints..."
+                        v-model="cockpit.tags"
+                        use-input
+                        use-chips
+                        multiple
+                        max-values="9"
+                        counter
+                        hide-dropdown-icon
+                        input-debounce="0"
+                        new-value-mode="add-unique"
+                    />
                 </q-card-section>
             </CardSimple>
         </div>
@@ -156,30 +119,28 @@
 
 <script>
 import { ref } from 'vue'
-import { regRules } from 'src/boot/modules/globals';
-import NavCockpit from 'src/components/navigation/NavCockpit.vue';
-import FormWrapper from 'src/components/global/FormWrapper.vue';
-import GoogleLocation from 'src/components/GoogleLocation.vue';
-import CardUploadImage from 'components/CardUploadImage.vue';
+import ImageUpload from 'components/ImageUpload.vue';
 
 export default {
     name: 'CockpitProfile',
     components: {
-        NavCockpit, FormWrapper, GoogleLocation, CardUploadImage
+        ImageUpload
     },
 
     setup() {
         return {
-            loading: ref(true),
-            regRules
+            redirectURL: '/community/',
+            loading: ref(true)
         };
     },
 
     data() {
         return {
-            cockpit: {
-                location: {}
-            }
+            // redirectURL: process.env.APP_BASE_URL + '/community/',
+            cockpit: {},
+            avatarImage: {
+                img_src: '',
+            },
         }
     },
 
@@ -191,8 +152,9 @@ export default {
         async loadAttributes() {
             try {
                 this.loading = true;
-                const cockpitResponse = await this.$axios.get('/load-cockpit-profile');
+                const cockpitResponse = await this.$axios.get('/cockpit-load-profile');
                 this.cockpit = cockpitResponse.data.cockpit;
+                this.avatarImage.img_src = this.cockpit.avatar
             } catch (error) {
                 this.$toast.error(error.response ?? error)
             } finally {
@@ -203,7 +165,7 @@ export default {
         async updatePublicity(cockpit_isPublic) {
             try {
                 this.$toast.load();
-                const response = await this.$axios.post('/update-cockpit-public-access', {
+                const response = await this.$axios.post('/cockpit-update-publicity', {
                     is_public: cockpit_isPublic
                 });
                 this.$toast.success(response.data.message);
@@ -214,14 +176,12 @@ export default {
             }
         },
 
-        async udpateAvatar(src, deleteAvatar) {
+        async udpateAvatar(image) {
             try {
-                if(!src && !deleteAvatar) return;
                 const formData = new FormData;
-                if(src) formData.append("src", src);
-                formData.append("avatar_delete", deleteAvatar ? '1' : '0');
+                if(image.file) formData.append("file", image.file);
                 this.$toast.load();
-                const response = await this.$axios.post('/update-cockpit-avatar', formData);
+                const response = await this.$axios.post('/cockpit-update-avatar', formData);
                 this.$toast.success(response.data.message);
             } catch (error) {
                 this.$toast.error(error.response ?? error);
@@ -231,7 +191,7 @@ export default {
         async updateName(name) {
             try {
                 this.$toast.load();
-                const response = await this.$axios.post('/update-cockpit-credits', {
+                const response = await this.$axios.post('/cockpit-update-credits', {
                     name: name,
                 });
                 this.$toast.success(response.data.message);
@@ -243,29 +203,8 @@ export default {
         async updateAbout(about) {
             try {
                 this.$toast.load();
-                const response = await this.$axios.post('/update-cockpit-about', {
+                const response = await this.$axios.post('/cockpit-update-about', {
                     about: about,
-                });
-                this.$toast.success(response.data.message);
-            } catch (error) {
-                this.$toast.error(error.response ?? error)
-            }
-        },
-
-        async updateLocation(location) {
-            try {
-                if(!location.place_id) throw 'Please enter address.';
-                this.$toast.load();
-                const response = await this.$axios.post('/update-cockpit-location', {
-                    place_id: location.place_id,
-                    lng: location.lng,
-                    lat: location.lat,
-                    address: location.address,
-                    country: location.country,
-                    country_short: location.country_short,
-                    area: location.area,
-                    area_short: location.area_short,
-                    zip_code: location.zip_code
                 });
                 this.$toast.success(response.data.message);
             } catch (error) {
@@ -276,7 +215,7 @@ export default {
         async updateBulletpoints(tags) {
             try {
                 this.$toast.load();
-                const response = await this.$axios.post('/update-cockpit-bulletpoints', {
+                const response = await this.$axios.post('/cockpit-update-bulletpoints', {
                     tags: tags,
                 });
                 this.$toast.success(response.data.message);
@@ -287,9 +226,8 @@ export default {
 
         async updateImpressum(website, contact) {
             try {
-                if(!this.regRules.sanitizeLink.test(website)) throw 'Invalid link.'
                 this.$toast.load();
-                const response = await this.$axios.post('/update-cockpit-impressum', {
+                const response = await this.$axios.post('/cockpit-update-impressum', {
                     website: website,
                     contact: contact,
                 });

@@ -190,7 +190,7 @@
 
                                     <!-- Feature 1: Cockpit -->
                                     <q-item 
-                                        v-if="$user.access.tokens[$env.APP_ACCESS_COCKPIT]" 
+                                        v-if="$user.access.tokens[accessTokenCockpit]" 
                                         @click="$router.push('/cockpit/dashboard')" 
                                         clickable v-ripple 
                                     >
@@ -215,7 +215,7 @@
                                     <!-- Backpanel -->
                                     <q-item 
                                         clickable v-ripple
-                                        v-if="$user.access.tokens[$env.APP_ACCESS_ADMIN]" 
+                                        v-if="$user.access.tokens[accessTokenAdmin]" 
                                         @click="$router.push('/admin/dashboard')"
                                     >
                                         <q-item-section avatar>
@@ -249,6 +249,13 @@ export default {
         'authUser',
         'logoutUser',
     ],
+
+    setup() {
+        return {
+            accessTokenAdmin: process.env.APP_ACCESS_ADMIN,
+            accessTokenCockpit: process.env.APP_ACCESS_COCKPIT
+        };
+    },
 
     methods: {
         async goMemberArea() {

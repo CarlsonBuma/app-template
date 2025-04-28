@@ -69,7 +69,7 @@ class Kernel extends HttpKernel
         // Access
         'email_verified' => \App\Http\Middleware\EmailVerified::class,
         'access_admin' => \App\Http\Middleware\AccessAdmin::class,
-        'access_cockpit' => \App\Http\Middleware\AccessCockpit::class,
+        'access_cockpit' => \App\Http\Middleware\AccessCockpit::class,      // Subscription
 
         // Paddle Management
         'paddle_webhook_verified' => \App\Http\Middleware\PaddleWebhookVerification::class,

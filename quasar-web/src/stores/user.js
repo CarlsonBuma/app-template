@@ -27,7 +27,7 @@ const useUserStore = defineStore('user', {
     actions: {
 
         setAppAccess(accessToken = '', expirationDate = '', quantity = 0) {
-            if(!accessToken || !expirationDate) return;
+            if(!accessToken) return;
             this.access.tokens[accessToken] = {
                 id: accessToken,
                 expiration_date: expirationDate,
@@ -52,21 +52,21 @@ const useUserStore = defineStore('user', {
          * After successful login 
          */
         setBearerToken(sessionToken) {
-            LocalStorage.set(process.env.SESSION_NAME, sessionToken)
+            LocalStorage.set(process.env.APP_SESSION_NAME, sessionToken)
         },
 
         /**
          * Check current session
          */
         checkBearerTokenSet() {
-            return LocalStorage.getItem(process.env.SESSION_NAME) ? true : false
+            return LocalStorage.getItem(process.env.APP_SESSION_NAME) ? true : false
         },
 
         /**
          * remove bearer token from local storage
          */
         removeBearerToken() {
-            LocalStorage.remove(process.env.SESSION_NAME)
+            LocalStorage.remove(process.env.APP_SESSION_NAME)
         },
 
         /**
@@ -74,7 +74,7 @@ const useUserStore = defineStore('user', {
          * Set new user session
          */
         setSession() {
-            const token = LocalStorage.getItem(process.env.SESSION_NAME);
+            const token = LocalStorage.getItem(process.env.APP_SESSION_NAME);
             if(token) {
                 axios.defaults.headers.common['Authorization'] = `Bearer ${token}`
                 this.access.bearer_token = true;

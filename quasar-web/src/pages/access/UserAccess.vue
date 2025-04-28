@@ -2,7 +2,7 @@
 
     <PageWrapper :rendering="loading" >
         <template #navigation>
-            <NavUser />
+            <NavUser title="Account Access"/>
         </template>
 
         <!-- Price -->
@@ -15,7 +15,7 @@
             />
             <SectionNote>
                 By purchasing tokens through payments, you are able to gain access to our provided app features.<br>
-                For further information see our <router-link to="/pricing">Pricing details</router-link> 
+                For further information see our <router-link to="/ecosystem">Pricing details</router-link> 
                 and <router-link to="/legal">Terms &amp; Conditions</router-link>.
             </SectionNote>
         </div>
@@ -103,12 +103,11 @@ export default {
         async loadAccess(){
             try {
                 this.loading = true;
-                const response = await this.$axios.get('load-user-access')
+                const response = await this.$axios.get('user-load-access')
                 this.prices = response.data.prices;
                 this.transactions = response.data.transactions;
             } catch (error) {
                 this.$toast.error(error.response ?? error);
-                console.log('user.access.error', error.response ?? error)
             } finally {
                 this.loading = false;
             }
@@ -121,7 +120,7 @@ export default {
                 if(data?.name === 'checkout.completed') {
                     const transactionID = data.data?.transaction_id;
                     const customerID = data.data?.customer?.id;
-                    await this.$axios.post('initialize-user-checkout', {
+                    await this.$axios.post('user-initialize-checkout', {
                         transaction_token: transactionID,
                         customer_token: customerID
                     });
@@ -131,7 +130,6 @@ export default {
                 }
             } catch (error) {
                 this.$toast.error(error.response ?? error)
-                console.log('user.checkout.error', error.response ?? error)
             }
         },
 
@@ -146,7 +144,7 @@ export default {
 
                     // Request
                     this.intervalRequests++;
-                    const response = await this.$axios.post('verify-user-checkout', {
+                    const response = await this.$axios.post('user-verify-checkout', {
                         'transaction_token': transactionID,
                     });
 
@@ -176,7 +174,6 @@ export default {
                     clearInterval(intervalId);
                     this.intervalRequests = 0;
                     this.$toast.error(error.response ?? error)
-                    console.log('user.transaction.verification.error', error.response ?? error);
                 }
             }, 5000);
         },
@@ -186,14 +183,13 @@ export default {
         async cancelSubscription(price) {
             try {
                 this.$toast.load();
-                const response = await this.$axios.post('cancel-user-subscription' , {
+                const response = await this.$axios.post('user-cancel-subscription' , {
                     'price_token': price.price_token,
                 });
                 this.$toast.success(response.data.message);
                 price.has_active_subscription = false;
             } catch (error) {
                 this.$toast.error(error.response ?? error);
-                console.log('subscription.cancel.error', error.response ?? error)
             }
         },
 

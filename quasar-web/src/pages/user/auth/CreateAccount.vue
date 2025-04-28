@@ -2,7 +2,7 @@
 
     <PageWrapper>
         <CardWrapper
-            class="w-card-lg"
+            class="w-card"
             :goBack="true"
             title="Create account"
             iconHeader="admin_panel_settings"

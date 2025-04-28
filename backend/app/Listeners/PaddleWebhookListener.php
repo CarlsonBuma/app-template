@@ -5,11 +5,12 @@
 use Exception;
 use Illuminate\Http\Request;
 use App\Models\PaddleTransactions;
+use Illuminate\Support\Facades\Log;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\Access\AccessHandler;
 use App\Http\Controllers\Access\PaddlePriceHandler;
-use App\Http\Controllers\Access\PaddleSubscriptionHandler;
 use App\Http\Controllers\Access\PaddleTransactionHandler;
+use App\Http\Controllers\Access\PaddleSubscriptionHandler;
 
 class PaddleWebhookListener extends Controller
 {
@@ -47,8 +48,11 @@ class PaddleWebhookListener extends Controller
             // Prepare
             $payload = $request->json()->all();
             $contentData = $payload['data'];
-            if(!isset($contentData)) return;
+            if(empty($contentData)) return;
             $paddleStatus = $payload['event_type'] ?? null;
+
+            // Logs
+            Log::channel('webhooks')->info("Webhook received: $paddleStatus, " . now(), ['data' => $contentData]);
 
             // Handle accoring webhook type
             if ($paddleStatus === 'transaction.completed') {
@@ -69,6 +73,7 @@ class PaddleWebhookListener extends Controller
                 $Price->updatePriceByWebhook($contentData);
             }
         } catch (Exception $e) {
+            Log::channel('webhooks')->error("WebhookHandler error: " . now(), ['error' => $e->getMessage()]);
             return;
         }
     }
@@ -144,6 +149,7 @@ class PaddleWebhookListener extends Controller
             // Close transaction, after access granted
             $PaddleTransaction->closeTransaction();
         } catch (Exception $e) {
+            Log::channel('webhooks')->error("InitiateUserAccess error: " . now(), ['error' => $e->getMessage()]);
             $PaddleTransaction->transaction?->update([
                 'status' => 'failed',
                 'message' => 'webhook.access.error: ' . $e->getMessage()
@@ -159,19 +165,19 @@ class PaddleWebhookListener extends Controller
      */
     private function cancelUserAccess(array $contentData)
     {
-        $PaddleTransaction = new PaddleTransactionHandler(
-            PaddleTransactions::where('transaction_token', $contentData['id'])->first()
-        );
-
-        AccessHandler::cancelUserAccessByTransaction(
-            $PaddleTransaction->transaction,
-            'inactive',
-            'canceled.by.webhook'
-        );
-
-        $PaddleTransaction->transaction->update([
-            'status' => $PaddleTransaction->status,
-            'message' => 'webhook.access.removed',
-        ]);
+        try {
+            $PaddleTransaction = new PaddleTransactionHandler(
+                PaddleTransactions::where('transaction_token', $contentData['id'])->first()
+            );
+    
+            if($transaction = $PaddleTransaction?->transaction) {
+                AccessHandler::cancelTransactionAccess(
+                    $transaction,
+                    'canceled.by.webhook'
+                );
+            }
+        } catch (Exception $e) {
+            Log::channel('webhooks')->error("CancelUserAccess error: " . now(), ['error' => $e->getMessage()]);
+        }
     }
 }

@@ -3,12 +3,11 @@
 namespace App\Models;
 
 use App\Models\Cockpit;
+use App\Models\CockpitEvents;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-/**
- * Seed by new geolocation requests
- */
+
 class AppGeolocations extends Model
 {
     use HasFactory;
@@ -40,7 +39,7 @@ class AppGeolocations extends Model
      * @param array $data
      * @return int|null
      */
-    public function add_new_entry(array $data): ?int 
+    public function add_new_entry(array $data): int 
     {
         if(isset($data['place_id'])) {
             return $this->firstOrCreate([
@@ -48,15 +47,15 @@ class AppGeolocations extends Model
             ], [
                 'lng' =>  $data['lng'],
                 'lat' =>  $data['lat'],
-                'address' =>  $data['address'],
-                'country' =>  $data['country'],
-                'country_short' =>  $data['country_short'],
-                'area' =>  $data['area'],
-                'area_short' =>  $data['area_short'],
-                'zip_code' =>  $data['zip_code']
+                'address' =>  $data['address'] ?? null,
+                'country' =>  $data['country'] ?? null,
+                'country_short' =>  $data['country_short'] ?? null,
+                'area' =>  $data['area'] ?? null,
+                'area_short' =>  $data['area_short'] ?? null,
+                'zip_code' =>  $data['zip_code'] ?? null
             ])->id;
         }
 
-        return null;
+        return 0;
     }
 }

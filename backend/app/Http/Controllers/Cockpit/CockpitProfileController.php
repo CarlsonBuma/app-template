@@ -2,15 +2,12 @@
 
 namespace App\Http\Controllers\Cockpit;
 
-use Exception;
 use App\Models\Cockpit;
-use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Http\Classes\Modulate;
-use App\Models\AppGeolocations;
+use App\Http\Classes\FileStorage;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Storage;
 use App\Http\Collections\CockpitCollection;
 
 
@@ -65,29 +62,20 @@ class CockpitProfileController extends Controller
      */
     public function updateAvatar(Request $request) 
     {
-        $data = $request->validate([
-            'src' => ['nullable', 'mimes:jpg,jpeg,png', 'max:2048'],     // Update Banner if set
-            'avatar_delete' => ['required', 'boolean'],                  // Check if user wants to delete Avatar
+        $cockpit = $request->attributes->get('cockpit');
+        $request->validate([
+            'file' => ['nullable', 'mimes:jpg,jpeg,png', 'max:10240'],
         ]);
 
-        // Process Avatar
-        $Cockpit = Cockpit::where('user_id', Auth::id())->first();
-        if(!$Cockpit) throw new Exception('Cockpit does not exist.');
-        $currentAvatarImageLink = $Cockpit->avatar;
-        if($data['avatar_delete']) {
-            if($currentAvatarImageLink) Storage::disk('cockpit')->delete($currentAvatarImageLink);
-            $currentAvatarImageLink = null;
-        } else if(isset($data['src'])) {
-            if($currentAvatarImageLink) Storage::disk('cockpit')->delete($currentAvatarImageLink);  
-            $fileExtension = $request->file('src')->extension();
-            $currentAvatarImageLink = Auth::id() . '-' . Str::random(45) . '.' . $fileExtension;
-            Storage::putFileAs('public/cockpit', $request->file('src'), $currentAvatarImageLink);
-        }
-
-        // Add Link to image
-        $Cockpit->update([
-            'avatar' => $currentAvatarImageLink,
-        ]);
+        $imgSrc = FileStorage::storeFile(
+            $request->file('file'),
+            FileStorage::$cockpitLocation,
+            $cockpit->avatar,
+            $cockpit->id,
+        );
+        
+        $cockpit->avatar = $imgSrc;
+        $cockpit->save();
 
         return response()->json([
             'message' => 'Avatar updated.',
@@ -184,42 +172,6 @@ class CockpitProfileController extends Controller
 
         return response()->json([
             'message' => 'Bulletpoints updated.',
-        ], 200);
-    }
-
-    /**
-     * Update Geolocation
-     *
-     * @param Request $request
-     * @return void
-     */
-    public function updateLocation(Request $request) 
-    {
-        $data = $request->validate([
-            'place_id' => ['nullable', 'string', 'max:255'],
-            'lng' => ['nullable', 'numeric'],
-            'lat' => ['nullable', 'numeric'],
-            'address' => ['nullable', 'string', 'max:255'],
-            'country' => ['nullable', 'string', 'max:99'],
-            'country_short' => ['nullable', 'string', 'max:99'],
-            'area' => ['nullable', 'string', 'max:99'],
-            'area_short' => ['nullable', 'string', 'max:99'],
-            'zip_code' => ['nullable', 'string', 'max:19'],
-        ]);
-
-        $cockpit = Cockpit::where('user_id', Auth::id())->first();
-        if(!$data['address']) {
-            $cockpit->location_id = null;
-            $cockpit->save();
-        } else {
-            $geolocation = new AppGeolocations();
-            $cockpit->update([
-                'location_id' => $geolocation->add_new_entry($data),
-            ]);
-        }
-
-        return response()->json([
-            'message' => 'Location updated.',
         ], 200);
     }
 }

@@ -13,7 +13,7 @@ return new class extends Migration
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('transaction_id')->nullable();
             $table->string('access_token')->nullable();
-            $table->unsignedBigInteger('quantity')->default(1);
+            $table->integer('quantity')->default(0);
             $table->date('expiration_date')->nullable();
             $table->boolean('is_active')->default(false);
             $table->string('status')->nullable();

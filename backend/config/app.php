@@ -58,6 +58,8 @@ return [
 
     'asset_url' => env('CLIENT_ASSET_URL', 'http://localhost'),
 
+    'unsafe_http_request' => (bool) env('CLIENT_ALLOW_HTTP_REQUEST', false),
+
     /*
     |--------------------------------------------------------------------------
     | Application Timezone

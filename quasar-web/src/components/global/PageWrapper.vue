@@ -11,7 +11,7 @@
                     : 'bg-grey-1 text-dark'"
             >
                 <slot name="navigation">
-                    <NavUser v-if="$user.access.user" />
+                    <NavUser v-if="$user?.access.user" />
                 </slot>
             </div>
             
@@ -21,10 +21,15 @@
                 :disable="!allowRefresh" 
                 @refresh="(done) => refresh(done)" 
             >
+                <!-- Header -->
+                <slot name="header" />
+
+                <!-- Content -->
                 <div 
                     class="row justify-center" 
-                    :class="noMargin ? '' : 'q-px-md-md q-py-xl'" 
+                    :class="noMargin ? '' : 'q-px-md-md q-py-lg'" 
                 >
+                    <!-- Loading -->
                     <LoadingData 
                         v-if="rendering"
                         text="Processing data..."
@@ -42,17 +47,17 @@
 
         <!-- Footer -->
         <q-footer
-                id="app-footer"
-                bordered 
-                v-if="showFooter"
-                :class="{
-                    'bg-dark': $q.dark.isActive,
-                    'bg-grey-1': !$q.dark.isActive,
-                    'text-white': $q.dark.isActive,
-                    'text-dark': !$q.dark.isActive,
-                }"
-            >
-                <NavFoot />
+            id="app-footer"
+            bordered 
+            v-if="showFooter"
+            :class="{
+                'bg-dark': $q.dark.isActive,
+                'bg-grey-1': !$q.dark.isActive,
+                'text-white': $q.dark.isActive,
+                'text-dark': !$q.dark.isActive,
+            }"
+        >
+            <NavFoot />
         </q-footer>
     </div>
 

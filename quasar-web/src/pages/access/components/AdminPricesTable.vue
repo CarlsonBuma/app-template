@@ -26,9 +26,18 @@
                 <q-td key="id" :props="props">
                     {{ props.rowIndex + 1 }}
                 </q-td>
+                <q-td key="is_active" :props="props">
+                    <q-checkbox v-model="props.row.is_active"/>
+                </q-td>
                 <q-td key="name" :props="props">
                     <span>{{ props.row.name }}</span><br>
                     <span class="text-caption"><em>"{{ props.row.access_token }}"</em></span>
+                </q-td>
+                <q-td key="price" :props="props">
+                    {{ props.row.currency_code + ' ' + props.row.price }}
+                </q-td>
+                <q-td key="billing_type" :props="props">
+                    {{ props.row.type }}
                 </q-td>
                 <q-td key="billing_period" :props="props">
                     {{ 
@@ -39,9 +48,6 @@
                                 : 'none'
                     }}
                 </q-td>
-                <q-td key="billing_type" :props="props">
-                    {{ props.row.type }}
-                </q-td>
                 <q-td key="trial_mode" :props="props">
                     {{ 
                         props.row.trial_frequency 
@@ -49,14 +55,8 @@
                             : 'none' 
                     }}
                 </q-td>
-                <q-td key="price" :props="props">
-                    {{ props.row.currency_code + ' ' + props.row.price }}
-                </q-td>
                 <q-td key="status" :props="props">
                     {{ props.row.status }}
-                </q-td>
-                <q-td key="is_active" :props="props">
-                    <q-checkbox v-model="props.row.is_active"/>
                 </q-td>
                 <q-td key="actions" :props="props">
                     <q-btn 
@@ -97,29 +97,17 @@ export default {
                 field: 'id',
                 align: 'left',
             }, {
+                name: 'is_active',
+                label: 'Published',
+                field: 'is_active',
+                note: 'Whether the price is active within app.'
+            }, {
                 name: 'name',
-                label: 'Token',
+                label: 'Access Token',
                 field: 'name',
                 align: 'left',
                 sortable: false,
                 note: 'Tokens grant users access to specific features within the app.'
-            }, {
-                name: 'billing_period',
-                label: 'Access period',
-                field: 'billing_period',
-                align: 'left',
-                note: 'Duration of access to the provided token.'
-            }, {
-                name: 'billing_type',
-                label: 'Billing type',
-                field: 'billing_type',
-                align: 'left',
-                note: 'One-time purchases are charged a single time. Subscriptions allow for periodic renewal of access, with the option to cancel at any time.'
-            }, {
-                name: 'trial_mode',
-                label: 'Trial mode',
-                field: 'trial_mode',
-                align: 'left',
             }, {
                 name: 'price',
                 label: 'Price',
@@ -127,16 +115,28 @@ export default {
                 align: 'left',
                 sortable: false
             }, {
+                name: 'billing_type',
+                label: 'Billing type',
+                field: 'billing_type',
+                align: 'left',
+                note: 'One-time purchases are charged a single time. Subscriptions allow for periodic renewal of access, with the option to cancel at any time.'
+            }, {
+                name: 'billing_period',
+                label: 'Access period',
+                field: 'billing_period',
+                align: 'left',
+                note: 'Duration of access to the provided token.'
+            }, {
+                name: 'trial_mode',
+                label: 'Trial mode',
+                field: 'trial_mode',
+                align: 'left',
+            }, {
                 name: 'status',
                 label: 'Paddle status',
                 field: 'status',
                 note: 'Whether the price is active within Paddle.'
             }, {
-                name: 'is_active',
-                label: 'is public',
-                field: 'is_active',
-                note: 'Whether the price is active within app.'
-            },{
                 name: 'actions',
                 label: 'Actions',
                 field: 'actions',

@@ -52,7 +52,7 @@ class PaddleWebhookVerification
 
             // Calculate the HMAC-SHA256 hash using your Paddle Webhook Secret
             $signedPayload = "{$timestamp}:{$payload}";
-            $calculatedSignature = hash_hmac('sha256', $signedPayload, env('PADDLE_WEBHOOK_SECRET'));
+            $calculatedSignature = hash_hmac('sha256', $signedPayload, config('paddle.webhook_secret'));
 
             // Verified
             if(hash_equals($calculatedSignature, $receivedSignature)) {

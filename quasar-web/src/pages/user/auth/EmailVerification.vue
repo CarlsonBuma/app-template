@@ -1,7 +1,7 @@
 <template>
     <PageWrapper>
         <CardWrapper
-            class="w-card-lg"
+            class="w-card"
             title="Email verification"
             iconHeader="verified"
             note="*After verify your email, you will be logged into your account."
@@ -119,7 +119,7 @@ export default {
                 // Login
                 this.$toast.success(response.data.message)
                 this.$user.setBearerToken(response.data.token);
-                this.$emit('authorize', '/user/dashboard');
+                this.$emit('authorize', '/user');
             } catch (error) {
                 this.$toast.error(error.response ?? error);
             } finally {

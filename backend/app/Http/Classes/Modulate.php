@@ -15,13 +15,13 @@ abstract class Modulate
      * @param Array|null $params
      * @return String
      */
-    static public function signedLink(String $route, Array $params = null): String
+    static public function signedLink(?string $route, ?array $params): String
     {
         // BaseURL (SERVER)
         $assignedBaseURL = URL::to('/') . '/api';
         
         // External URL (APP)
-        $appBaseURL = env('CLIENT_URL');
+        $appBaseURL = config('app.url');
 
         // Create Signed Laravel Route
         $signedVerificationLink = URL::temporarySignedRoute(
@@ -38,26 +38,23 @@ abstract class Modulate
     /**
      * Sanitize link
      *
-     * @param string $rawPath
+     * @param string|null $rawPath
      * @return string|null
      */
-    static public function sanitizeLink(string $rawPath = ''): string|null
+    static public function sanitizeLink(?string $rawPath): string|null
     {
-        $string = null;
-        if(!$rawPath) return null;
-        if( // Validate
-            strpos($rawPath, 'http://') !== false 
-            || strpos($rawPath, 'https://') !== false 
-            || strpos($rawPath, 'www.') !== false
-        ) {
-            // Replace characters before 'https', 'http' by 'www.'
-            $string = preg_replace('/^.*?(https?:\/\/|www\.)/i', '', $rawPath);
-            $string = str_replace(array('http://','https://', 'www.', 'http://www.', 'https://www.'), '', $string);
-            $string = 'www.' . $string;
+        if (is_null($rawPath) 
+            || (!filter_var($rawPath, FILTER_VALIDATE_URL) 
+                && !preg_match('/^www\./i', $rawPath))
+        ) return null;
 
-            // Remove all special characters
-            $string =  preg_replace("#[^a-zA-Z0-9_\-./:@%+~=?&\#]#", "", $string);   
-        }
+        // Replace characters before 'https', 'http' by 'www.'
+        $string = preg_replace('/^.*?(https?:\/\/|www\.)/i', '', $rawPath);
+        $string = str_replace(['http://', 'https://', 'www.', 'http://www.', 'https://www.'], '', $string);
+        $string = 'www.' . $string;
+
+        // Remove all special characters
+        // $string = preg_replace('#[^a-zA-Z0-9_\-./:@%+~=?&\#]#', '', $string);
 
         return $string;
     }

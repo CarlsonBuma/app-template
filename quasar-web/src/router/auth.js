@@ -44,6 +44,11 @@ const routesAuth = [
         path: "/login",
         name: "UserLogin",
         component: () => import('src/pages/user/auth/UserLogin.vue'),
+    }, {
+        path: "/authenticate/:email?/:token?",
+        name: "UserAuth",
+        props: true,
+        component: () => import('src/pages/user/auth/UserAuth.vue'),
     }
 ];
 

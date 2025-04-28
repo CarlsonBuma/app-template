@@ -1,6 +1,7 @@
 <style lang="sass" scoped>
 #map-div
-    height: 460px
+    height: 420px
+    width: 620px
 #map-circle-geolocation
     position: absolute
     border-radius: 50%
@@ -20,9 +21,10 @@
 
 <template>
 
-    <div class="row">
-        <div class="col-12 q-pa-md">
+    <div class="row" >
+        <div class="w-100 q-px-xl q-pt-sm">
             <q-slider
+                dense
                 switch-label-side
                 v-model="mapSearchDiameter"
                 :min="1"
@@ -35,57 +37,55 @@
         <q-separator />
         
         <!-- Googlemaps -->
-        <div class="col-12">
-            <GoogleMap
-                id="map-div"
-                ref="mapRef"
-                :zoom="mapZoomLevel"
-                :api-key="googleAPIKey" 
-                :center="{
-                    lat: initialLatitude ? initialLatitude : 0, 
-                    lng: initialLongitude ? initialLongitude : 0
-                }"
-                @center_changed="updateLocationCenter()"
-                @zoom_changed="calcGeolocationSearchRadius(mapSearchDiameter)"
-            >
-                <CustomMarker 
-                    :options="{ 
-                        position: {
-                            lat: latitude, 
-                            lng: longitude
-                        }, 
-                        anchorPoint: 'BOTTOM_CENTER',
-                    
-                    streetViewControl: false,
-                }">
-                    <!-- CircleDiameter -->
-                    <div
-                        id="map-circle-geolocation"
-                        :style="{
-                            top: -mapSearchDiameter + 'px',
-                            left: -mapSearchDiameter + 'px',
-                            width: mapSearchDiameter * 2 + 'px',
-                            height: mapSearchDiameter * 2 + 'px',
-                        }"
-                    >
-                        <div id="map-cirlcle-geolocation-dot"/>
-                    </div>
-                </CustomMarker>
-            </GoogleMap>
-        </div>
+        <GoogleMap
+            id="map-div"
+            ref="mapRef"
+            :zoom="mapZoomLevel"
+            :api-key="googleAPIKey" 
+            :center="{
+                lat: initialLatitude ? initialLatitude : 0, 
+                lng: initialLongitude ? initialLongitude : 0
+            }"
+            @center_changed="updateLocationCenter()"
+            @zoom_changed="calcGeolocationSearchRadius(mapSearchDiameter)"
+        >
+            <CustomMarker 
+                :options="{ 
+                    position: {
+                        lat: latitude, 
+                        lng: longitude
+                    }, 
+                    anchorPoint: 'BOTTOM_CENTER',
+                
+                streetViewControl: false,
+            }">
+                <!-- CircleDiameter -->
+                <div
+                    id="map-circle-geolocation"
+                    :style="{
+                        top: -mapSearchDiameter + 'px',
+                        left: -mapSearchDiameter + 'px',
+                        width: mapSearchDiameter * 2 + 'px',
+                        height: mapSearchDiameter * 2 + 'px',
+                    }"
+                >
+                    <div id="map-cirlcle-geolocation-dot"/>
+                </div>
+            </CustomMarker>
+        </GoogleMap>
 
         <!-- Geolocation -->
-        <div class="col-12 text-center">
+        <!-- <div class="col-12 text-center">
             <span class="text-caption text-grey">
-                {{ computedMapSearchDistance }}, Lat: {{ latitude }}, Lng: {{ longitude }} 
+              {{ computedMapSearchDistance }}, Lat: {{ latitude }}, Lng: {{ longitude }}  
             </span>
-        </div>
+        </div>-->
     </div>
 
 </template>
 
 <script>
-import { ref, computed } from 'vue';
+import { ref, computed, getCurrentInstance } from 'vue';
 import { GoogleMap, CustomMarker } from "vue3-google-map";
 
 export default {
@@ -103,65 +103,63 @@ export default {
         'update'
     ],
 
-    setup(props, context) {
-        const googleAPIKey = process.env.APP_GOOGLE_API_KEY ?? '';
+    setup() {
+        const { proxy } = getCurrentInstance();
+        const googleAPIKey = process.env.APP_GOOGLE_WEB_KEY ?? '';
+        const appLocation = proxy.$tp.get_cookie('client_location') || {};
+        
         const mapRef = ref(null);
-        const mapSearchDiameter = ref(50);
-        const mapSearchRadius = ref(4096)      // [m]
-        const mapDefaultZoom = ref(10)
-        const mapZoomLevel = ref(10)
-        const initialLatitude = ref(0)
-        const initialLongitude = ref(0)
-        const latitude = ref(0)
-        const longitude = ref(0)
-        const allowGeolocation = ref(false)
+        const mapSearchDiameter = ref(appLocation.diameter || 100);
+        const mapSearchRadius = ref(appLocation.radius || 2097152)      // [m]
+        const mapDefaultZoom = ref(appLocation.zoom || 2)
+        const mapZoomLevel = ref(appLocation.zoom || 2)
+        
+        const initialLatitude = ref(appLocation.lat || 47.0)
+        const initialLongitude = ref(appLocation.lng || 8.0)
+        const latitude = ref(appLocation.lat || 47.0)
+        const longitude = ref(appLocation.lng || 8.0)
 
-        // Get Client Location
-        navigator.geolocation.getCurrentPosition((position) => {
-            initialLatitude.value = position.coords.latitude
-            initialLongitude.value = position.coords.longitude
-            latitude.value = position.coords.latitude
-            longitude.value = position.coords.longitude
-            context.emit('update', mapSearchRadius.value, latitude.value, longitude.value)
-        })
-
-        // Calcultate Distance
-        const computedMapSearchDistance = computed(() => {
-            return mapSearchRadius.value > 1000 
-                ? 'r ≈ ' + Math.round(mapSearchRadius.value / 1000 * 10) / 10 + 'km'     // [m] -> [km]
-                : 'r ≈ ' + mapSearchRadius.value + 'm'                                  
-        })
-
-        const setGeolocationStats = () => {
-            initialLatitude.value = latitude.value;
-            initialLongitude.value = longitude.value;
-        }
-
-        const calcGeolocationSearchRadius = (factor) => {
-            // Factor allows to include dynamic searchDiamater (0 - 100, Default = 50)
-            // Each zoom is defaultDistance ^ zoomLevel
-            // Default distance is at zoomLevel = 1, 50% MapDiameter
-            // In here we can specify MapDiamater as current Radius to search within (Accurate!)
-            // mapSearchRadius will be in km
-            const minZoomDistance = 2;  
-            const maxZoomLevels = 22;       // fully zoomed in
-            mapZoomLevel.value = mapRef.value?.map?.data?.map?.zoom ?? 10;
-            const RadiusMeter = (minZoomDistance ** (maxZoomLevels - mapZoomLevel.value)) * (factor * 2 / 100);
- 
-            
-            // Radius [km]
-            mapSearchRadius.value = Math.round(RadiusMeter * 10) / 10;
-            context.emit('update', mapSearchRadius.value, latitude.value, longitude.value)
-        }
-
+        // Update Location Center
         const updateLocationCenter = () => {
             const center = mapRef.value?.map?.data?.map?.center;
             latitude.value = center ? center.lat() : 0;
             longitude.value = center ? center.lng() : 0;
-            context.emit('update', mapSearchRadius.value, latitude.value, longitude.value)
+
+            // Set Location Cookie
+            proxy.$tp.set_cookie('client_location', {
+                lat: latitude.value,
+                lng: longitude.value,
+                radius: mapSearchRadius.value,
+                zoom: mapZoomLevel.value,
+                diameter: mapSearchDiameter.value
+            });
         }
 
+        // Calculate Radius
+        const calcGeolocationSearchRadius = (factor = 50) => {
+            // Factor allows dynamic search diameter (0 - 100, Default = 50)
+            const minZoomDistance = 2;
+            const maxZoomLevels = 22;  // Fully zoomed in
+
+            mapZoomLevel.value = mapRef.value?.map?.data?.map?.zoom ?? 10;
+
+            // Radius
+            const radiusMeters = Math.pow(minZoomDistance, maxZoomLevels - mapZoomLevel.value) * (factor / 50)
+            mapSearchRadius.value = Math.round(radiusMeters * 10) / 10
+
+            updateLocationCenter();
+        };
+
+        // Calcultate Distance
+        const computedMapSearchDistance = computed(() => {
+            const radius = mapSearchRadius.value;
+            return radius >= 1000 
+                ? `r ≈ ${(radius / 1000).toFixed(0)} km`  // Convert meters to km with 1 decimal place
+                : `r ≈ ${radius} m`;                     
+        });
+
         return {
+            appLocation,
             googleAPIKey,
             mapRef,
             mapSearchDiameter,
@@ -172,11 +170,9 @@ export default {
             initialLongitude,
             latitude,
             longitude,
-            allowGeolocation,
             computedMapSearchDistance,
-            setGeolocationStats,
             calcGeolocationSearchRadius,
-            updateLocationCenter
+            updateLocationCenter,
         };
     },
 
@@ -187,11 +183,31 @@ export default {
     },
 
     mounted() {
-      this.updateLocationCenter()
+        navigator.geolocation.getCurrentPosition((position) => {
+            
+            // Check cookie Set
+            if(this.appLocation?.lng && this.appLocation?.lat) {
+                this.initialLatitude = this.appLocation.lat
+                this.initialLongitude = this.appLocation.lng
+                this.latitude = this.appLocation.lat
+                this.longitude = this.appLocation.lng
+                this.mapSearchRadius = this.appLocation.radius
+                this.mapZoomLevel = this.appLocation.zoom
+                this.mapSearchDiameter = this.appLocation.diameter
+            } 
+
+            // Initial location
+            else {
+                this.initialLatitude = position.coords.latitude
+                this.initialLongitude = position.coords.longitude
+                this.latitude = position.coords.latitude
+                this.longitude = position.coords.longitude
+            }
+        })
     },
 
     methods: {
-        
+        // 
     }
 }
 </script>

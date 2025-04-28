@@ -1,18 +1,18 @@
 <?php
 
-use App\Listeners\PaddleWebhookListener;
 use Illuminate\Support\Facades\Route;
+use App\Listeners\PaddleWebhookListener;
+use App\Http\Controllers\User\Auth\GoogleLoginController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+// Google Login
+Route::get('/google-auth/redirect/web', [GoogleLoginController::class, 'redirect'])
+    ->withoutMiddleware(['web'])
+    ->middleware(['throttle:12,1']);
+Route::get('/google-auth/callback/web', [GoogleLoginController::class, 'callback'])
+    ->withoutMiddleware(['web'])
+    ->middleware(['throttle:12,1']);
+
+// Access
 Route::post('/access/webhook', [PaddleWebhookListener::class, 'handleWebhook'])
     ->middleware('paddle_webhook_verified')
     ->name('access.webhook');

@@ -31,7 +31,7 @@
         <!-- Response -->
         <q-separator class="q-mb-sm w-100" />
         <div class="w-100">
-            <div class="w-100  _overflow-elipsis">
+            <div class="w-100 _overflow-elipsis">
                 <span class="text-caption"><b>Place - ID:</b> {{ location.place_id ?? 'No location available.' }}</span>
             </div>
             <span class="text-caption"><b>Coordinates:</b> {{ location.lat ?? '-' }}, {{ location.lng ?? '-' }}<br></span>
@@ -92,7 +92,7 @@ export default {
         async requestGoogleAPI(google_maps_address) {
             try {
                 if(this.currentRequests >= this.requestLimits) throw 'Limit of ' + this.requestLimits + ' requests.'
-                if(!process.env.APP_GOOGLE_API_KEY) throw 'To use geolocation, please add a Google_API_KEY, by creating an account for Developers.'
+                if(!process.env.APP_GOOGLE_WEB_KEY) throw 'To use geolocation, please add a Google_API_KEY, by creating an account for Developers.'
                 if(!google_maps_address) return;
                 if(this.fetching) return;
 
@@ -100,7 +100,7 @@ export default {
                 this.currentRequests++;
                 const api_address = this.googleMapsAPI 
                     + encodeURIComponent(google_maps_address) 
-                    + '&key=' + process.env.APP_GOOGLE_API_KEY
+                    + '&key=' + process.env.APP_GOOGLE_WEB_KEY
                     + '&language=en';
 
                 this.fetching = true;

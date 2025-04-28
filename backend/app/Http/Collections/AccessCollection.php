@@ -22,9 +22,8 @@ abstract class AccessCollection
             'is_active' => $access->is_active,
             'access_token' => $access->access_token,
             'quantity' => $access->quantity,
-            'expiration_date' => Carbon::parse($access->expiration_date)->format('Y-m-d'),
+            'expiration_date' => $access->expiration_date,
             'price' => $access->belongs_to_transaction?->belongs_to_price,
-            'access' => AccessHandler::checkAccessByID($access->id),
             'subscription' => SELF::renderUserSubscription($access->belongs_to_transaction?->belongs_to_subscription),
             'status' => $access->status,
             'message' => $access->message,
@@ -37,7 +36,7 @@ abstract class AccessCollection
      * @param object|null $subscription
      * @return array|null
      */
-    static public function renderUserSubscription(object $subscription = null): ?array
+    static public function renderUserSubscription(?object $subscription): ?array
     {
         if(!$subscription) return null;
         return [
@@ -76,7 +75,7 @@ abstract class AccessCollection
             'tax_mode' => $price->tax_mode,
             'duration_months' => $price->duration_months,
             'access_token' => $price->access_token,
-            'has_access' => AccessHandler::checkUserAccessByToken($userID, $price->access_token),
+            'has_access' => AccessHandler::getUserAccessByToken($userID, $price->access_token),
             'status' => $price->status,
             'message' => $price->message,
             'is_subscription' => $price->trial_interval && $price->trial_frequency,
@@ -104,16 +103,18 @@ abstract class AccessCollection
             'id' => $transaction->id,
             'transaction_token' => $transaction->transaction_token,
             'price_id' => $transaction->price_id,
-            'quantity' => $transaction->quantity,
             'total' => $transaction->total,
             'tax' => $transaction->tax,
             'currency_code' => $transaction->currency_code,
+            'quantity' => $transaction->quantity,
+            'expiration_date' => $transaction->expiration_date,
+            'canceled_at' => $transaction->canceled_at,
             'status' => $transaction->status,
             'message' => $transaction->message,
             'created_at' => Carbon::parse($transaction->created_at)->format('Y-m-d H:i:s'),
             'updated_at' => Carbon::parse($transaction->updated_at)->format('Y-m-d H:i:s'),
             'price' => $price ? SELF::renderUserPrice($price, $transaction->user_id) : null,
-            'access' => $price ? AccessHandler::checkUserAccessByToken($transaction->user_id, $price->access_token) : null
+            'access' => $price ? AccessHandler::getUserAccessByToken($transaction->user_id, $price->access_token) : null
         ];
     }
 }

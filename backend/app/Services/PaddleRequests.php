@@ -12,27 +12,22 @@ class PaddleRequests
 
     /**
      * Setup Client API Call
-     * 
-     * Documentation:
      * https://developer.paddle.com/api-reference/overview
-     * 
-     * Important:
-     * 'Https' protocoll disabled, on Sandbox Environment 
-     * 
      */
     function __construct() 
     {
         $this->client = new Client([
-            'verify' => env('CLIENT_ALLOW_HTTP_REQUEST', false) !== 'true',
-            'base_uri' => env('PADDLE_API_URL'),
+            'verify' => !config('app.unsafe_http_request'),
+            'base_uri' => config('paddle.url'),
         ]);
     }
 
     /**
      * Cancel subscription via API Request
      * 
-     * Note: 
+     * Note:
      * Allows user to cancel Paddle price subscription at any time.
+     * Consider cancel subscription at delete user!
      *
      * @param string $token
      * @return boolean
@@ -41,7 +36,7 @@ class PaddleRequests
     {
         $response = $this->client->request('POST', 'subscriptions/' . $token . '/cancel', [
             'headers' => [
-                'Authorization' => 'Bearer ' . env('PADDLE_API_KEY'),
+                'Authorization' => 'Bearer ' . config('paddle.api_key'),
                 'Content-Type' => 'application/json'
             ],
             'body' => json_encode([

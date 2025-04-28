@@ -23,6 +23,8 @@ class User extends Authenticatable
         'email',
         'password',
         'token',
+        'google_id',
+        'google_avatar',
         'email_verified_at',    // Flag
         'archived'              // Flag
     ];

@@ -11,9 +11,6 @@
 ### PG Admin create new server
 #### Hostname: Provided IP Adress
 ######################################
-# Curl
-## docker exec -it ollama_container /bin/sh
-## Exit
 
 version: "3.9"
 

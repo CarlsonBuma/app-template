@@ -1,3 +1,13 @@
+<style scoped>
+.btn-dialog-wrapper {
+    position: fixed; 
+    top: 0; 
+    right: 0; 
+    z-index: 999;
+    margin: '12px'
+}
+</style>
+
 <template>
 
     <div class="absolute"> <!-- Div Required! -->
@@ -8,12 +18,18 @@
             @hide="$emit('close', showDialog = false)"
         >
             <q-card class="w-card">
-                <q-card-section class="row items-center q-pb-none">
+                <q-card-section 
+                    class="row items-center q-pb-none q-mb-md" 
+                    :class="$tp.client_preferences.value.darkmode ? 'bg-dark text-white' : 'bg-grey-1 text-dark'"
+                >
                     <div class="text-subtitle1">{{ title }}</div>
                     <q-space />
-                    <q-btn icon="close" flat round dense v-close-popup />
+                    <div>
+                        
+                    </div>
+                    <q-btn class="btn-dialog-wrapper q-ma-sm" icon="close" dense flat v-close-popup />
                 </q-card-section>
-                <q-separator class="q-mt-md"/>
+                <q-separator class="w-100"/>
                 <slot />
             </q-card>
         </q-dialog>
@@ -44,6 +60,10 @@ export default {
                 this.$emit('update:modelValue', value);
             }
         }
+    },
+
+    mounted() { 
+        // this.componentRendered = true;
     },
     
     emits: [

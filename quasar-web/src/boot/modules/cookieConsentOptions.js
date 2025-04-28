@@ -1,5 +1,11 @@
 'use strict';
 
+//* Analytics
+const setOptionalCookies = () => {
+    
+    // Google Tag Manager
+}; 
+
 /** 
  ** Cookie Consent
  * GDPR Compliant Cookie Consent for clients browers.
@@ -20,25 +26,7 @@
  *  > See Cookie preferences
  *  > May adjust options as well
  */
-
-import initTranslationPackage from '../translations/index.js'
-
-const setRequiredCookies = () => {
-    // Allow client preferences
-    const translationPack = initTranslationPackage();
-    translationPack.get_cookie('client_dateformat') 
-        ?? translationPack.set_cookie('client_dateformat', 'international')
-    translationPack.get_cookie('client_language') 
-        ?? translationPack.set_cookie('client_language', 'en')
-    translationPack.get_cookie('client_darkmode') 
-        ?? translationPack.set_cookie('client_darkmode', 'false')
-}
-
-const setOptionalCookies = () => {
-    // Option cookies
-}
-
-const consentOptions = {
+const cookieConsentOptions = {
     autorun: true,
     current_lang: 'en',
     autoclear_cookies: true,                   // default: false
@@ -78,8 +66,8 @@ const consentOptions = {
         });
         
         // Set Cookies
-        setRequiredCookies();
-        if(allowOptionalAnalytics) setOptionalCookies();
+        if(allowOptionalAnalytics) 
+            setOptionalCookies();
     },
 
     /** Edit Content here */
@@ -155,13 +143,13 @@ const consentOptions = {
                             readonly: false
                         },
                         cookie_table: [             // list of all expected cookies
-                            // {
-                            //     col1: '^_ga',
-                            //     col2: 'google.com',
-                            //     col3: '1 years',
-                            //     col4: 'Google Analytics (GA-4) - session statistics, approx. geolocation, device infos, default events, user properties, client ID, etc. See https://support.google.com/analytics/answer/11593727?hl=en',
-                            //     is_regex: true
-                            // },
+                            {
+                                col1: '^_ga',
+                                col2: 'google.com',
+                                col3: '1 years',
+                                col4: 'Google Analytics (GA-4) - session statistics, approx. geolocation, device infos, default events, user properties, client ID, etc. See https://support.google.com/analytics',
+                                is_regex: true
+                            },
                         ]
                     },
                     {
@@ -174,4 +162,4 @@ const consentOptions = {
     }
 }
 
-export default consentOptions;
+export default cookieConsentOptions;

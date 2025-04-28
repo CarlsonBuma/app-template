@@ -5,6 +5,7 @@ namespace App\Http\Controllers\User\Auth;
 use Exception;
 use App\Models\User;
 use Illuminate\Support\Str;
+use Laravel\Passport\Token;
 use Illuminate\Http\Request;
 use App\Http\Classes\Modulate;
 use Illuminate\Support\Facades\DB;
@@ -36,7 +37,7 @@ class UserTransferController extends Controller
 
         $user = (object) Auth::user();
         $userEntry = User::find(Auth::id());
-        $token = Str::random(255);
+        $token = Str::random(64);
         
         try {
             // Validate
@@ -47,7 +48,6 @@ class UserTransferController extends Controller
             DB::beginTransaction();
 
                 // Start Transfer
-                $userEntry->email_verified_at = null;
                 $userEntry->token = $token;
                 $userEntry->save();
 
@@ -60,8 +60,9 @@ class UserTransferController extends Controller
                 
                 Mail::to($data['email'])->send(new SendEmailVerification($verificationLink, $user)); 
                 
-                // Logout
-                $user->token()->delete();
+                // Remove all tokens, after new User sign-up
+                // $user->token()->delete();
+                // Token::where('user_id', $user->id)->delete();
             DB::commit(); 
         } catch (Exception $e) {
             DB::rollBack();
@@ -71,6 +72,7 @@ class UserTransferController extends Controller
         }
 
         return response()->json([
+            'fallback' => $verificationLink,
             'message' => 'Token sent to provided email.',
         ], 200);
     }
@@ -105,25 +107,25 @@ class UserTransferController extends Controller
                 $request->hasValidSignature()
                 && $user = User::where([
                     'email' => $email,
-                    'email_verified_at' => null,
                     'token' => $token
                 ])->first()
             ) {
                 
                 // Check unique email
                 if(User::where('email', $transfer)->exists()) {
-                    $user->email_verified_at = now();
-                    $user->save();
                     throw new Exception('This email is already in use. Please log in with your previous credentials.');
                 } else {
                     // Set new email
                     $user->email = $transfer;
                     $user->password = Hash::make($data['password']);
                     $user->email_verified_at = now();
+                    $user->google_id = null;
+                    $user->google_avatar = null;
                     $user->token = null;
                     $user->save();
 
                     // Auth
+                    Token::where('user_id', $user->id)?->delete();
                     $token = $user->createToken('user-client-access')->accessToken;
                     return response()->json([
                         'token' => $token,

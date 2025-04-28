@@ -2,48 +2,50 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\User\Auth\UserAuthController;
+use App\Http\Controllers\User\Auth\UserDeleteController;
 use App\Http\Controllers\User\Auth\UserAccountController;
 use App\Http\Controllers\User\Auth\UserTransferController;
 use App\Http\Controllers\User\Auth\CreateAccountController;
 use App\Http\Controllers\User\Auth\PasswordResetController;
 use App\Http\Controllers\User\Auth\EmailVerificationController;
 
+
+//* User
 Route::middleware(['auth:api', 'email_verified'])->group(function () {
 
     //* Auth
-    Route::get('/auth', [UserAuthController::class, 'authUser'])
-        ->name('auth');
-    Route::post('/logout', [UserAuthController::class, 'logoutUser'])
-        ->name('logout');
+    Route::get('/auth', [UserAuthController::class, 'authUser']);
+    Route::post('/logout', [UserAuthController::class, 'logoutUser']);
     
     //* User Account
-    Route::post('/update-user-avatar', [UserAccountController::class, 'changeAvatar'])
-        ->name('update.user.avatar');
-    Route::post('/update-user-name', [UserAccountController::class, 'changeName'])
-        ->name('update.user.name');
-    Route::post('/update-user-password', [UserAccountController::class, 'changePassword'])
-        ->name('update.user.password'); 
+    Route::post('/user-update-name', [UserAccountController::class, 'changeName']);
+    Route::post('/user-update-avatar', [UserAccountController::class, 'changeAvatar']);
+    Route::post('/user-reset-password', [UserAccountController::class, 'changePassword']);
+    Route::post('/user-invalidate-tokens', [UserAccountController::class, 'invalidateTokens']);
+    Route::post('/user-invalidate-email', [UserAccountController::class, 'invalidateEmail']);
 
     // Transfer Account Request 
-    // Email will be updated, after Emailverification, email_verified_at = null
-    Route::post('/transfer-user-account', [UserTransferController::class, 'initializeEmailTransfer'])
-        ->middleware('paddle_no_active_subscriptions')
-        ->name('transfer.user.account');
+    // Email will be updated, after Emailverification
+    Route::post('/user-transfer-account', [UserTransferController::class, 'initializeEmailTransfer'])
+        ->middleware('paddle_no_active_subscriptions');
 
     // Delete User
-    Route::post('/user-delete-account', [UserAccountController::class, 'deleteAccount'])
-        ->middleware('paddle_no_active_subscriptions')
-        ->name('user.delete.account');
+    Route::post('/user-delete-account', [UserDeleteController::class, 'deleteAccount'])
+        ->middleware('paddle_no_active_subscriptions');
 });
 
 
 //* Public account access
+// Login
+Route::post('/authenticate/{email}/{token}', [UserAuthController::class, 'authenticateUser'])
+    ->middleware(['throttle:6,1'])
+    ->name('authenticate');
 Route::post('/login', [UserAuthController::class, 'loginUser'])
-    ->middleware(['throttle:6,1'])    
-    ->name('login');
+    ->middleware(['throttle:9,1']);
 
 // Create Account
 Route::post('/create-account', [CreateAccountController::class, 'register'])
+    ->middleware(['throttle:5,1'])    
     ->name('create.account');
 
 // Verify Email

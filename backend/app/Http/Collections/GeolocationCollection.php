@@ -31,7 +31,7 @@ abstract class GeolocationCollection
      * @param boolean $showAddress
      * @return array
      */
-    static public function render_geoLoaction(object $geolocation = null, bool $showAddress): array
+    static public function render_geoLoaction(?object $geolocation, bool $showAddress): array
     {
         if(!$geolocation) return SELF::$geoLocation;
         return [
@@ -47,5 +47,39 @@ abstract class GeolocationCollection
             'country_short' => $geolocation->country_short,
             'zip_code' => $geolocation->zip_code,
         ];
+    }
+
+    /**
+     * Undocumented function
+     *
+     * @param float $locationLat
+     * @param float $locationLng
+     * @param float $centerLat
+     * @param float $centerLng
+     * @return void
+     */
+    static public function calculate_location_distance(float $locationLat, float $locationLng, float $centerLat, float $centerLng)
+    {
+        $earthRadius = 6371; // Radius of Earth in kilometers
+
+        // Convert degrees to radians
+        $latFrom = deg2rad($locationLat);
+        $lngFrom = deg2rad($locationLng);
+        $latTo = deg2rad($centerLat);
+        $lngTo = deg2rad($centerLng);
+
+        // Haversine formula
+        $latDelta = $latTo - $latFrom;
+        $lngDelta = $lngTo - $lngFrom;
+
+        $a = sin($latDelta / 2) * sin($latDelta / 2) +
+            cos($latFrom) * cos($latTo) *
+            sin($lngDelta / 2) * sin($lngDelta / 2);
+        
+        $c = 2 * atan2(sqrt($a), sqrt(1 - $a));
+
+        $distance = $earthRadius * $c; // Distance in km
+
+        return round($distance, 2); // Return rounded distance in km
     }
 }

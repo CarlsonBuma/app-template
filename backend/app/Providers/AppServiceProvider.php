@@ -2,7 +2,6 @@
 
 namespace App\Providers;
 
-
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Validation\Rules\Password;
 
@@ -33,5 +32,7 @@ class AppServiceProvider extends ServiceProvider
                 // ->symbols()
                 ->uncompromised();
         });
+
+        // Passport::loadKeysFrom(storage_path());
     }
 }

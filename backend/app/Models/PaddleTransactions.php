@@ -24,12 +24,16 @@ class PaddleTransactions extends Model
         'transaction_token',
         'customer_token',
         'price_id',
-        'quantity',
         'total',
         'tax',
         'currency_code',
+
+        // Access
+        'quantity',
+        'expiration_date',
         'access_added',
         'is_verified',
+        'canceled_at',
         'status',
         'message',
     ];
@@ -37,7 +41,8 @@ class PaddleTransactions extends Model
     protected $casts = [
         'total' => 'float:2',
         'tax' => 'float:2',
-        
+        'expiration_date' => 'date:Y-m-d',
+        'canceled_at' => 'datetime',
     ];
 
     public function belongs_to_user() {

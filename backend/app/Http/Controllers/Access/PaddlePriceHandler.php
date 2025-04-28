@@ -15,7 +15,6 @@ class PaddlePriceHandler
      *  - Webhook: "\Listeners\PaddleWebhookListener"
      * 
      * Setup:
-     *  0. Define price-access within app logic.
      *  1. Implement price-access-token within function "updatePriceByWebhook()"
      *      - Define new access-tokens in "\Access\AccessHandler"
      *      - May add logic to handle new access-token accordingly within app
@@ -23,23 +22,22 @@ class PaddlePriceHandler
      *      - Ensure 'custom_data' is included in the price configuration
      *          > 'access_token' (string, required): Defines access to the app and its features
      *          > 'duration_months' (int, optional): Defines the period of access
-     *              - Note: This is overridden by the subscription.billing_period.ends_at value
+     *              > Note: This is overridden by the subscription.billing_period.ends_at value
+     *          > 'quantity_factor: (int, optional): factor of quantity purchased
      *
      * @param array $contentData
-     * @return void
+     * @return void 
      */
     public function updatePriceByWebhook(array $contentData): void
     {
         $accessTokenByPaddle = $contentData['custom_data']['access_token'] ?? null;
         if($accessTokenByPaddle && (
-            $accessTokenByPaddle === AccessHandler::$tokenCockpit
             
-            // ------------------------------------
-            // Allow other price tokens within app here
-            // ------------------------------------
-
-        )) { 
             // Price is available and defined within app
+            // Add other prices tokens here...
+            $accessTokenByPaddle === AccessHandler::$tokenCockpit
+        )) { 
+            
             $this->price = PaddlePrices::updateOrCreate([
                 'price_token' => $contentData['id'],                                                // Required by access logic
             ], [
@@ -55,7 +53,7 @@ class PaddlePriceHandler
                 'trial_interval' => $contentData['trial_period']['interval'] ?? null,               // Optional
                 'trial_frequency' => $contentData['trial_period']['frequency'] ?? null,             // Optional
                 'access_token' => $contentData['custom_data']['access_token'] ?? 'undefined',       // Required by access logic
-                'duration_months' => $contentData['custom_data']['duration_months'] ?? 0,           // Required by access logic
+                'duration_months' => $contentData['custom_data']['duration_months'] ?? 0,           // Optional by access logic
                 'status' => $contentData['status'],                                                 // Optional
                 'message' => 'webhook.price.updated',                                               // Optional
             ]);

@@ -2,7 +2,7 @@
 
     <PageWrapper>
         <CardWrapper
-            class="w-card-lg"
+            class="w-card"
             title="Reset password"
             iconHeader="lock_clock"
             note="*You will receive an email with the provided token. Please click the link we sent to your email."

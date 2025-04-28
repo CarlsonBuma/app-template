@@ -17,14 +17,18 @@ return new class extends Migration
             $table->string('customer_token', 255)->nullable();
             $table->unsignedBigInteger('subscription_id')->nullable();
             $table->unsignedBigInteger('price_id')->nullable();
-            $table->unsignedBigInteger('quantity')->default(1);
             $table->decimal('total', 10, 2)->default(0.00);
             $table->decimal('tax', 10, 2)->default(0.00);
-            $table->string('currency_code', 3)->default('CHF');          
+            $table->string('currency_code', 3)->default('CHF');  
+
+            // Access
+            $table->unsignedBigInteger('quantity')->default(1);
+            $table->date('expiration_date')->nullable();     
             
             // Payment Meta
             $table->boolean('access_added')->default(false);
             $table->boolean('is_verified')->default(false);
+            
             $table->string('status', 99);
             $table->text('message')->nullable();
             $table->timestamps();

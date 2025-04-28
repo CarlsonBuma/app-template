@@ -51,6 +51,22 @@ return [
     */
 
     'channels' => [
+        
+        'webhooks' => [
+            'driver' => 'single',
+            'path' => storage_path('logs/webhooks.log'),
+        ],
+
+        'backup' => [
+            'driver' => 'single',
+            'path' => storage_path('logs/backup.log'),
+        ],
+
+        'app' => [
+            'driver' => 'single',
+            'path' => storage_path('logs/app.log'),
+        ],
+
         'stack' => [
             'driver' => 'stack',
             'channels' => ['single'],

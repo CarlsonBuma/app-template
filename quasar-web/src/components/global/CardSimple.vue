@@ -1,6 +1,6 @@
 <template>
     
-    <q-card class="q-my-xs q-mx-sm-xs" bordered :flat="shadow ? false : true">
+    <q-card class="q-my-xs q-mx-sm-xs" bordered :flat="!shadow">
 
         <!-- Head -->
         <q-card-section v-if="title" header>
@@ -11,15 +11,19 @@
                         v-if="tooltip"
                         name="info"
                         size="12px"
-                        :color="tooltipIconColor ? tooltipIconColor : 'red'"
+                        :color="tooltipColor ? tooltipColor : 'primary'"
                     >
                         <q-tooltip>
-                            <p class="text-caption w-tooltip">{{ tooltip }}</p>
+                            <slot name="tooltip">
+                                <span class="text-caption w-tooltip">{{ tooltip }}</span>
+                            </slot>
                         </q-tooltip>
                     </q-icon>
-                    <div class="flex items-center">
-                        <span class="q-item__label--header p-0 m-0">{{ title }}</span>
-                    </div>
+                    <slot name="title">
+                        <div class="flex items-center">
+                            <span class="q-item__label--header p-0 m-0">{{ title }}</span>
+                        </div>
+                    </slot>
                 </div>
                 <div class="col-12 col-sm-auto flex justify-end">
                     <slot name="actions"/>
@@ -50,7 +54,7 @@ export default {
         title: String,
         description: String,
         tooltip: String,
-        tooltipIconColor: String,
+        tooltipColor: String,
         note: String,
         flat: Boolean,
         bordered: Boolean,

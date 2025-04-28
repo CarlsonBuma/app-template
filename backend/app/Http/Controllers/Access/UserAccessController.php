@@ -41,7 +41,7 @@ class UserAccessController extends Controller
             });
 
         $userTransactions = PaddleTransactions::where('user_id', Auth::id())
-            ->orderBy('updated_at', 'desc')
+            ->orderBy('created_at', 'desc')
             ->get()
             ->map(function($transaction) {
                 return AccessCollection::renderUserTransaction($transaction);
@@ -63,7 +63,7 @@ class UserAccessController extends Controller
      */
     public function checkUserAccess(string $access_token)
     {
-        $userAccess = AccessHandler::checkUserAccessByToken(Auth::id(), $access_token);
+        $userAccess = AccessHandler::getUserAccessByToken(Auth::id(), $access_token);
         return response()->json([
             'access' => $userAccess,
             'access_token' => $access_token,
@@ -89,7 +89,7 @@ class UserAccessController extends Controller
             'customer_token' => ['required', 'string'],
         ]);
 
-        $PaddleTransaction = new PaddleTransactionHandler();
+        $PaddleTransaction = new PaddleTransactionHandler(null);
         $PaddleTransaction->initializeUserTransaction(
             Auth::id(), 
             $data['transaction_token'],
@@ -128,7 +128,13 @@ class UserAccessController extends Controller
         }
         
         // Check if transaction has been verified by webhook
-        if($userAccess = AccessHandler::checkUserAccessByTransactionID(Auth::id(), $userTransaction->id)) {
+        $userAccess = UserAccess::where([
+            'user_id' => Auth::id(),
+            'transaction_id' => $userTransaction->id,   // Unique
+            'is_active' => true,
+        ])->first();
+
+        if($userAccess) {
             return response()->json([
                 'access' => UserCollection::render_user_access($userAccess),
                 'price_id' => $userTransaction->price_id,

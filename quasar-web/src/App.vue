@@ -46,7 +46,6 @@
 import { ref } from 'vue';
 import NavHead from 'src/components/navigation/NavHead.vue';
 
-
 export default {
     name: 'App',
     components: {
@@ -61,7 +60,7 @@ export default {
     },
 
     mounted() {
-        // Code
+        //
     },
 
     methods: {

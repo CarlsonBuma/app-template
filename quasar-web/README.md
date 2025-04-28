@@ -2,8 +2,12 @@
 Website: https://quasar.dev/introduction-to-quasar
 
 ## App Initialization
- - npm install
-    > quasar info         // Current dependencies
+ - Quasar Upgrade check (see Upgrade Guide)
+    > quasar info
+    > quasar upgrade
+        > May delete package-lock.json & NPM if necessary
+    > quasar upgrade --install
+ - npm install / update
     > quasar dev          // Dev Mode
     > quasar build        // Production Mode
     > npm run lint
@@ -11,7 +15,9 @@ Website: https://quasar.dev/introduction-to-quasar
  - Define .env file
  - Setup meta-data in package.json
  - Optional: Setup \src\modules\cookieConsent.js
+    > Cookie Consents: GDPR Compliance
     > Implement Cookies (eg. Google Tags, Bing UET, etc.)
+    > Required, Optional, Analytics
 
 ## Live Deployment
  - See Vue 3 / Quasar Framework
