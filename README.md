@@ -1,3 +1,7 @@
+# Outdated
+Newest App Template see
+- https://github.com/CarlsonBuma/app-template.git
+
 # Webapp Template
 by Carlson, 2025-02-14
 - Documentation: see "\docs"
