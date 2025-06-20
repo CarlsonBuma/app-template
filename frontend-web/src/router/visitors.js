@@ -6,19 +6,19 @@ const routesVisitors = [
         component: () => import('src/layouts/InitialLayout.vue'),
         children: [
             {
-                path: '/welcome',
+                path: 'welcome',
                 name: 'WebWelcome',
                 component: () => import('src/pages/visitor/WebWelcome.vue'),
             }, {
-                path: "/newsfeed",
+                path: "newsfeed",
                 name: "WebNewsfeed",
                 component: () => import('src/pages/visitor/WebNewsfeed.vue'),
             }, {
-                path: "/about",
+                path: "about",
                 name: "WebAbout",
                 component: () => import('src/pages/visitor/WebAbout.vue'),
             }, {
-                path: "/legal",
+                path: "legal",
                 name: "WebLegal",
                 component: () => import('src/pages/visitor/WebLegal.vue'),
             } 

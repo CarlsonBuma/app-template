@@ -2,19 +2,25 @@
 import store from "src/stores/user.js";
 
 const fallBackRouteCockpit = '/';
-const routesCockpit = [{
-        path: '/cockpit',
-        redirect: '/cockpit/profile'
-    }, 
-    
+const routesCockpit = [
     {
-        path: '/cockpit/profile',
-        name: 'CockpitProfile',
-        component: () => import('src/pages/cockpit/CockpitProfile.vue'),
+        path: '/cockpit',
+        component: () => import('src/layouts/CockpitLayout.vue'),
         beforeEnter: (to, from, next) => {
-            if (!store().access.user) next(fallBackRouteCockpit);
+            if (!store().access.tokens[process.env.APP_ACCESS_COCKPIT]) next(fallBackRouteCockpit);
             else next();
-        }
+        },
+        children: [
+            {
+                path: '',
+                name: 'CockpitDashboard',
+                component: () => import('src/pages/cockpit/CockpitDashboard.vue'),
+            }, {
+                path: 'impressum',
+                name: 'CockpitImpressum',
+                component: () => import('src/pages/cockpit/CockpitImpressum.vue'),
+            },
+        ]
     },
 ];
 

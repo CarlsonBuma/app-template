@@ -39,6 +39,21 @@
                 <q-item-label>Dashbaord</q-item-label>
             </q-item-section>
         </q-item>
+
+        <!-- Cockpit -->
+        <q-item 
+            clickable
+            v-if="$user?.access?.user"
+            :disable="!$user?.access?.tokens[accessTokenCockpit]"
+            @click="$router.push('/cockpit')"  
+        >
+            <q-item-section avatar>
+                <q-icon name="widgets" />
+            </q-item-section>
+            <q-item-section>
+                <q-item-label>Business Cockpit</q-item-label>
+            </q-item-section>
+        </q-item>
         
         <!-- Account -->
         <q-item v-if="$user?.access?.user">
@@ -92,8 +107,8 @@
         <!-- Backpanel -->
         <q-item 
             clickable v-ripple
-            v-if="$user?.access?.tokens[accessToken]" 
-            @click="$router.push('/admin/dashboard')"
+            v-if="$user?.access?.tokens[accessTokenAdmin]" 
+            @click="$router.push('/admin')"
         >
             <q-item-section avatar>
                 <q-icon name="admin_panel_settings" class="q-mr-sm" />
@@ -165,7 +180,8 @@ export default {
 
     setup() {
         return {
-            accessToken: process.env.APP_ACCESS_ADMIN,
+            accessTokenAdmin: process.env.APP_ACCESS_ADMIN,
+            accessTokenCockpit: process.env.APP_ACCESS_COCKPIT,
         };
     },
 

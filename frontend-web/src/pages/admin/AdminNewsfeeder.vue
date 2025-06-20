@@ -1,9 +1,6 @@
 <template>
 
     <PageWrapper :rendering="rendering">
-        <template #navigation>
-            <NavAdmin />
-        </template>
 
         <template #header>
             <q-tabs v-model="tab" class="q-pt-lg" >
@@ -13,7 +10,7 @@
         </template>
 
         <!-- Add Entries -->
-        <div class="row w-content flex justify-center">
+        <div class="row w-content flex justify-center q-py-lg">
             <CardSimple title="Create Feed" class="w-card">
                 <template #actions>
                     <q-btn label="Publish" outline size="sm" color="primary" @click="createNewNewsfeed(newEntry)"/>
@@ -28,13 +25,13 @@
         </div>
         
         <!-- Read, Update, Delete Entries -->
-        <q-separator class="w-content q-ma-md" />
+        <q-separator class="w-content" />
         <q-table
             title="Newsfeed"
             :rows="newsfeed"
             :columns="columns"
             row-key="id"
-            class="w-content q-mt-sm"
+            class="w-content q-my-lg"
         >
             <template v-slot:body="props">
                 <q-tr :props="props">

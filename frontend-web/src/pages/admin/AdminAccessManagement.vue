@@ -1,9 +1,6 @@
 <template>
 
     <PageWrapper :rendering="loading" >
-        <template #navigation>
-            <NavAdmin />
-        </template>
 
         <template #header>
             <q-tabs v-model="tab" class="q-pt-lg" >
@@ -13,9 +10,9 @@
         </template>
 
         <!-- Price -->
-        <div class="row w-100 justify-center">
+        <div class="w-content q-my-lg">
             <PricesTable 
-                class="table-width"
+                class="w-100"
                 title="App Prices"
                 :prices="prices"
                 @update="(price) => updatePrice(price.id, price.is_active)"
@@ -27,24 +24,20 @@
         </div>
 
         <!-- Access -->
-        <div class="row w-100 justify-center q-my-md">
-            <q-separator class="table-width" />
-        </div>
-        <div class="row w-100 justify-center">
-            <AccessTable 
-                class="table-width"
-                title="User Access"
-                :access="userAccess"
-                @search="(email) => searchUser(email)"
-                @add="(email) => prepareAddNewAccess(email)"
-                @update="(access) => updateAccess(access.id, access.is_active)"
-            />
-        </div>
+        <q-separator class="w-content" />
+        <AccessTable 
+            class="w-content q-my-lg"
+            title="User Access"
+            :access="userAccess"
+            @search="(email) => searchUser(email)"
+            @add="(email) => prepareAddNewAccess(email)"
+            @update="(access) => updateAccess(access.id, access.is_active)"
+        />
 
         <!-- Transactions -->
-        <div class="row q-mt-md w-100 justify-center">
+        <div class="w-content">
             <TransactionsTable
-                class="table-width" 
+                class="w-100" 
                 title="User Transactions"
                 :transactions="userTransactions"
                 @cancel="(transaction) => cancelTransaction(transaction)"

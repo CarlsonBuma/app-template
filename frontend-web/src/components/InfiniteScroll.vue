@@ -9,7 +9,7 @@
         <slot />
 
         <!-- Loading -->
-        <div v-if="loading" class="row justify-center q-mt-md">
+        <div v-if="loading" class="row justify-center">
             <LoadingData text="Loading data..." />
         </div>
     </q-infinite-scroll>

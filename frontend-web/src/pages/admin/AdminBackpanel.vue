@@ -1,11 +1,15 @@
 <template>
 
     <PageWrapper :rendering="rendering" >
-        <template #navigation>
-            <NavAdmin />
+
+        <template #header>
+            <q-tabs v-model="tab" class="q-pt-lg" >
+                <q-tab name="overview" label="App Users" />
+            </q-tabs>
+            <q-separator class="w-100"/>
         </template>
 
-        <q-card class="my-card">
+        <q-card class="my-card q-my-lg">
             <q-card-section>
                 <div class="text-h6">Verified Users:</div>
                 <div class="text-h3 q-ma-md flex justify-center">{{ infos.users ? infos.users : 0 }}</div>
@@ -32,6 +36,7 @@ export default {
 
     setup() {
         return {
+            tab: ref('overview'),
             rendering: ref(true),
             infos: ref({})
         };

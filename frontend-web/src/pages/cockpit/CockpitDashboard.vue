@@ -1,12 +1,8 @@
 <template>
 
     <PageWrapper >
-        <template #navigation>
-            <NavCockpit />
-        </template>
-
         <!-- Content -->
-        <CardSimple title="Cockpit Dashboard" >
+        <CardSimple title="Cockpit Dashboard" class="q-my-lg" >
             <q-separator>
                 Create something amazing!
             </q-separator>

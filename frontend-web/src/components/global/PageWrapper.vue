@@ -1,13 +1,17 @@
+<style scoped>
+.page-wrapper-navigation-fixed {
+    z-index: 999;
+    left:auto; 
+    right: auto;
+}
+</style>
+
 <template>
     
     <div id="page-content" :class="{'bg-design': bgDesign}">
         
         <!-- Top Navigation -->
-        <div 
-            :class="$q.dark.isActive 
-                ? 'text-sm bg-dark text-white' 
-                : 'bg-grey-1 text-dark'"
-        >
+        <div :class="$q.dark.isActive ? 'text-sm bg-dark text-white' : 'bg-grey-1 text-dark'" >
             <slot name="navigation" />
         </div>
         
@@ -21,12 +25,12 @@
             <slot name="header" />
 
             <!-- Content -->
-            <div 
-                class="w-100 flex justify-center" 
-            >
-                <!-- Loading -->
+            <div class="w-100 flex justify-center" >
+                
+                <!-- Rendering -->
                 <LoadingData 
                     v-if="rendering"
+                    class="q-my-lg"
                     text="Processing data..."
                     :colorIcon="bgDesign ? 'white' : 'primary'"
                     :colorText="bgDesign ? 'text-white' : 'text-grey'"
@@ -37,8 +41,12 @@
             </div>
         </q-pull-to-refresh>
 
-        <div :class="navBottomClass + ' w-100 fixed-top flex justify-end'">
-            <slot name="navBottom" />
+        <!-- Bottom -->
+        <slot name="bottom" />
+
+        <!-- Fixed Navigation -->
+        <div class="fixed-bottom page-wrapper-navigation-fixed">
+            <slot name="navigation-fixed" />
         </div>
 
         <!-- Footer -->
