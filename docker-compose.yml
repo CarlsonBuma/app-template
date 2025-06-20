@@ -1,0 +1,60 @@
+######################################
+# Vector Database: PostgreSQL
+## docker-compose down
+## docker-compose up -d
+### After initializiation, pgAdmin 
+### CREATE EXTENSION vector;
+######################################
+# Connect via browser to container
+## docker ps
+## docker inspect --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' <container_id>
+### 172.17.0.3
+### PG Admin create new server
+#### Hostname: Provided IP Adress
+######################################
+# Curl
+## docker exec -it ollama_container /bin/sh
+## Exit
+
+version: "3.9"
+
+services:
+  pgvector:
+    image: ankane/pgvector:latest
+    restart: always
+    container_name: ankane_container  # Static container name
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+    ports: 
+      - "5555:5432"
+    volumes:
+      - pg_vector:/var/lib/postgresql/data
+    networks:
+      - pg_network
+
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    restart: always
+    container_name: pgadmin_container  # Static container name
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+      PGADMIN_LISTEN_PORT: 80
+    ports:
+      - 5050:80
+    volumes:
+      - pg_admin:/var/lib/pgadmin
+    depends_on:
+      - pgvector
+    networks:
+      - pg_network
+
+volumes:
+  pg_vector:
+  pg_admin:
+
+networks:
+  pg_network:
+    driver: bridge

@@ -1,0 +1,292 @@
+/** Style **/
+.app-bg-main {
+    background-image: linear-gradient(180deg, #000000a8 30%, #00000000 90%);
+}
+
+.app-bordered-bottom {
+    border-bottom: 2px solid $primary;
+}
+
+#app-header {
+    z-index: 9998;
+}
+
+#app-content {
+    min-height: 100vh;
+    background: rgb(231, 231, 231);
+}
+
+/** Components **/
+main {
+    min-height: calc(100vh - 51px) !important;
+}
+
+.z-index-999 {
+    z-index: 1;
+}
+
+.border-left {
+    border-left-style: solid;
+}
+
+.bg-primal-blue {
+    background-color: rgb(51, 48, 214);
+}
+
+.background {
+    background-color: rgba(37, 33, 255, 0.8);
+}
+
+.background-light {
+    background-color: rgba(36, 36, 36, 0.9);
+}
+
+.background-dark {
+    background-color: rgb(36, 36, 36) !important;
+}
+
+.bg-header-bright-mode {
+    background: linear-gradient(#8f00ff 0%, #444bff);
+}
+
+.bg-design {
+    background: linear-gradient(rgba(143, 0, 255, 1) 0%, rgba(68, 75, 255, 1) 100%);
+}
+
+.bg-design-transparent {
+    background: linear-gradient(rgba(#8f00ff, 1) 0%, #444bff);
+}
+
+.bg-transparent {
+    background-color: transparent;
+}
+
+.design-card {
+    border-left: 3px solid $primary;
+}
+
+// Text
+.__text-escape {
+    overflow-wrap: break-word;
+}
+
+._underline {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+._hover {
+    cursor: pointer;
+}
+
+._hover-mouse:hover {
+    cursor: pointer;
+}
+
+._hover:hover {
+    text-decoration: underline;
+}
+
+._overflow-elipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 100%; /* Ensure the container doesn't expand beyond its parent */
+}
+
+._text-focus {
+    text-transform: uppercase;
+    // font-family: cursive;
+}
+
+._text-cursive { 
+    font-family: cursive;
+}
+
+._text-uppercase {
+    text-transform: uppercase;
+}
+
+._word-break {
+    word-break: break-all;
+}
+
+._text-break {
+    overflow: auto;
+    white-space: pre-wrap;
+}
+
+._overflow-x {
+    overflow-x: auto;
+}
+
+._flex-no-wrap {
+    flex-wrap: nowrap !important; 
+    overflow-x: auto;
+}
+
+._overflow-hidden {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+// Defaults
+.default-link {
+    text-decoration: none;
+}
+
+.p-0 {
+    padding: 0 !important;
+}
+
+.p-1 {
+    padding: 6px !important;
+}
+
+.m-0 {
+    margin: 0;
+}
+
+.table-width {
+    width: 100%;
+    max-width: 1120px;
+}
+
+.w-tooltip {
+    max-width: 220px;
+    margin: 0px;
+}
+
+.w-tooltip-sm {
+    max-width: 120px;
+    margin: 0px;
+}
+
+.rounded-border {
+    border-radius: 3px;
+}
+
+// Components
+.w-avatar {
+    width: 100%;
+    max-width: 360px;
+}
+
+.w-avatar-sm {
+    width: 100%;
+    max-width: 220px;
+}
+
+.w-select {
+    width: 100%;
+    max-width: 270px;
+}
+
+.w-select-sm {
+    width: 100%;
+    max-width: 220px;
+}
+
+.w-text {
+    width: 100%;
+    max-width: 120px;
+}
+
+.w-popup {
+    min-width: 260px !important;
+}
+
+// Content
+.w-100 {
+    width: 100%;
+}
+
+.h-auto {
+    height: auto;
+}
+
+.w-content-xs {
+    width: 100%;
+    max-width: 720px;
+}
+
+.w-content-sm {
+    width: 100%;
+    max-width: 820px;
+}
+
+.w-content-md {
+    width: 100%;
+    max-width: 920px;
+}
+
+.w-content-md-md {
+    width: 100%;
+    max-width: 980px;
+}
+
+.w-content {
+    width: 100%;
+    max-width: 1220px;
+}
+
+.w-content-lg {
+    width: 100%;
+    max-width: 1620px;
+}
+
+.w-title {
+    width: 100%;
+    max-width: 460px;
+}
+
+.w-title-md {
+    width: 100%;
+    max-width: 540px;
+}
+
+.w-title-lg {
+    width: 100%;
+    max-width: 640px;
+}
+
+// Cards
+.w-card-xs {
+    width: 100%;
+    max-width: 220px;
+}
+
+.w-card-sm {
+    width: 100%;
+    max-width: 280px;
+}
+
+.w-card {
+    width: 100%;
+    max-width: 360px;
+}
+
+.w-card-md {
+    width: 100%;
+    max-width: 320px;
+}
+
+.w-card-lg {
+    width: 100%;
+    max-width: 420px;
+}
+
+.w-card-xl {
+    width: 100%;
+    max-width: 540px;
+}
+
+// Quasar custize
+.toaster-container {
+    margin-top: 15px;
+}
+
+.q-fab__actions {
+    margin-top: 13px;
+}

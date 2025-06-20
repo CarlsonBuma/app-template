@@ -1,0 +1,963 @@
+<mxfile host="Electron" modified="2025-02-15T00:08:01.152Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.15 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="kxhuvPqgeuv4pqppsLP7" version="22.1.15" type="device" pages="6">
+  <diagram id="UitA2do2NvOQAMUplk1J" name="Feature Overview">
+    <mxGraphModel dx="3703" dy="1243" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Tur9mPzXtXX7kOvMszdY-1" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-1550" y="1113" as="sourcePoint" />
+            <mxPoint x="1402.5" y="1112.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Tur9mPzXtXX7kOvMszdY-3" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=default;" parent="1" source="lpv_V7dIOGIIX44eoK-m-1" target="XLDXQ8pQ_xPOunSGDu-5-7" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-390" y="1312.1399999999999" as="sourcePoint" />
+            <mxPoint x="-190" y="1312.1399999999999" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Tur9mPzXtXX7kOvMszdY-5" value="&lt;b&gt;Paddle Transaction&lt;br&gt;&lt;/b&gt;Transactions" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;dashed=1;" parent="1" vertex="1">
+          <mxGeometry x="-2.5000000000000284" y="585" width="180" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="Tur9mPzXtXX7kOvMszdY-7" value="&lt;b&gt;Paddle Subscriptions&lt;/b&gt;&lt;br&gt;Manage Customers Subscriptions" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="-310" y="900" width="180" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="Tur9mPzXtXX7kOvMszdY-9" value="&lt;h1&gt;Paddle Cockpit&lt;/h1&gt;&lt;p&gt;Payment Provider, allowing processing payments by customers within our app.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="-1600" y="980" width="210" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="Tur9mPzXtXX7kOvMszdY-15" value="&lt;h1&gt;App Access Management&lt;/h1&gt;&lt;p&gt;User can gain access to app features, according prices and its access definitions.&amp;nbsp;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="-1590" y="1166.25" width="190" height="137.5" as="geometry" />
+        </mxCell>
+        <mxCell id="Tur9mPzXtXX7kOvMszdY-18" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fillColor=default;" parent="1" source="Tur9mPzXtXX7kOvMszdY-5" target="-dZIRAtPOdo9v_Imx_vp-21" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-60" y="912.5" as="sourcePoint" />
+            <mxPoint x="-61" y="1162.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nrHdGCbzq3XjSZZxZuLL-1" value="&lt;b&gt;User Access&lt;br&gt;&lt;/b&gt;Allows user access certain &lt;br&gt;app features by defined &lt;br&gt;&quot;access-token&quot;." style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;dashed=1;" parent="1" vertex="1">
+          <mxGeometry x="580" y="1320" width="180" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="nrHdGCbzq3XjSZZxZuLL-6" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;startArrow=block;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fillColor=default;" parent="1" source="cVaqJ95r4fNrpDcWqSW7-1" target="GjguRNVwzjblkNLckBbc-2" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-500" y="1242.5" as="sourcePoint" />
+            <mxPoint x="-500" y="960" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fAkgLg6Yq0fzTYVt4pPN-2" value="&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&lt;b&gt;Feature&lt;/b&gt;: User Access Overview&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&lt;ul style=&quot;border-color: var(--border-color);&quot;&gt;&lt;li style=&quot;border-color: var(--border-color);&quot;&gt;Available prices are listed&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;User can buy access to available prices&lt;/span&gt;&lt;/li&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;If user already subscribed to price type &quot;subscription&quot;, user must cancel subscription first (see Action 2).&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;li style=&quot;border-color: var(--border-color);&quot;&gt;User transactions and according access are listed.&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;b&gt;Action 1&lt;/b&gt;: User can buy access to provided prices.&lt;br&gt;&lt;/span&gt;&lt;div&gt;&lt;ul&gt;&lt;li style=&quot;border-color: var(--border-color);&quot;&gt;PaddleJS handles client checkout&lt;/li&gt;&lt;li&gt;Price must be available and active within Paddle and our app&lt;/li&gt;&lt;li&gt;User has no active subscription on price, if price is type of &quot;subscription&quot;&lt;/li&gt;&lt;li&gt;After completion of Checkout, user access request must be initialized for further verification by backend webhooks&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;Action 2:&amp;nbsp;&lt;/b&gt;User can cancel subscriptions at any time.&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&lt;ul style=&quot;border-color: var(--border-color);&quot;&gt;&lt;li style=&quot;border-color: var(--border-color);&quot;&gt;User price must be type of &quot;subscription&quot;&lt;/li&gt;&lt;li style=&quot;border-color: var(--border-color);&quot;&gt;Selected price subscription must be active at time&lt;/li&gt;&lt;li style=&quot;border-color: var(--border-color);&quot;&gt;After cancelation of subscriptions, us can purchase for referring price again.&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;align=left;spacing=12;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="-880.75" y="1550" width="344" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="fAkgLg6Yq0fzTYVt4pPN-3" value="&lt;b&gt;Action&lt;/b&gt;: Paddle account owner, must define prices and corresponding access based on app&#39;s logic, so that users receive the correct feature access upon successful payment.&lt;br&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Price custom_data must be defined with the following parameters:&lt;/span&gt;&lt;br&gt;&lt;/li&gt;&lt;ul&gt;&lt;li style=&quot;border-color: var(--border-color);&quot;&gt;access_token (string): Access to features within app (required)&lt;/li&gt;&lt;li style=&quot;border-color: var(--border-color);&quot;&gt;duration_month (int): Access expiration&lt;/li&gt;&lt;/ul&gt;&lt;/ul&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;i&gt;Note&lt;/i&gt;: App webhook endpoint must be defined to handle Paddle Notifictaion via backend.&lt;/span&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;align=left;spacing=12;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="-1382.5" y="561.88" width="310" height="226.25" as="geometry" />
+        </mxCell>
+        <mxCell id="fAkgLg6Yq0fzTYVt4pPN-5" value="&lt;b&gt;Call: User loads prices&lt;br&gt;&lt;/b&gt;User can buy access according active prices, set within our app." style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;align=left;spacing=12;fillColor=#fff2cc;strokeColor=#d6b656;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="-1110" y="1311.25" width="200" height="77.5" as="geometry" />
+        </mxCell>
+        <mxCell id="XLDXQ8pQ_xPOunSGDu-5-2" value="&lt;b&gt;Call: Price webhook triggered&lt;/b&gt;&amp;nbsp;&lt;br&gt;Synchronize prices after webhook-event triggers.." style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;align=left;spacing=12;fillColor=#fff2cc;strokeColor=#d6b656;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="-1210" y="1089" width="230" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="XLDXQ8pQ_xPOunSGDu-5-4" value="&lt;b&gt;Action&lt;/b&gt;: Create new Price or Update affected Price&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;ul&gt;&lt;li style=&quot;border-color: var(--border-color);&quot;&gt;Prices are stored according Paddle Price, allowing our app beeing synchronized with Paddle Prices.&lt;/li&gt;&lt;li style=&quot;&quot;&gt;Price access must be implemented accordingly in app feature logic.&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;align=left;spacing=12;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="-1364.8799999999999" y="1510" width="274.75" height="177.25" as="geometry" />
+        </mxCell>
+        <mxCell id="XLDXQ8pQ_xPOunSGDu-5-5" value="&lt;div&gt;&lt;b&gt;Call: Client Checkout&lt;/b&gt;&lt;/div&gt;&lt;div&gt;Handles user payments via PaddleJS, according price selected.&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;align=left;spacing=12;fillColor=#fff2cc;strokeColor=#d6b656;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="-690" y="1040" width="210" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="XLDXQ8pQ_xPOunSGDu-5-6" value="&lt;b&gt;Call: Initiate user access&lt;br&gt;&lt;/b&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;After checkout completion, system must initialize user-access-request for further verification by backend.&lt;/span&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;align=left;spacing=12;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="-400" y="1427.5" width="250" height="102.5" as="geometry" />
+        </mxCell>
+        <mxCell id="XLDXQ8pQ_xPOunSGDu-5-9" value="&lt;b&gt;Action: &lt;/b&gt;Payments from our customers, will be handeled through our Paddle provider..&lt;br&gt;&lt;ul&gt;&lt;li&gt;Webhook endppoint must be defined&lt;/li&gt;&lt;li&gt;PaddleJS implemented within UI, to allow payments via client&lt;/li&gt;&lt;/ul&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;align=left;spacing=12;" parent="1" vertex="1">
+          <mxGeometry x="-857.25" y="610" width="297" height="145" as="geometry" />
+        </mxCell>
+        <mxCell id="huzISX9o3MUVbkpnmKz_-1" value="Grant&lt;br&gt;access" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="540" y="1382.49" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="huzISX9o3MUVbkpnmKz_-2" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=default;" parent="1" source="lpv_V7dIOGIIX44eoK-m-2" target="huzISX9o3MUVbkpnmKz_-1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="198" y="1352.02" as="sourcePoint" />
+            <mxPoint x="518" y="1352.02" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="huzISX9o3MUVbkpnmKz_-3" value="&lt;b&gt;Action:&amp;nbsp;&lt;/b&gt;Verify transaction and its correlated user, for granting requested app access.&lt;br&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Validate user according transaction, by transaction or subscription token, depending on price type &quot;one-time-purchase&quot; or &quot;subscription&quot;&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;align=left;spacing=12;" parent="1" vertex="1">
+          <mxGeometry x="-61.980000000000004" y="1528.62" width="307.7" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="huzISX9o3MUVbkpnmKz_-5" value="&lt;b&gt;Action: &lt;/b&gt;Grant Access to user, by access_token, its period or expiration_date (depending on logic)&lt;br&gt;&lt;ul&gt;&lt;li&gt;access_token and its access-limits (quantity vs. expiration_date) must be definied within app logic.&lt;/li&gt;&lt;/ul&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;align=left;spacing=12;" parent="1" vertex="1">
+          <mxGeometry x="542.5" y="1512.5" width="255" height="152.5" as="geometry" />
+        </mxCell>
+        <mxCell id="huzISX9o3MUVbkpnmKz_-6" value="&lt;b&gt;App Access Management&lt;br&gt;&lt;/b&gt;Manage user access via Admin panel" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="1070" y="1320" width="180" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="huzISX9o3MUVbkpnmKz_-7" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="huzISX9o3MUVbkpnmKz_-6" target="nrHdGCbzq3XjSZZxZuLL-1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="200" y="1362.5" as="sourcePoint" />
+            <mxPoint x="500" y="1362.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="huzISX9o3MUVbkpnmKz_-8" value="&lt;b&gt;Action: &lt;/b&gt;Admin can manage user access via Backpanel&lt;br&gt;&lt;ul&gt;&lt;li&gt;Admin can define new access accroding &quot;access_token&quot;, &quot;quantity&quot; and &quot;expiration_date&quot;&lt;/li&gt;&lt;li&gt;Admin can remove user access, by set it inactive&lt;/li&gt;&lt;/ul&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;align=left;spacing=12;" parent="1" vertex="1">
+          <mxGeometry x="1018" y="1512.5" width="284" height="158.75" as="geometry" />
+        </mxCell>
+        <mxCell id="huzISX9o3MUVbkpnmKz_-9" value="&lt;b&gt;Call: Grant Access by Admin&lt;/b&gt;&lt;br&gt;Admin can grant access to user manually.&lt;br&gt;&lt;ul&gt;&lt;li&gt;User must be selected&lt;/li&gt;&lt;li&gt;Access token must be defined&lt;/li&gt;&lt;li&gt;Period or quantity to limit access as additional restrictions&lt;/li&gt;&lt;/ul&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;align=left;spacing=12;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="810" y="1269" width="250" height="128.5" as="geometry" />
+        </mxCell>
+        <mxCell id="huzISX9o3MUVbkpnmKz_-13" value="&lt;b&gt;Action: &lt;/b&gt;Cancel subscription&lt;br&gt;&lt;ul&gt;&lt;li&gt;User is not charged anymore.&lt;/li&gt;&lt;li&gt;Owner can cancel subscription manually within Paddle Cockpit.&lt;/li&gt;&lt;/ul&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;align=left;spacing=12;" parent="1" vertex="1">
+          <mxGeometry x="-342.5" y="755" width="245" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="GjguRNVwzjblkNLckBbc-2" value="&lt;b&gt;Paddle Payment Handler&lt;br&gt;&lt;/b&gt;Payment Gateway, that handels customer transactions." style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;dashed=1;" parent="1" vertex="1">
+          <mxGeometry x="-811.24" y="770" width="210" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="GjguRNVwzjblkNLckBbc-5" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;" parent="1" source="fAkgLg6Yq0fzTYVt4pPN-4" target="GjguRNVwzjblkNLckBbc-4" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-855" y="1353" as="sourcePoint" />
+            <mxPoint x="-590" y="1353" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f1oyIB4GkQQLYOil8gvG-1" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0;exitDx=0;exitDy=0;dashed=1;" parent="1" source="f1oyIB4GkQQLYOil8gvG-2" target="Tur9mPzXtXX7kOvMszdY-5" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="60" y="903" as="sourcePoint" />
+            <mxPoint x="60" y="1218" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-290" y="670" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f1oyIB4GkQQLYOil8gvG-2" value="New transaction" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="-660" y="770" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="f1oyIB4GkQQLYOil8gvG-4" value="&lt;b&gt;Action: &lt;/b&gt;Each payment initalize a transaction, according payment status (completed, failed etc.).&lt;br&gt;&lt;div&gt;&lt;p style=&quot;border-color: var(--border-color);&quot;&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;Types of transactions:&lt;/b&gt;&lt;/p&gt;&lt;p style=&quot;border-color: var(--border-color);&quot;&gt;&lt;/p&gt;&lt;ul style=&quot;border-color: var(--border-color);&quot;&gt;&lt;li style=&quot;border-color: var(--border-color);&quot;&gt;&lt;u&gt;One-time purchase&lt;/u&gt;: are charged a single time.&amp;nbsp;&lt;/li&gt;&lt;li style=&quot;border-color: var(--border-color);&quot;&gt;&lt;u&gt;Subscription&lt;/u&gt;: allow periodic renewal of access, with the option to cancel at any time (see Paddle Subscriptions).&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;align=left;spacing=12;" parent="1" vertex="1">
+          <mxGeometry x="-40" y="380" width="279.2" height="195" as="geometry" />
+        </mxCell>
+        <mxCell id="f1oyIB4GkQQLYOil8gvG-6" value="&lt;div&gt;&lt;b&gt;Call: &lt;/b&gt;Transaction event triggered.&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;align=left;spacing=12;fillColor=#fff2cc;strokeColor=#d6b656;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="-280" y="600" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XLDXQ8pQ_xPOunSGDu-5-8" value="&lt;br&gt;&lt;b&gt;Call: Transaction webhook triggered&lt;/b&gt;&lt;span style=&quot;font-weight: bold; background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;Transaction data will be sent to app webhook listener.&lt;br&gt;&lt;ul style=&quot;border-color: var(--border-color);&quot;&gt;&lt;li style=&quot;border-color: var(--border-color);&quot;&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;Transaction_Token exists&lt;/b&gt;: Transaction has been initialized via PaddleJS recently (Initial Payment)&lt;/li&gt;&lt;li style=&quot;border-color: var(--border-color);&quot;&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;Transaction_Token does not exist&lt;/b&gt;: Transaction initialized by a user price subscription in past.&lt;/li&gt;&lt;/ul&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;align=left;spacing=12;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="100" y="880" width="270" height="187.5" as="geometry" />
+        </mxCell>
+        <mxCell id="huzISX9o3MUVbkpnmKz_-4" value="&lt;b&gt;Call: Issue Access&lt;br&gt;&lt;/b&gt;Grant access to matching user&lt;br&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Access token must be specified&lt;/span&gt;&lt;br&gt;&lt;/li&gt;&lt;li&gt;Period or quantity to limit access as additional restrictions&lt;/li&gt;&lt;/ul&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;align=left;spacing=12;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="270" y="1270" width="240" height="127.5" as="geometry" />
+        </mxCell>
+        <mxCell id="cVaqJ95r4fNrpDcWqSW7-4" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;startArrow=block;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;fillColor=default;" parent="1" source="cVaqJ95r4fNrpDcWqSW7-3" target="Tur9mPzXtXX7kOvMszdY-7" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-667" y="1236" as="sourcePoint" />
+            <mxPoint x="-670" y="960" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cVaqJ95r4fNrpDcWqSW7-6" value="" style="group" parent="1" vertex="1" connectable="0">
+          <mxGeometry x="-869" y="1250.0000000000002" width="320.5" height="284.3699999999999" as="geometry" />
+        </mxCell>
+        <mxCell id="Tur9mPzXtXX7kOvMszdY-2" value="User Access Panel&lt;br&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;User access overview&lt;/span&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" parent="cVaqJ95r4fNrpDcWqSW7-6" vertex="1">
+          <mxGeometry x="40" y="36.86999999999989" width="247.5" height="247.5" as="geometry" />
+        </mxCell>
+        <mxCell id="GjguRNVwzjblkNLckBbc-4" value="App &lt;br&gt;Prices" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f8cecc;strokeColor=#b85450;dashed=1;" parent="cVaqJ95r4fNrpDcWqSW7-6" vertex="1">
+          <mxGeometry y="125.61999999999989" width="70" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="lpv_V7dIOGIIX44eoK-m-1" value="Checkout completed" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#e1d5e7;strokeColor=#9673a6;dashed=1;" parent="cVaqJ95r4fNrpDcWqSW7-6" vertex="1">
+          <mxGeometry x="253" y="126.86999999999989" width="67.5" height="67.5" as="geometry" />
+        </mxCell>
+        <mxCell id="cVaqJ95r4fNrpDcWqSW7-1" value="Client Checkout" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f8cecc;strokeColor=#b85450;" parent="cVaqJ95r4fNrpDcWqSW7-6" vertex="1">
+          <mxGeometry x="120.63" width="86.25" height="86.25" as="geometry" />
+        </mxCell>
+        <mxCell id="cVaqJ95r4fNrpDcWqSW7-3" value="Cancel&lt;br&gt;Subscription" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="cVaqJ95r4fNrpDcWqSW7-6" vertex="1">
+          <mxGeometry x="212.5" y="34.36999999999989" width="75" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="cVaqJ95r4fNrpDcWqSW7-7" value="" style="group" parent="1" vertex="1" connectable="0">
+          <mxGeometry x="-50" y="1280" width="283.75" height="232.5" as="geometry" />
+        </mxCell>
+        <mxCell id="Tur9mPzXtXX7kOvMszdY-4" value="&lt;b&gt;Access Request Validation&lt;br&gt;&lt;/b&gt;Validate transactions and its correlated user." style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;dashed=1;" parent="cVaqJ95r4fNrpDcWqSW7-7" vertex="1">
+          <mxGeometry x="40" y="32.5" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="-dZIRAtPOdo9v_Imx_vp-21" value="Verify&lt;br&gt;request" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f8cecc;strokeColor=#b85450;" parent="cVaqJ95r4fNrpDcWqSW7-7" vertex="1">
+          <mxGeometry x="102.5" width="70" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="XLDXQ8pQ_xPOunSGDu-5-7" value="Initiate &lt;br&gt;access request" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f8cecc;strokeColor=#b85450;" parent="cVaqJ95r4fNrpDcWqSW7-7" vertex="1">
+          <mxGeometry x="-17" y="98.75" width="67.5" height="67.5" as="geometry" />
+        </mxCell>
+        <mxCell id="lpv_V7dIOGIIX44eoK-m-2" value="Verified" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#e1d5e7;strokeColor=#9673a6;dashed=1;" parent="cVaqJ95r4fNrpDcWqSW7-7" vertex="1">
+          <mxGeometry x="230" y="98.11999999999999" width="68.75" height="68.75" as="geometry" />
+        </mxCell>
+        <mxCell id="huzISX9o3MUVbkpnmKz_-12" value="&lt;b&gt;Call: Cancel subscription&lt;br&gt;&lt;/b&gt;Via Paddle API Call, subscription can be canceled.&lt;br&gt;&lt;ul&gt;&lt;li&gt;suscription_token must be defined.&lt;/li&gt;&lt;li&gt;Date of canclation (&quot;immediatelly&quot; or &quot;end-of-subscription-period&quot;).&lt;/li&gt;&lt;li&gt;User subscription must be tagged als canceled.&lt;/li&gt;&lt;/ul&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;align=left;spacing=12;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="-400" y="1169" width="254.75" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="cVaqJ95r4fNrpDcWqSW7-9" value="" style="group;strokeColor=none;dashed=1;" parent="1" vertex="1" connectable="0">
+          <mxGeometry x="-1320" y="1280" width="190" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="fAkgLg6Yq0fzTYVt4pPN-4" value="App Access Prices&lt;br&gt;&lt;span style=&quot;border-color: var(--border-color); font-weight: 400; background-color: initial;&quot;&gt;Stores prices, which grant user access to certain app features.&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&lt;/span&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontStyle=1;dashed=1;" parent="cVaqJ95r4fNrpDcWqSW7-9" vertex="1">
+          <mxGeometry y="35.48571428571429" width="184.7885714285714" height="184.7885714285714" as="geometry" />
+        </mxCell>
+        <mxCell id="GjguRNVwzjblkNLckBbc-1" value="Set&lt;br&gt;App Price" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f8cecc;strokeColor=#b85450;" parent="cVaqJ95r4fNrpDcWqSW7-9" vertex="1">
+          <mxGeometry x="57.43405405405406" width="69.91999999999999" height="69.91999999999999" as="geometry" />
+        </mxCell>
+        <mxCell id="fAkgLg6Yq0fzTYVt4pPN-6" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fillColor=default;" parent="1" source="Tur9mPzXtXX7kOvMszdY-10" target="GjguRNVwzjblkNLckBbc-1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-750" y="952.5" as="sourcePoint" />
+            <mxPoint x="-850" y="1032.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cVaqJ95r4fNrpDcWqSW7-10" value="" style="group" parent="1" vertex="1" connectable="0">
+          <mxGeometry x="-1340" y="801.25" width="217.5" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="Tur9mPzXtXX7kOvMszdY-10" value="&lt;b&gt;Paddle Price Management&lt;br&gt;&lt;/b&gt;Define Prices" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="cVaqJ95r4fNrpDcWqSW7-10" vertex="1">
+          <mxGeometry x="7.5" width="210" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="GjguRNVwzjblkNLckBbc-3" value="Setup" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="cVaqJ95r4fNrpDcWqSW7-10" vertex="1">
+          <mxGeometry width="65" height="65" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="tJpdamuhlTRlWs8NpNzs" name="Feature Definition">
+    <mxGraphModel dx="4522" dy="1740" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="FbIAEuSWL4UDz-fWMkYz-1" value="&lt;h1&gt;User Access Management&lt;/h1&gt;&lt;p&gt;&lt;b&gt;Overview&lt;/b&gt;:&lt;br&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;User Access Management allows users to purchase access by payments to specified features within the app. The process involves several steps:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;1. Setup Access by Paddle Prices:&lt;br&gt;&lt;/strong&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;u&gt;&lt;i&gt;Payments&lt;/i&gt;&lt;/u&gt;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;: Handled via our external payment provider, Paddle, using defined prices. These prices allow users to gain access to certain app features.&lt;/span&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;strong style=&quot;background-color: initial;&quot;&gt;Price Synchronization&lt;/strong&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;: Prices are set within the Paddle provider and must be synchronized with our app using webhooks.&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;strong style=&quot;background-color: initial;&quot;&gt;Custom Data&lt;/strong&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;: Prices must include custom_data to set user access within the app accordingly:&lt;/span&gt;&lt;/li&gt;&lt;ul&gt;&lt;li&gt;&lt;code style=&quot;background-color: initial;&quot;&gt;access_token&lt;/code&gt;&lt;span style=&quot;background-color: initial;&quot;&gt; (string, required): Grants access to features.&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;code style=&quot;background-color: initial;&quot;&gt;duration_month&lt;/code&gt;&lt;span style=&quot;background-color: initial;&quot;&gt; (int, optional): Defines the period of access. Note: This will be overwritten by the subscription expiration date.&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;&lt;strong style=&quot;background-color: initial;&quot;&gt;Admin Control&lt;/strong&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;: Admins can activate or deactivate prices within the app or Paddle. Only active prices are available for users.&lt;/span&gt;&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;2. User Access Initialization:&lt;br&gt;&lt;/strong&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;u&gt;&lt;i&gt;Purchasing Access&lt;/i&gt;&lt;/u&gt;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;: Users can purchase access to specific features based on the prices available within the app.&lt;/span&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;strong style=&quot;background-color: initial;&quot;&gt;Client Checkout&lt;/strong&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;: Users can buy active prices via Client Checkout provided by PaddleJS. Payments are handled through the Paddle payment provider.&lt;/span&gt;&lt;/li&gt;&lt;ul&gt;&lt;li&gt;&lt;strong style=&quot;background-color: initial;&quot;&gt;Price Types&lt;/strong&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;: Prices can be either &quot;One-Time Purchase&quot; or &quot;Subscription&quot;.&lt;/span&gt;&lt;/li&gt;&lt;ul&gt;&lt;li&gt;&lt;u style=&quot;background-color: initial; border-color: var(--border-color);&quot;&gt;One-Time-Purchase&lt;/u&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;: User pay only once, for a specific quantity or expiration_time defined by price. User Access will be granted for &quot;once&quot; until expiration (expiration date vs. quantity).&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;u style=&quot;background-color: initial; border-color: var(--border-color);&quot;&gt;Subscription&lt;/u&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;: User is subscribing to Price, which will be periodically charged, by Payment Provider. User Access will be granted &quot;periodically&quot; via Webhook corresponding the subscription_token and corresponding user.&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;&lt;strong style=&quot;background-color: initial;&quot;&gt;Subscription Management&lt;/strong&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;: Users can cancel subscriptions at any time through the app if the price type is &quot;subscription,&quot; providing control over ongoing payments and app access.&lt;/span&gt;&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;Post-Payment Verification&lt;/strong&gt;: After successful payment, the &quot;user-access-request&quot; must be stored within backend database for subsequent access verification through Paddle webhooks (see User Access Verification).&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;3. User Access Verification:&lt;br&gt;&lt;/strong&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;i&gt;&lt;u&gt;Verification Process&lt;/u&gt;&lt;/i&gt;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;: After completing Client Checkout, the initial &quot;user-access-request&quot; needs to be verified to appropriately grant access to the specified features.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;strong style=&quot;background-color: initial;&quot;&gt;Webhook Calls&lt;/strong&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;: Subsequent webhook calls will verify user transactions based on the price type (&quot;One-Time Purchase&quot; or &quot;Subscription&quot;) and set access accordingly.&lt;/span&gt;&lt;/li&gt;&lt;ul&gt;&lt;li&gt;&lt;u&gt;Transactions&lt;/u&gt;&lt;b&gt;:&amp;nbsp;&lt;/b&gt;Payments processed via Paddle, that referring to a certain price.&amp;nbsp;&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;see Documentation&lt;/b&gt;:&amp;nbsp;&lt;a style=&quot;border-color: var(--border-color);&quot; href=&quot;https://developer.paddle.com/&quot;&gt;Home - Paddle Developer&lt;/a&gt;&lt;br&gt;&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;4. Manual Access Management:&lt;br&gt;&lt;/strong&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;i&gt;&lt;u&gt;Admin Capabilities&lt;/u&gt;&lt;/i&gt;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;: Admins can manually manage user access within the app.&lt;/span&gt;&lt;/p&gt;&lt;ul style=&quot;border-color: var(--border-color);&quot;&gt;&lt;li&gt;&lt;strong style=&quot;background-color: initial;&quot;&gt;Transaction and Subscription Management&lt;/strong&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;: Admins can read user transactions, subscriptions, and access records.&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;strong style=&quot;background-color: initial;&quot;&gt;Issuing Access&lt;/strong&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;: Admins can issue access to any verified user.&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;strong style=&quot;background-color: initial;&quot;&gt;Revoking Access&lt;/strong&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;: Admins can revoke user access.&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;strong style=&quot;background-color: initial;&quot;&gt;Publishing Prices&lt;/strong&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;: Admins can publish/unpublish prices, making them available for users to purchase access to provided app features.&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="-1570" y="90" width="530" height="1010" as="geometry" />
+        </mxCell>
+        <mxCell id="U2YOYQVLZKXm_-sVwfDY-1" value="&lt;b&gt;Middleware&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="-920" y="190" width="863" height="650" as="geometry" />
+        </mxCell>
+        <mxCell id="U2YOYQVLZKXm_-sVwfDY-6" value="&lt;b&gt;&quot;paddle_webhook_verified&quot;: 400, 403, 500&lt;/b&gt;&lt;br&gt;Verify paddle webhooks by&amp;nbsp;PADDLE_WEBHOOK_SECRET&lt;br&gt;&lt;ul&gt;&lt;li&gt;validate paddle signature&lt;/li&gt;&lt;ul&gt;&lt;li&gt;timestamp [&#39;ts&#39;]&lt;/li&gt;&lt;li&gt;signature [&#39;h1&#39;]&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;Make sure there are not expired timestamps (5min)&lt;/li&gt;&lt;ul&gt;&lt;li&gt;Prevent Replay attacks&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;Calculate signature&lt;/li&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://developer.paddle.com/webhooks/signature-verification&quot;&gt;Verify webhook signatures - Paddle Developer&lt;/a&gt;&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;Validate signature&lt;/li&gt;&lt;/ul&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;align=left;verticalAlign=top;spacing=12;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="-790" y="320" width="340" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="hiRfiFeVJD8kV65hWhro-2" value="ref. FTR. &quot;User Account Managemenr&quot;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="-320" y="670" width="170" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="fDM4YMv3eYL9xFOZOELk" name="DB Schema">
+    <mxGraphModel dx="1434" dy="870" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="yBDRP4j6Li_2MC17L-Lr-1" value="users" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="1320" y="680" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="yBDRP4j6Li_2MC17L-Lr-2" value="Data" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="yBDRP4j6Li_2MC17L-Lr-1" vertex="1">
+          <mxGeometry y="30" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="yBDRP4j6Li_2MC17L-Lr-3" value="paddle_prices" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="707" y="665" width="163" height="290" as="geometry" />
+        </mxCell>
+        <mxCell id="yBDRP4j6Li_2MC17L-Lr-4" value="&lt;ul&gt;&lt;li&gt;price_token&lt;/li&gt;&lt;li&gt;product_token&lt;/li&gt;&lt;li&gt;name&lt;/li&gt;&lt;li&gt;description&lt;/li&gt;&lt;li&gt;type&lt;/li&gt;&lt;li&gt;price&lt;/li&gt;&lt;li&gt;tax_mode&lt;/li&gt;&lt;li&gt;currency_mode&lt;/li&gt;&lt;li&gt;billing_interval&lt;/li&gt;&lt;li&gt;billing_frequency&lt;/li&gt;&lt;li&gt;access_token&lt;/li&gt;&lt;li&gt;duration_months&lt;/li&gt;&lt;li&gt;is_active&lt;/li&gt;&lt;li&gt;status&lt;/li&gt;&lt;li&gt;message&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="yBDRP4j6Li_2MC17L-Lr-3" vertex="1">
+          <mxGeometry y="30" width="163" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="yBDRP4j6Li_2MC17L-Lr-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.244;entryY=0.989;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="yBDRP4j6Li_2MC17L-Lr-14" target="yBDRP4j6Li_2MC17L-Lr-2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yBDRP4j6Li_2MC17L-Lr-11" value="1:n&lt;br&gt;Set Null" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="yBDRP4j6Li_2MC17L-Lr-10" vertex="1" connectable="0">
+          <mxGeometry x="-0.092" relative="1" as="geometry">
+            <mxPoint x="-89" y="24" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yBDRP4j6Li_2MC17L-Lr-12" value="paddle_subscriptions" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1030" y="902.5" width="169" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="yBDRP4j6Li_2MC17L-Lr-14" value="&lt;ul&gt;&lt;li&gt;subscription_token&lt;/li&gt;&lt;li&gt;user_id&lt;/li&gt;&lt;li&gt;price_id&lt;/li&gt;&lt;li&gt;started_at&lt;/li&gt;&lt;li&gt;canceled_at&lt;/li&gt;&lt;li&gt;paused_at&lt;/li&gt;&lt;li&gt;status&lt;/li&gt;&lt;li&gt;message&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="yBDRP4j6Li_2MC17L-Lr-12" vertex="1">
+          <mxGeometry y="30" width="169" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="yBDRP4j6Li_2MC17L-Lr-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="yBDRP4j6Li_2MC17L-Lr-14" target="yBDRP4j6Li_2MC17L-Lr-4" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="900.96" y="754.01" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yBDRP4j6Li_2MC17L-Lr-17" value="1:n&lt;br&gt;Set Null" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="yBDRP4j6Li_2MC17L-Lr-16" vertex="1" connectable="0">
+          <mxGeometry x="-0.6104" y="1" relative="1" as="geometry">
+            <mxPoint x="-7" y="-76" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yBDRP4j6Li_2MC17L-Lr-18" value="paddle_transactions" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1350" y="1230" width="180" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="yBDRP4j6Li_2MC17L-Lr-19" value="&lt;ul&gt;&lt;li&gt;transaction_token&lt;/li&gt;&lt;li&gt;user_id&lt;/li&gt;&lt;li&gt;customer_token&lt;/li&gt;&lt;li&gt;subscription_id&lt;/li&gt;&lt;li&gt;price_id&lt;/li&gt;&lt;li&gt;quantity&lt;/li&gt;&lt;li&gt;total&lt;/li&gt;&lt;li&gt;tax&lt;/li&gt;&lt;li&gt;currency_code&lt;/li&gt;&lt;li&gt;access_added&lt;/li&gt;&lt;li&gt;is_verified&lt;/li&gt;&lt;li&gt;status&lt;/li&gt;&lt;li&gt;message&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="yBDRP4j6Li_2MC17L-Lr-18" vertex="1">
+          <mxGeometry y="30" width="180" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="yBDRP4j6Li_2MC17L-Lr-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="yBDRP4j6Li_2MC17L-Lr-18" target="yBDRP4j6Li_2MC17L-Lr-2" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1249.9999999999998" y="1260" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yBDRP4j6Li_2MC17L-Lr-25" value="1:n" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="yBDRP4j6Li_2MC17L-Lr-24" vertex="1" connectable="0">
+          <mxGeometry x="-0.1203" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yBDRP4j6Li_2MC17L-Lr-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.198;exitDx=0;exitDy=0;entryX=0.498;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;exitPerimeter=0;" parent="1" source="yBDRP4j6Li_2MC17L-Lr-19" target="yBDRP4j6Li_2MC17L-Lr-14" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1110" y="1260" as="sourcePoint" />
+            <mxPoint x="1046" y="1105" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yBDRP4j6Li_2MC17L-Lr-27" value="0:n&lt;br&gt;Set Null" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="yBDRP4j6Li_2MC17L-Lr-26" vertex="1" connectable="0">
+          <mxGeometry x="0.2333" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p5olz9-tP4Pds1S0X24A-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="yBDRP4j6Li_2MC17L-Lr-30" target="yBDRP4j6Li_2MC17L-Lr-2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p5olz9-tP4Pds1S0X24A-3" value="1:n&lt;br&gt;Cascade" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="p5olz9-tP4Pds1S0X24A-2" vertex="1" connectable="0">
+          <mxGeometry x="-0.7389" relative="1" as="geometry">
+            <mxPoint y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yBDRP4j6Li_2MC17L-Lr-30" value="user_access" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="1680" y="1570" width="160" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="yBDRP4j6Li_2MC17L-Lr-31" value="&lt;ul&gt;&lt;li&gt;user_id&lt;/li&gt;&lt;li&gt;transaction_id&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;access_token&lt;/span&gt;&lt;br&gt;&lt;/li&gt;&lt;li&gt;quantity&lt;/li&gt;&lt;li&gt;expiration_date&lt;/li&gt;&lt;li style=&quot;border-color: var(--border-color);&quot;&gt;is_active&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="yBDRP4j6Li_2MC17L-Lr-30" vertex="1">
+          <mxGeometry y="30" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="yBDRP4j6Li_2MC17L-Lr-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.513;entryY=0.997;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="yBDRP4j6Li_2MC17L-Lr-31" target="yBDRP4j6Li_2MC17L-Lr-19" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1394" y="1570.0000000000005" as="sourcePoint" />
+            <mxPoint x="1173.98" y="1275.9899999999998" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yBDRP4j6Li_2MC17L-Lr-39" value="0:n&lt;br&gt;Set Null" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="yBDRP4j6Li_2MC17L-Lr-38" vertex="1" connectable="0">
+          <mxGeometry x="0.1268" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yBDRP4j6Li_2MC17L-Lr-40" value="&lt;h1&gt;DB Structure&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Paddle_Prices allows user request ceratain access to app features according prices set.&lt;/li&gt;&lt;li&gt;Paddle_Subscriptions &amp;amp; Paddle_Transactions allows us verifying users, via Paddle webhook calls according transaction_token or subscription_token.&lt;/li&gt;&lt;li&gt;User_Access defines user access to app features and its access limits.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="290" y="400" width="300" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="yBDRP4j6Li_2MC17L-Lr-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.478;entryY=0.999;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="yBDRP4j6Li_2MC17L-Lr-19" target="yBDRP4j6Li_2MC17L-Lr-4" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1110" y="1260" as="sourcePoint" />
+            <mxPoint x="900.54" y="755.33" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p5olz9-tP4Pds1S0X24A-1" value="1:n&lt;br&gt;Set Null" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="yBDRP4j6Li_2MC17L-Lr-41" vertex="1" connectable="0">
+          <mxGeometry x="0.2466" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eUz4MnDlw25-_B4LijGR-1" value="&lt;b&gt;paddle_prices&lt;/b&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;: App has prices, which defines app featrues, users can gain access to.&lt;/span&gt;&lt;br&gt;&lt;ul style=&quot;border-color: var(--border-color);&quot;&gt;&lt;li style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;access_token: according user_access&lt;/span&gt;&lt;br&gt;&lt;/li&gt;&lt;li style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;border-color: var(--border-color); background-color: initial;&quot;&gt;duration_months: if custom data &quot;period_months&quot; set in Paddle Price Cockpit&lt;/span&gt;&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&lt;/li&gt;&lt;li style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;border-color: var(--border-color); background-color: initial;&quot;&gt;billing_interval &amp;amp; billing_frequency, if price is type &quot;subscription&quot;&lt;/span&gt;&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&lt;/li&gt;&lt;li style=&quot;border-color: var(--border-color);&quot;&gt;is_active: allow users to request access to provided price&lt;/li&gt;&lt;li style=&quot;border-color: var(--border-color);&quot;&gt;status: Paddle status of price &quot;active&quot; vs. &quot;inactive&quot;&lt;/li&gt;&lt;/ul&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;align=left;spacing=12;fillColor=#fff2cc;strokeColor=#d6b656;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="420" y="657.5" width="260" height="245" as="geometry" />
+        </mxCell>
+        <mxCell id="eUz4MnDlw25-_B4LijGR-2" value="&lt;b&gt;paddle_subscriptions&lt;/b&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;:&amp;nbsp;&lt;/span&gt;Stores user subscription, for further verification of transaction webhooks. Additionally, this allows user to cancel subscriptions via our app.&lt;br&gt;&lt;ul style=&quot;border-color: var(--border-color);&quot;&gt;&lt;li style=&quot;border-color: var(--border-color);&quot;&gt;subscription_token, allows us verifiying further transaction, made by user-subscription&lt;/li&gt;&lt;li style=&quot;border-color: var(--border-color);&quot;&gt;user_id: According user, that belongs to subscription&lt;/li&gt;&lt;li style=&quot;border-color: var(--border-color);&quot;&gt;metadata: Status of user&#39;s subscription&lt;/li&gt;&lt;/ul&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;align=left;spacing=12;fillColor=#fff2cc;strokeColor=#d6b656;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="971" y="665" width="270" height="195" as="geometry" />
+        </mxCell>
+        <mxCell id="eUz4MnDlw25-_B4LijGR-3" value="&lt;b&gt;paddle_transactions&lt;/b&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;: Initialize user access request&amp;nbsp; for further verification and stores user transactions.&lt;/span&gt;&lt;br&gt;&lt;ul style=&quot;border-color: var(--border-color);&quot;&gt;&lt;li style=&quot;border-color: var(--border-color);&quot;&gt;transaction_token: allows us verifiying user, according transaction&lt;/li&gt;&lt;li style=&quot;border-color: var(--border-color);&quot;&gt;user_id: According user, that made transaction&lt;/li&gt;&lt;/ul&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;align=left;spacing=12;fillColor=#fff2cc;strokeColor=#d6b656;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="1460" y="1040" width="240" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="eUz4MnDlw25-_B4LijGR-4" value="&lt;b&gt;user_access&lt;/b&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;: U&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;ser access by it&#39;s token and limits.&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;ul style=&quot;border-color: var(--border-color);&quot;&gt;&lt;li style=&quot;border-color: var(--border-color);&quot;&gt;user_id: user that has access to ceratain features&lt;/li&gt;&lt;li style=&quot;border-color: var(--border-color);&quot;&gt;transaction_id: transaction that led to access&lt;/li&gt;&lt;ul&gt;&lt;li style=&quot;border-color: var(--border-color);&quot;&gt;If null, access has been initialized manually by an admin.&lt;/li&gt;&lt;/ul&gt;&lt;li style=&quot;border-color: var(--border-color);&quot;&gt;access_token: Token, that handles feature-access&lt;/li&gt;&lt;li style=&quot;border-color: var(--border-color);&quot;&gt;quantity: Amount limits&lt;/li&gt;&lt;li style=&quot;border-color: var(--border-color);&quot;&gt;expiration_date: Period of access&amp;nbsp;&lt;/li&gt;&lt;li style=&quot;border-color: var(--border-color);&quot;&gt;is_active: Removed access, if set to false&lt;/li&gt;&lt;/ul&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;align=left;spacing=12;fillColor=#fff2cc;strokeColor=#d6b656;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="1820" y="1350" width="330" height="190" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="ezXa8PKXZf3m3BCPrRNH" name="1 - Initialize Access">
+    <mxGraphModel dx="1687" dy="1024" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="vGKq-BhATYDVhMU9XuAE-1" value="User" style="swimlane;startSize=20;horizontal=0;html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="250" y="260" width="3640" height="187" as="geometry" />
+        </mxCell>
+        <mxCell id="vGKq-BhATYDVhMU9XuAE-2" value="&quot;account/access&quot;" style="points=[[0.145,0.145,0],[0.5,0,0],[0.855,0.145,0],[1,0.5,0],[0.855,0.855,0],[0.5,1,0],[0.145,0.855,0],[0,0.5,0]];shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=standard;symbol=general;" parent="vGKq-BhATYDVhMU9XuAE-1" vertex="1">
+          <mxGeometry x="80" y="97" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="vGKq-BhATYDVhMU9XuAE-4" value="Load Prices &amp;amp; User transactions" style="points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];shape=mxgraph.bpmn.task;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=1;expand=0;collapsible=0;taskMarker=script;" parent="vGKq-BhATYDVhMU9XuAE-1" vertex="1">
+          <mxGeometry x="204" y="82" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="vGKq-BhATYDVhMU9XuAE-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="vGKq-BhATYDVhMU9XuAE-1" source="vGKq-BhATYDVhMU9XuAE-2" target="vGKq-BhATYDVhMU9XuAE-4" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vGKq-BhATYDVhMU9XuAE-17" value="" style="points=[[0.145,0.145,0],[0.5,0,0],[0.855,0.145,0],[1,0.5,0],[0.855,0.855,0],[0.5,1,0],[0.145,0.855,0],[0,0.5,0]];shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=catching;symbol=signal;" parent="vGKq-BhATYDVhMU9XuAE-1" vertex="1">
+          <mxGeometry x="465" y="97" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="vGKq-BhATYDVhMU9XuAE-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="vGKq-BhATYDVhMU9XuAE-1" source="vGKq-BhATYDVhMU9XuAE-4" target="vGKq-BhATYDVhMU9XuAE-17" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vGKq-BhATYDVhMU9XuAE-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="vGKq-BhATYDVhMU9XuAE-1" source="vGKq-BhATYDVhMU9XuAE-20" target="vGKq-BhATYDVhMU9XuAE-23" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vGKq-BhATYDVhMU9XuAE-20" value="Render Prices&lt;br&gt;&amp;amp; User Transactions" style="points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];shape=mxgraph.bpmn.task;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=1;expand=0;collapsible=0;taskMarker=script;" parent="vGKq-BhATYDVhMU9XuAE-1" vertex="1">
+          <mxGeometry x="577" y="82" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="vGKq-BhATYDVhMU9XuAE-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="vGKq-BhATYDVhMU9XuAE-1" source="vGKq-BhATYDVhMU9XuAE-17" target="vGKq-BhATYDVhMU9XuAE-20" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vGKq-BhATYDVhMU9XuAE-23" value="Rendered" style="points=[[0.145,0.145,0],[0.5,0,0],[0.855,0.145,0],[1,0.5,0],[0.855,0.855,0],[0.5,1,0],[0.145,0.855,0],[0,0.5,0]];shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=throwing;symbol=signal;" parent="vGKq-BhATYDVhMU9XuAE-1" vertex="1">
+          <mxGeometry x="760" y="97" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="JUJtWGQ3KjyEVi_W5sDs-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="vGKq-BhATYDVhMU9XuAE-1" source="vGKq-BhATYDVhMU9XuAE-25" target="JUJtWGQ3KjyEVi_W5sDs-1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vGKq-BhATYDVhMU9XuAE-25" value="User clicks price" style="points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];shape=mxgraph.bpmn.task;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=1;expand=0;collapsible=0;taskMarker=user;" parent="vGKq-BhATYDVhMU9XuAE-1" vertex="1">
+          <mxGeometry x="871" y="82" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="vGKq-BhATYDVhMU9XuAE-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="vGKq-BhATYDVhMU9XuAE-1" source="vGKq-BhATYDVhMU9XuAE-23" target="vGKq-BhATYDVhMU9XuAE-25" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vGKq-BhATYDVhMU9XuAE-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;" parent="vGKq-BhATYDVhMU9XuAE-1" source="vGKq-BhATYDVhMU9XuAE-27" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1310" y="-100" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vGKq-BhATYDVhMU9XuAE-27" value="Open according price&lt;br&gt;PaddleJS" style="points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];shape=mxgraph.bpmn.task;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=1;expand=0;collapsible=0;taskMarker=script;" parent="vGKq-BhATYDVhMU9XuAE-1" vertex="1">
+          <mxGeometry x="1240" y="82" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="vAtGVQH-4u4hiPoSUItG-8" value="PaddleJS&lt;br&gt;loaded" style="points=[[0.145,0.145,0],[0.5,0,0],[0.855,0.145,0],[1,0.5,0],[0.855,0.855,0],[0.5,1,0],[0.145,0.855,0],[0,0.5,0]];shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=catching;symbol=signal;" parent="vGKq-BhATYDVhMU9XuAE-1" vertex="1">
+          <mxGeometry x="1430" y="97" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="vAtGVQH-4u4hiPoSUItG-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="vGKq-BhATYDVhMU9XuAE-1" source="vGKq-BhATYDVhMU9XuAE-27" target="vAtGVQH-4u4hiPoSUItG-8" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vAtGVQH-4u4hiPoSUItG-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;" parent="vGKq-BhATYDVhMU9XuAE-1" source="vAtGVQH-4u4hiPoSUItG-11" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1610" y="-100" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vAtGVQH-4u4hiPoSUItG-11" value="User buys product" style="points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];shape=mxgraph.bpmn.task;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=1;expand=0;collapsible=0;taskMarker=user;" parent="vGKq-BhATYDVhMU9XuAE-1" vertex="1">
+          <mxGeometry x="1550" y="82" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="vAtGVQH-4u4hiPoSUItG-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="vGKq-BhATYDVhMU9XuAE-1" source="vAtGVQH-4u4hiPoSUItG-8" target="vAtGVQH-4u4hiPoSUItG-11" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vAtGVQH-4u4hiPoSUItG-14" value="Checkout&lt;br&gt;status" style="points=[[0.145,0.145,0],[0.5,0,0],[0.855,0.145,0],[1,0.5,0],[0.855,0.855,0],[0.5,1,0],[0.145,0.855,0],[0,0.5,0]];shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=catching;symbol=signal;" parent="vGKq-BhATYDVhMU9XuAE-1" vertex="1">
+          <mxGeometry x="1750" y="97" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="vAtGVQH-4u4hiPoSUItG-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="vGKq-BhATYDVhMU9XuAE-1" source="vAtGVQH-4u4hiPoSUItG-11" target="vAtGVQH-4u4hiPoSUItG-14" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vAtGVQH-4u4hiPoSUItG-17" value="Complete Client Checkout" style="points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];shape=mxgraph.bpmn.task;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=1;expand=0;collapsible=0;taskMarker=script;" parent="vGKq-BhATYDVhMU9XuAE-1" vertex="1">
+          <mxGeometry x="2000" y="82" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="vAtGVQH-4u4hiPoSUItG-20" value="Status&lt;br&gt;checkout.completed" style="points=[[0.145,0.145,0],[0.5,0,0],[0.855,0.145,0],[1,0.5,0],[0.855,0.855,0],[0.5,1,0],[0.145,0.855,0],[0,0.5,0]];shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=catching;symbol=conditional;" parent="vGKq-BhATYDVhMU9XuAE-1" vertex="1">
+          <mxGeometry x="1880" y="97" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="vAtGVQH-4u4hiPoSUItG-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="vGKq-BhATYDVhMU9XuAE-1" source="vAtGVQH-4u4hiPoSUItG-14" target="vAtGVQH-4u4hiPoSUItG-20" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vAtGVQH-4u4hiPoSUItG-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="vGKq-BhATYDVhMU9XuAE-1" source="vAtGVQH-4u4hiPoSUItG-20" target="vAtGVQH-4u4hiPoSUItG-17" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vAtGVQH-4u4hiPoSUItG-31" value="" style="points=[[0.145,0.145,0],[0.5,0,0],[0.855,0.145,0],[1,0.5,0],[0.855,0.855,0],[0.5,1,0],[0.145,0.855,0],[0,0.5,0]];shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=catching;symbol=signal;" parent="vGKq-BhATYDVhMU9XuAE-1" vertex="1">
+          <mxGeometry x="2230" y="97" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="vAtGVQH-4u4hiPoSUItG-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="vGKq-BhATYDVhMU9XuAE-1" source="vAtGVQH-4u4hiPoSUItG-17" target="vAtGVQH-4u4hiPoSUItG-31" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vAtGVQH-4u4hiPoSUItG-34" value="Request Interval (5sec)&lt;br&gt;Check if transaction has been verified by our webhook" style="points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];shape=mxgraph.bpmn.task;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=1;expand=0;collapsible=0;taskMarker=script;isLoopStandard=1;" parent="vGKq-BhATYDVhMU9XuAE-1" vertex="1">
+          <mxGeometry x="2410" y="82" width="150" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="vAtGVQH-4u4hiPoSUItG-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="vGKq-BhATYDVhMU9XuAE-1" source="vAtGVQH-4u4hiPoSUItG-31" target="vAtGVQH-4u4hiPoSUItG-34" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vAtGVQH-4u4hiPoSUItG-45" value="" style="points=[[0.145,0.145,0],[0.5,0,0],[0.855,0.145,0],[1,0.5,0],[0.855,0.855,0],[0.5,1,0],[0.145,0.855,0],[0,0.5,0]];shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=catching;symbol=signal;" parent="vGKq-BhATYDVhMU9XuAE-1" vertex="1">
+          <mxGeometry x="2655" y="97" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="vAtGVQH-4u4hiPoSUItG-47" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="vGKq-BhATYDVhMU9XuAE-1" source="vAtGVQH-4u4hiPoSUItG-34" target="vAtGVQH-4u4hiPoSUItG-45" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vAtGVQH-4u4hiPoSUItG-48" value="" style="points=[[0.25,0.25,0],[0.5,0,0],[0.75,0.25,0],[1,0.5,0],[0.75,0.75,0],[0.5,1,0],[0.25,0.75,0],[0,0.5,0]];shape=mxgraph.bpmn.gateway2;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=rhombusPerimeter;outlineConnect=0;outline=none;symbol=none;gwType=exclusive;" parent="vGKq-BhATYDVhMU9XuAE-1" vertex="1">
+          <mxGeometry x="2795" y="97" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="vAtGVQH-4u4hiPoSUItG-49" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="vGKq-BhATYDVhMU9XuAE-1" source="vAtGVQH-4u4hiPoSUItG-45" target="vAtGVQH-4u4hiPoSUItG-48" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vAtGVQH-4u4hiPoSUItG-50" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;" parent="vGKq-BhATYDVhMU9XuAE-1" source="vAtGVQH-4u4hiPoSUItG-48" target="vAtGVQH-4u4hiPoSUItG-34" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2820" y="57" />
+              <mxPoint x="2485" y="57" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vAtGVQH-4u4hiPoSUItG-51" value="no_access_token" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="vAtGVQH-4u4hiPoSUItG-50" vertex="1" connectable="0">
+          <mxGeometry x="-0.1205" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vAtGVQH-4u4hiPoSUItG-52" value="Add new user-access in client store" style="points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];shape=mxgraph.bpmn.task;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=1;expand=0;collapsible=0;taskMarker=script;isLoopStandard=0;" parent="vGKq-BhATYDVhMU9XuAE-1" vertex="1">
+          <mxGeometry x="2950" y="82" width="150" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="vAtGVQH-4u4hiPoSUItG-53" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="vGKq-BhATYDVhMU9XuAE-1" source="vAtGVQH-4u4hiPoSUItG-48" target="vAtGVQH-4u4hiPoSUItG-52" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vAtGVQH-4u4hiPoSUItG-60" value="access_token" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="vAtGVQH-4u4hiPoSUItG-53" vertex="1" connectable="0">
+          <mxGeometry x="-0.1257" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vAtGVQH-4u4hiPoSUItG-54" value="If price, was type &quot;subscription&quot;, disable button" style="points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];shape=mxgraph.bpmn.task;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=1;expand=0;collapsible=0;taskMarker=script;isLoopStandard=0;" parent="vGKq-BhATYDVhMU9XuAE-1" vertex="1">
+          <mxGeometry x="3150" y="82" width="150" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="vAtGVQH-4u4hiPoSUItG-55" value="Destory Request &lt;br&gt;interval" style="points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];shape=mxgraph.bpmn.task;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=1;expand=0;collapsible=0;taskMarker=script;isLoopStandard=0;" parent="vGKq-BhATYDVhMU9XuAE-1" vertex="1">
+          <mxGeometry x="3350" y="82" width="150" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="vAtGVQH-4u4hiPoSUItG-56" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="vGKq-BhATYDVhMU9XuAE-1" source="vAtGVQH-4u4hiPoSUItG-52" target="vAtGVQH-4u4hiPoSUItG-54" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vAtGVQH-4u4hiPoSUItG-57" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="vGKq-BhATYDVhMU9XuAE-1" source="vAtGVQH-4u4hiPoSUItG-54" target="vAtGVQH-4u4hiPoSUItG-55" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vAtGVQH-4u4hiPoSUItG-58" value="" style="points=[[0.145,0.145,0],[0.5,0,0],[0.855,0.145,0],[1,0.5,0],[0.855,0.855,0],[0.5,1,0],[0.145,0.855,0],[0,0.5,0]];shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=end;symbol=terminate2;" parent="vGKq-BhATYDVhMU9XuAE-1" vertex="1">
+          <mxGeometry x="3550" y="97" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="vAtGVQH-4u4hiPoSUItG-59" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="vGKq-BhATYDVhMU9XuAE-1" source="vAtGVQH-4u4hiPoSUItG-55" target="vAtGVQH-4u4hiPoSUItG-58" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JUJtWGQ3KjyEVi_W5sDs-1" value="" style="points=[[0.25,0.25,0],[0.5,0,0],[0.75,0.25,0],[1,0.5,0],[0.75,0.75,0],[0.5,1,0],[0.25,0.75,0],[0,0.5,0]];shape=mxgraph.bpmn.gateway2;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=rhombusPerimeter;outlineConnect=0;outline=none;symbol=none;gwType=exclusive;" parent="vGKq-BhATYDVhMU9XuAE-1" vertex="1">
+          <mxGeometry x="1040" y="97" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="JUJtWGQ3KjyEVi_W5sDs-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="vGKq-BhATYDVhMU9XuAE-1" source="JUJtWGQ3KjyEVi_W5sDs-1" target="vGKq-BhATYDVhMU9XuAE-27" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JUJtWGQ3KjyEVi_W5sDs-3" value="no_active_subscription" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="JUJtWGQ3KjyEVi_W5sDs-2" vertex="1" connectable="0">
+          <mxGeometry x="-0.3041" y="1" relative="1" as="geometry">
+            <mxPoint x="17" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JUJtWGQ3KjyEVi_W5sDs-5" value="cancel&lt;br&gt;subscription" style="points=[[0.145,0.145,0],[0.5,0,0],[0.855,0.145,0],[1,0.5,0],[0.855,0.855,0],[0.5,1,0],[0.145,0.855,0],[0,0.5,0]];shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=throwing;symbol=link;" parent="vGKq-BhATYDVhMU9XuAE-1" vertex="1">
+          <mxGeometry x="1140" y="20" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="JUJtWGQ3KjyEVi_W5sDs-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;" parent="vGKq-BhATYDVhMU9XuAE-1" source="JUJtWGQ3KjyEVi_W5sDs-1" target="JUJtWGQ3KjyEVi_W5sDs-5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JUJtWGQ3KjyEVi_W5sDs-7" value="active_subscription" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="JUJtWGQ3KjyEVi_W5sDs-6" vertex="1" connectable="0">
+          <mxGeometry x="-0.5678" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vGKq-BhATYDVhMU9XuAE-6" value="&quot;auth:api&lt;span style=&quot;background-color: initial;&quot;&gt;&quot;&lt;/span&gt;" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+          <mxGeometry x="250" y="507" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vGKq-BhATYDVhMU9XuAE-7" value="&quot;email_verified&lt;span style=&quot;background-color: initial;&quot;&gt;&quot;&lt;/span&gt;" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+          <mxGeometry x="250" y="467" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vGKq-BhATYDVhMU9XuAE-8" value="&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Render active prices&lt;/span&gt;&lt;/li&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Check if price is type &#39;one-time-purchase&#39; or &#39;subscription&#39;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Check if user has active subscriptions&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Price must have &#39;status&#39; === &#39;active&#39; (Paddle Price is active) and must be &#39;is_active&#39; within app&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Render user transactions&amp;nbsp;&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;" style="points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];shape=mxgraph.bpmn.task;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=1;expand=0;collapsible=0;taskMarker=businessRule;verticalAlign=top;align=left;" parent="1" vertex="1">
+          <mxGeometry x="434" y="1042" width="426" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="vGKq-BhATYDVhMU9XuAE-9" value="Get &quot;/user-load-access&lt;span style=&quot;background-color: initial;&quot;&gt;&quot;&lt;/span&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="434" y="954" width="180" height="73" as="geometry" />
+        </mxCell>
+        <mxCell id="vGKq-BhATYDVhMU9XuAE-10" value="Response" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="620" y="487" width="240" height="540" as="geometry" />
+        </mxCell>
+        <mxCell id="vGKq-BhATYDVhMU9XuAE-12" value="prices: Collection&lt;br&gt;&lt;ul&gt;&lt;li&gt;id&lt;/li&gt;&lt;li&gt;price_token (for PaddleJS)&lt;/li&gt;&lt;li&gt;name&lt;/li&gt;&lt;li&gt;type&lt;/li&gt;&lt;li&gt;price&lt;/li&gt;&lt;li&gt;currency_code&lt;/li&gt;&lt;li&gt;billing_interval&lt;/li&gt;&lt;li&gt;billing_frequency&lt;/li&gt;&lt;li&gt;trial_interval&lt;/li&gt;&lt;li&gt;trial_frequency&lt;/li&gt;&lt;li&gt;duration_month&lt;/li&gt;&lt;li&gt;access_token&lt;/li&gt;&lt;li&gt;has_access&lt;/li&gt;&lt;li&gt;is_subscription&lt;/li&gt;&lt;li&gt;has_active_subscriptions&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="vGKq-BhATYDVhMU9XuAE-10" vertex="1">
+          <mxGeometry y="30" width="240" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="vGKq-BhATYDVhMU9XuAE-16" value="transactions: Collection&lt;br&gt;&lt;ul&gt;&lt;li&gt;name (price)&lt;/li&gt;&lt;li&gt;price_token&lt;/li&gt;&lt;li&gt;expiration_date (user_access)&lt;/li&gt;&lt;li&gt;is_active (user_access)&lt;/li&gt;&lt;li&gt;transaction_token&lt;/li&gt;&lt;li&gt;price_id&lt;/li&gt;&lt;li&gt;quantity&lt;/li&gt;&lt;li&gt;total&lt;/li&gt;&lt;li&gt;tax&lt;/li&gt;&lt;li&gt;currency_code&lt;/li&gt;&lt;li&gt;status&lt;/li&gt;&lt;li&gt;created_at&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="vGKq-BhATYDVhMU9XuAE-10" vertex="1">
+          <mxGeometry y="300" width="240" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="vGKq-BhATYDVhMU9XuAE-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;dashed=1;" parent="1" source="vGKq-BhATYDVhMU9XuAE-4" target="vGKq-BhATYDVhMU9XuAE-9" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vGKq-BhATYDVhMU9XuAE-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;" parent="1" source="vGKq-BhATYDVhMU9XuAE-10" target="vGKq-BhATYDVhMU9XuAE-17" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vGKq-BhATYDVhMU9XuAE-21" value="&lt;b&gt;Restrictions&lt;/b&gt;:&lt;br&gt;&lt;ul&gt;&lt;li&gt;Price can only be purchased if no subscription is active&lt;/li&gt;&lt;/ul&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#fff2cc;strokeColor=#d6b656;verticalAlign=top;align=left;spacing=12;" parent="1" vertex="1">
+          <mxGeometry x="1120" y="460" width="180" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="vGKq-BhATYDVhMU9XuAE-29" value="PaddleJS" style="swimlane;startSize=20;horizontal=0;html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="250" y="37" width="2050" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="vAtGVQH-4u4hiPoSUItG-1" value="Request Client Price" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1410" y="180" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="vAtGVQH-4u4hiPoSUItG-2" value="price_token" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="vAtGVQH-4u4hiPoSUItG-1" vertex="1">
+          <mxGeometry y="30" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vAtGVQH-4u4hiPoSUItG-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;" parent="1" target="vAtGVQH-4u4hiPoSUItG-8" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1705" y="157" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vAtGVQH-4u4hiPoSUItG-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;" parent="1" target="vAtGVQH-4u4hiPoSUItG-14" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2025" y="157" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vAtGVQH-4u4hiPoSUItG-18" value="Response" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="2040" y="180" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="vAtGVQH-4u4hiPoSUItG-19" value="status" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="vAtGVQH-4u4hiPoSUItG-18" vertex="1">
+          <mxGeometry y="30" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vAtGVQH-4u4hiPoSUItG-23" value="&lt;ul&gt;&lt;li&gt;Initialize checkout&lt;/li&gt;&lt;ul&gt;&lt;li&gt;Set transaction token&lt;/li&gt;&lt;li&gt;Set according user&lt;/li&gt;&lt;li&gt;Status: &#39;client.checkout.initialized&#39;&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;Return transaction&lt;/li&gt;&lt;/ul&gt;" style="points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];shape=mxgraph.bpmn.task;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=1;expand=0;collapsible=0;taskMarker=businessRule;verticalAlign=top;align=left;" parent="1" vertex="1">
+          <mxGeometry x="2220" y="615" width="360" height="102" as="geometry" />
+        </mxCell>
+        <mxCell id="vAtGVQH-4u4hiPoSUItG-25" value="Post &quot;/user-initialize-checkout&quot;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="2225" y="507" width="190" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="vAtGVQH-4u4hiPoSUItG-26" value="transaction_token: string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="vAtGVQH-4u4hiPoSUItG-25" vertex="1">
+          <mxGeometry y="30" width="190" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vAtGVQH-4u4hiPoSUItG-27" value="customer_token: string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="vAtGVQH-4u4hiPoSUItG-25" vertex="1">
+          <mxGeometry y="60" width="190" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vAtGVQH-4u4hiPoSUItG-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;dashed=1;" parent="1" source="vAtGVQH-4u4hiPoSUItG-17" target="vAtGVQH-4u4hiPoSUItG-25" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vAtGVQH-4u4hiPoSUItG-29" value="Response" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="2435" y="537" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="vAtGVQH-4u4hiPoSUItG-30" value="transaction: object" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="vAtGVQH-4u4hiPoSUItG-29" vertex="1">
+          <mxGeometry y="30" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vAtGVQH-4u4hiPoSUItG-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;" parent="1" source="vAtGVQH-4u4hiPoSUItG-29" target="vAtGVQH-4u4hiPoSUItG-31" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vAtGVQH-4u4hiPoSUItG-36" value="Post &quot;/user-verify-checkout&quot;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="2640" y="547" width="190" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="vAtGVQH-4u4hiPoSUItG-37" value="transaction_token: string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="vAtGVQH-4u4hiPoSUItG-36" vertex="1">
+          <mxGeometry y="30" width="190" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vAtGVQH-4u4hiPoSUItG-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;dashed=1;" parent="1" source="vAtGVQH-4u4hiPoSUItG-34" target="vAtGVQH-4u4hiPoSUItG-36" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vAtGVQH-4u4hiPoSUItG-40" value="&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Check if user-access has been generated&lt;/span&gt;&lt;br&gt;&lt;/li&gt;&lt;ul&gt;&lt;li style=&quot;border-color: var(--border-color);&quot;&gt;Check if transaction has been already verified by webhook&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;Return access&lt;/li&gt;&lt;/ul&gt;" style="points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];shape=mxgraph.bpmn.task;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=1;expand=0;collapsible=0;taskMarker=businessRule;verticalAlign=top;align=left;" parent="1" vertex="1">
+          <mxGeometry x="2640" y="617" width="360" height="102" as="geometry" />
+        </mxCell>
+        <mxCell id="vAtGVQH-4u4hiPoSUItG-41" value="Response" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="2860" y="487" width="140" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="vAtGVQH-4u4hiPoSUItG-43" value="access_token: ?string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="vAtGVQH-4u4hiPoSUItG-41" vertex="1">
+          <mxGeometry y="30" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vAtGVQH-4u4hiPoSUItG-42" value="expiration_date: ?date" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="vAtGVQH-4u4hiPoSUItG-41" vertex="1">
+          <mxGeometry y="60" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vAtGVQH-4u4hiPoSUItG-44" value="price_id: ?int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="vAtGVQH-4u4hiPoSUItG-41" vertex="1">
+          <mxGeometry y="90" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vAtGVQH-4u4hiPoSUItG-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;" parent="1" source="vAtGVQH-4u4hiPoSUItG-41" target="vAtGVQH-4u4hiPoSUItG-45" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="_vO5BIRlNVSkbS7bZPSf" name="2 - Manage Webhooks">
+    <mxGraphModel dx="2607" dy="1582" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="-jkr4OOVs6dp8ttQ99pZ-1" value="Paddle - Webhooks" style="swimlane;startSize=20;horizontal=0;html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="49" y="10" width="730" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="7-BmSt7ds8ixRX1NIojl-1" value="&quot;paddle_webhook_verified&lt;span style=&quot;background-color: initial;&quot;&gt;&quot;&lt;/span&gt;" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+          <mxGeometry x="49" y="260" width="210" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7-BmSt7ds8ixRX1NIojl-2" value="Backend - Paddle Wwebhook Listeners" style="swimlane;startSize=20;horizontal=0;html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="49" y="300" width="3111" height="840" as="geometry" />
+        </mxCell>
+        <mxCell id="7-BmSt7ds8ixRX1NIojl-3" value="Webhook&lt;br&gt;received" style="points=[[0.145,0.145,0],[0.5,0,0],[0.855,0.145,0],[1,0.5,0],[0.855,0.855,0],[0.5,1,0],[0.145,0.855,0],[0,0.5,0]];shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=end;symbol=signal;" parent="7-BmSt7ds8ixRX1NIojl-2" vertex="1">
+          <mxGeometry x="210" y="220" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="7-BmSt7ds8ixRX1NIojl-5" value="" style="points=[[0.25,0.25,0],[0.5,0,0],[0.75,0.25,0],[1,0.5,0],[0.75,0.75,0],[0.5,1,0],[0.25,0.75,0],[0,0.5,0]];shape=mxgraph.bpmn.gateway2;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=rhombusPerimeter;outlineConnect=0;outline=none;symbol=none;gwType=exclusive;" parent="7-BmSt7ds8ixRX1NIojl-2" vertex="1">
+          <mxGeometry x="381" y="220" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="7-BmSt7ds8ixRX1NIojl-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="7-BmSt7ds8ixRX1NIojl-2" source="7-BmSt7ds8ixRX1NIojl-3" target="7-BmSt7ds8ixRX1NIojl-5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="IRvMULToC-g_w9jJsOeI-1" value="&lt;ul&gt;&lt;li&gt;Check if subscription exists, according subscription_token&lt;/li&gt;&lt;ul&gt;&lt;li&gt;Update data&lt;/li&gt;&lt;/ul&gt;&lt;/ul&gt;" style="points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];shape=mxgraph.bpmn.task;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=1;expand=0;collapsible=0;taskMarker=businessRule;verticalAlign=top;align=left;" parent="7-BmSt7ds8ixRX1NIojl-2" vertex="1">
+          <mxGeometry x="621" y="196.25" width="229" height="97.5" as="geometry" />
+        </mxCell>
+        <mxCell id="IRvMULToC-g_w9jJsOeI-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="7-BmSt7ds8ixRX1NIojl-2" source="7-BmSt7ds8ixRX1NIojl-5" target="IRvMULToC-g_w9jJsOeI-1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="atiy2CbxPg1WyYbGPmXs-2" value="subscription.updated&lt;br&gt;|| subscription.canceled" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="IRvMULToC-g_w9jJsOeI-2" vertex="1" connectable="0">
+          <mxGeometry x="-0.6271" y="-1" relative="1" as="geometry">
+            <mxPoint x="41" y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IRvMULToC-g_w9jJsOeI-3" value="&lt;ul&gt;&lt;li&gt;Update or create Price, according received price_token&lt;/li&gt;&lt;ul&gt;&lt;li&gt;Is_active, will be set manually via admin&lt;/li&gt;&lt;/ul&gt;&lt;/ul&gt;" style="points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];shape=mxgraph.bpmn.task;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=1;expand=0;collapsible=0;taskMarker=businessRule;verticalAlign=top;align=left;" parent="7-BmSt7ds8ixRX1NIojl-2" vertex="1">
+          <mxGeometry x="621" y="50" width="239" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="IRvMULToC-g_w9jJsOeI-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;" parent="7-BmSt7ds8ixRX1NIojl-2" source="7-BmSt7ds8ixRX1NIojl-5" target="IRvMULToC-g_w9jJsOeI-3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="IRvMULToC-g_w9jJsOeI-5" value="price.created&lt;br&gt;|| price.updated" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="IRvMULToC-g_w9jJsOeI-4" vertex="1" connectable="0">
+          <mxGeometry x="-0.4819" y="1" relative="1" as="geometry">
+            <mxPoint x="1" y="31" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="atiy2CbxPg1WyYbGPmXs-3" value="&lt;div style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Check if transaction exists, according transaction_token&lt;/span&gt;&lt;/div&gt;" style="points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];shape=mxgraph.bpmn.task;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=1;expand=0;collapsible=0;taskMarker=businessRule;verticalAlign=middle;align=left;" parent="7-BmSt7ds8ixRX1NIojl-2" vertex="1">
+          <mxGeometry x="621" y="380" width="139" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="atiy2CbxPg1WyYbGPmXs-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" parent="7-BmSt7ds8ixRX1NIojl-2" source="7-BmSt7ds8ixRX1NIojl-5" target="atiy2CbxPg1WyYbGPmXs-3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="atiy2CbxPg1WyYbGPmXs-5" value="transaction.completed" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="atiy2CbxPg1WyYbGPmXs-4" vertex="1" connectable="0">
+          <mxGeometry x="0.1723" y="-1" relative="1" as="geometry">
+            <mxPoint x="41" y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="atiy2CbxPg1WyYbGPmXs-6" value="" style="points=[[0.25,0.25,0],[0.5,0,0],[0.75,0.25,0],[1,0.5,0],[0.75,0.75,0],[0.5,1,0],[0.25,0.75,0],[0,0.5,0]];shape=mxgraph.bpmn.gateway2;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=rhombusPerimeter;outlineConnect=0;outline=none;symbol=none;gwType=exclusive;" parent="7-BmSt7ds8ixRX1NIojl-2" vertex="1">
+          <mxGeometry x="831" y="395" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="atiy2CbxPg1WyYbGPmXs-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="7-BmSt7ds8ixRX1NIojl-2" source="atiy2CbxPg1WyYbGPmXs-3" target="atiy2CbxPg1WyYbGPmXs-6" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="atiy2CbxPg1WyYbGPmXs-8" value="&lt;span style=&quot;background-color: initial;&quot;&gt;Check if subscription exists, according subscription_token&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;" style="points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];shape=mxgraph.bpmn.task;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=1;expand=0;collapsible=0;taskMarker=businessRule;verticalAlign=middle;align=center;" parent="7-BmSt7ds8ixRX1NIojl-2" vertex="1">
+          <mxGeometry x="1046" y="372.5" width="149" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="atiy2CbxPg1WyYbGPmXs-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="7-BmSt7ds8ixRX1NIojl-2" source="atiy2CbxPg1WyYbGPmXs-6" target="atiy2CbxPg1WyYbGPmXs-8" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="atiy2CbxPg1WyYbGPmXs-10" value="no_transaction_exists" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="atiy2CbxPg1WyYbGPmXs-9" vertex="1" connectable="0">
+          <mxGeometry x="-0.2418" relative="1" as="geometry">
+            <mxPoint x="9" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="atiy2CbxPg1WyYbGPmXs-11" value="" style="points=[[0.25,0.25,0],[0.5,0,0],[0.75,0.25,0],[1,0.5,0],[0.75,0.75,0],[0.5,1,0],[0.25,0.75,0],[0,0.5,0]];shape=mxgraph.bpmn.gateway2;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=rhombusPerimeter;outlineConnect=0;outline=none;symbol=none;gwType=exclusive;" parent="7-BmSt7ds8ixRX1NIojl-2" vertex="1">
+          <mxGeometry x="1331" y="395" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="atiy2CbxPg1WyYbGPmXs-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="7-BmSt7ds8ixRX1NIojl-2" source="atiy2CbxPg1WyYbGPmXs-8" target="atiy2CbxPg1WyYbGPmXs-11" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="atiy2CbxPg1WyYbGPmXs-13" value="&lt;span style=&quot;background-color: initial;&quot;&gt;Initialize new transaction&lt;/span&gt;&lt;br&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Connect accordingly with subscription_id and user_id&lt;/span&gt;&lt;br&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Add data accordingly&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;" style="points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];shape=mxgraph.bpmn.task;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=1;expand=0;collapsible=0;taskMarker=businessRule;verticalAlign=top;align=left;spacing=12;" parent="7-BmSt7ds8ixRX1NIojl-2" vertex="1">
+          <mxGeometry x="1545.5" y="367.5" width="209" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="atiy2CbxPg1WyYbGPmXs-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="7-BmSt7ds8ixRX1NIojl-2" source="atiy2CbxPg1WyYbGPmXs-11" target="atiy2CbxPg1WyYbGPmXs-13" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="atiy2CbxPg1WyYbGPmXs-15" value="subscription_exists" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="atiy2CbxPg1WyYbGPmXs-14" vertex="1" connectable="0">
+          <mxGeometry x="-0.3062" y="-1" relative="1" as="geometry">
+            <mxPoint x="18" y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="atiy2CbxPg1WyYbGPmXs-16" value="" style="points=[[0.145,0.145,0],[0.5,0,0],[0.855,0.145,0],[1,0.5,0],[0.855,0.855,0],[0.5,1,0],[0.145,0.855,0],[0,0.5,0]];shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=end;symbol=terminate2;" parent="7-BmSt7ds8ixRX1NIojl-2" vertex="1">
+          <mxGeometry x="1421" y="280" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="atiy2CbxPg1WyYbGPmXs-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;" parent="7-BmSt7ds8ixRX1NIojl-2" source="atiy2CbxPg1WyYbGPmXs-11" target="atiy2CbxPg1WyYbGPmXs-16" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="atiy2CbxPg1WyYbGPmXs-18" value="no_subscription_exists" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="atiy2CbxPg1WyYbGPmXs-17" vertex="1" connectable="0">
+          <mxGeometry x="-0.5871" y="1" relative="1" as="geometry">
+            <mxPoint x="1" y="-8" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="atiy2CbxPg1WyYbGPmXs-19" value="&lt;span style=&quot;background-color: initial;&quot;&gt;Check if access is already added to current user&lt;br&gt;&lt;/span&gt;" style="points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];shape=mxgraph.bpmn.task;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=1;expand=0;collapsible=0;taskMarker=businessRule;verticalAlign=middle;align=center;" parent="7-BmSt7ds8ixRX1NIojl-2" vertex="1">
+          <mxGeometry x="1046" y="500" width="149" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="atiy2CbxPg1WyYbGPmXs-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" parent="7-BmSt7ds8ixRX1NIojl-2" source="atiy2CbxPg1WyYbGPmXs-6" target="atiy2CbxPg1WyYbGPmXs-19" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="atiy2CbxPg1WyYbGPmXs-21" value="transaction_exists" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="atiy2CbxPg1WyYbGPmXs-20" vertex="1" connectable="0">
+          <mxGeometry x="-0.6318" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="atiy2CbxPg1WyYbGPmXs-22" value="" style="points=[[0.25,0.25,0],[0.5,0,0],[0.75,0.25,0],[1,0.5,0],[0.75,0.75,0],[0.5,1,0],[0.25,0.75,0],[0,0.5,0]];shape=mxgraph.bpmn.gateway2;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=rhombusPerimeter;outlineConnect=0;outline=none;symbol=none;gwType=exclusive;" parent="7-BmSt7ds8ixRX1NIojl-2" vertex="1">
+          <mxGeometry x="1331" y="520" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="atiy2CbxPg1WyYbGPmXs-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="7-BmSt7ds8ixRX1NIojl-2" source="atiy2CbxPg1WyYbGPmXs-19" target="atiy2CbxPg1WyYbGPmXs-22" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="atiy2CbxPg1WyYbGPmXs-24" value="" style="points=[[0.145,0.145,0],[0.5,0,0],[0.855,0.145,0],[1,0.5,0],[0.855,0.855,0],[0.5,1,0],[0.145,0.855,0],[0,0.5,0]];shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=end;symbol=terminate2;" parent="7-BmSt7ds8ixRX1NIojl-2" vertex="1">
+          <mxGeometry x="1431" y="630" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="atiy2CbxPg1WyYbGPmXs-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" parent="7-BmSt7ds8ixRX1NIojl-2" source="atiy2CbxPg1WyYbGPmXs-22" target="atiy2CbxPg1WyYbGPmXs-24" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="atiy2CbxPg1WyYbGPmXs-26" value="access_added" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="atiy2CbxPg1WyYbGPmXs-25" vertex="1" connectable="0">
+          <mxGeometry x="-0.5439" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="atiy2CbxPg1WyYbGPmXs-28" value="&lt;span style=&quot;background-color: initial;&quot;&gt;Check if transaction is a subscription&lt;br&gt;&lt;/span&gt;" style="points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];shape=mxgraph.bpmn.task;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=1;expand=0;collapsible=0;taskMarker=businessRule;verticalAlign=middle;align=center;" parent="7-BmSt7ds8ixRX1NIojl-2" vertex="1">
+          <mxGeometry x="1545.5" y="500" width="149" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="atiy2CbxPg1WyYbGPmXs-29" value="&lt;div&gt;Transaction has been initialized by user-subscription&lt;br&gt;&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#fff2cc;strokeColor=#d6b656;verticalAlign=top;align=left;spacing=12;" parent="7-BmSt7ds8ixRX1NIojl-2" vertex="1">
+          <mxGeometry x="1041" y="280" width="170" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="atiy2CbxPg1WyYbGPmXs-30" value="&lt;div&gt;Transaction has been added recently by client checkout&lt;br&gt;&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#fff2cc;strokeColor=#d6b656;verticalAlign=top;align=left;spacing=12;" parent="7-BmSt7ds8ixRX1NIojl-2" vertex="1">
+          <mxGeometry x="1046" y="605" width="170" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="atiy2CbxPg1WyYbGPmXs-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="7-BmSt7ds8ixRX1NIojl-2" source="atiy2CbxPg1WyYbGPmXs-22" target="atiy2CbxPg1WyYbGPmXs-28" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="atiy2CbxPg1WyYbGPmXs-32" value="no_access_added" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="atiy2CbxPg1WyYbGPmXs-31" vertex="1" connectable="0">
+          <mxGeometry x="-0.2806" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="atiy2CbxPg1WyYbGPmXs-35" value="" style="points=[[0.25,0.25,0],[0.5,0,0],[0.75,0.25,0],[1,0.5,0],[0.75,0.75,0],[0.5,1,0],[0.25,0.75,0],[0,0.5,0]];shape=mxgraph.bpmn.gateway2;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=rhombusPerimeter;outlineConnect=0;outline=none;symbol=none;gwType=exclusive;" parent="7-BmSt7ds8ixRX1NIojl-2" vertex="1">
+          <mxGeometry x="1791" y="520" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="atiy2CbxPg1WyYbGPmXs-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="7-BmSt7ds8ixRX1NIojl-2" source="atiy2CbxPg1WyYbGPmXs-28" target="atiy2CbxPg1WyYbGPmXs-35" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="atiy2CbxPg1WyYbGPmXs-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="7-BmSt7ds8ixRX1NIojl-2" source="atiy2CbxPg1WyYbGPmXs-37" target="atiy2CbxPg1WyYbGPmXs-40" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="atiy2CbxPg1WyYbGPmXs-37" value="&lt;span style=&quot;background-color: initial;&quot;&gt;Create new subscription&lt;/span&gt;&lt;br&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Connect with price_id and user_id&lt;/span&gt;&lt;br&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;add data accordingly&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;" style="points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];shape=mxgraph.bpmn.task;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=1;expand=0;collapsible=0;taskMarker=businessRule;verticalAlign=top;align=left;spacing=12;" parent="7-BmSt7ds8ixRX1NIojl-2" vertex="1">
+          <mxGeometry x="1901" y="630" width="189" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="atiy2CbxPg1WyYbGPmXs-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" parent="7-BmSt7ds8ixRX1NIojl-2" source="atiy2CbxPg1WyYbGPmXs-35" target="atiy2CbxPg1WyYbGPmXs-37" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="atiy2CbxPg1WyYbGPmXs-39" value="is_subscription" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="atiy2CbxPg1WyYbGPmXs-38" vertex="1" connectable="0">
+          <mxGeometry x="-0.6367" relative="1" as="geometry">
+            <mxPoint y="6" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="atiy2CbxPg1WyYbGPmXs-40" value="" style="points=[[0.25,0.25,0],[0.5,0,0],[0.75,0.25,0],[1,0.5,0],[0.75,0.75,0],[0.5,1,0],[0.25,0.75,0],[0,0.5,0]];shape=mxgraph.bpmn.gateway2;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=rhombusPerimeter;outlineConnect=0;outline=none;symbol=none;" parent="7-BmSt7ds8ixRX1NIojl-2" vertex="1">
+          <mxGeometry x="2141" y="520" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="atiy2CbxPg1WyYbGPmXs-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="7-BmSt7ds8ixRX1NIojl-2" source="atiy2CbxPg1WyYbGPmXs-13" target="atiy2CbxPg1WyYbGPmXs-40" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="atiy2CbxPg1WyYbGPmXs-42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="7-BmSt7ds8ixRX1NIojl-2" source="atiy2CbxPg1WyYbGPmXs-35" target="atiy2CbxPg1WyYbGPmXs-40" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="atiy2CbxPg1WyYbGPmXs-43" value="is_no_subscription" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="atiy2CbxPg1WyYbGPmXs-42" vertex="1" connectable="0">
+          <mxGeometry x="-0.1845" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="atiy2CbxPg1WyYbGPmXs-45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="7-BmSt7ds8ixRX1NIojl-2" source="atiy2CbxPg1WyYbGPmXs-40" target="atiy2CbxPg1WyYbGPmXs-47" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2271" y="545" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="atiy2CbxPg1WyYbGPmXs-47" value="&lt;span style=&quot;background-color: initial;&quot;&gt;Complete Transaction, by setting all attributes&lt;br&gt;&lt;/span&gt;" style="points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];shape=mxgraph.bpmn.task;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=1;expand=0;collapsible=0;taskMarker=businessRule;verticalAlign=middle;align=center;" parent="7-BmSt7ds8ixRX1NIojl-2" vertex="1">
+          <mxGeometry x="2251" y="500" width="149" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="atiy2CbxPg1WyYbGPmXs-49" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="7-BmSt7ds8ixRX1NIojl-2" source="atiy2CbxPg1WyYbGPmXs-47" target="atiy2CbxPg1WyYbGPmXs-51" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2461" y="545" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="atiy2CbxPg1WyYbGPmXs-50" value="&lt;span style=&quot;background-color: initial;&quot;&gt;Close &lt;br&gt;Transaction&lt;br&gt;&lt;/span&gt;" style="points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];shape=mxgraph.bpmn.task;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=1;expand=0;collapsible=0;taskMarker=businessRule;verticalAlign=middle;align=center;" parent="7-BmSt7ds8ixRX1NIojl-2" vertex="1">
+          <mxGeometry x="2781" y="500" width="149" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="atiy2CbxPg1WyYbGPmXs-51" value="&lt;span style=&quot;background-color: initial;&quot;&gt;Add User access&lt;/span&gt;&lt;br&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Set access_token&lt;/span&gt;&lt;br&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Set quantity, according transaction&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Set expiration_date, according transaction&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;is_active to true&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;" style="points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];shape=mxgraph.bpmn.task;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=1;expand=0;collapsible=0;taskMarker=businessRule;verticalAlign=top;align=left;spacing=12;" parent="7-BmSt7ds8ixRX1NIojl-2" vertex="1">
+          <mxGeometry x="2471" y="470" width="249" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="atiy2CbxPg1WyYbGPmXs-52" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="7-BmSt7ds8ixRX1NIojl-2" source="atiy2CbxPg1WyYbGPmXs-51" target="atiy2CbxPg1WyYbGPmXs-50" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="atiy2CbxPg1WyYbGPmXs-53" value="" style="points=[[0.145,0.145,0],[0.5,0,0],[0.855,0.145,0],[1,0.5,0],[0.855,0.855,0],[0.5,1,0],[0.145,0.855,0],[0,0.5,0]];shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=end;symbol=terminate2;" parent="7-BmSt7ds8ixRX1NIojl-2" vertex="1">
+          <mxGeometry x="2991" y="520" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="atiy2CbxPg1WyYbGPmXs-54" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="7-BmSt7ds8ixRX1NIojl-2" source="atiy2CbxPg1WyYbGPmXs-50" target="atiy2CbxPg1WyYbGPmXs-53" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="atiy2CbxPg1WyYbGPmXs-55" value="&lt;div&gt;Log Webhook fails accordingly&lt;br&gt;&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#fff2cc;strokeColor=#d6b656;verticalAlign=top;align=left;spacing=12;" parent="7-BmSt7ds8ixRX1NIojl-2" vertex="1">
+          <mxGeometry x="171" y="315" width="150" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="atiy2CbxPg1WyYbGPmXs-57" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" parent="7-BmSt7ds8ixRX1NIojl-2" source="7-BmSt7ds8ixRX1NIojl-5" target="7yL8rX3Vels8Bw5li_ok-6" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="621" y="820" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="atiy2CbxPg1WyYbGPmXs-58" value="transaction.payment_failed&lt;br&gt;|| transaction.canceled" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="atiy2CbxPg1WyYbGPmXs-57" vertex="1" connectable="0">
+          <mxGeometry x="-0.2176" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7yL8rX3Vels8Bw5li_ok-1" value="" style="points=[[0.145,0.145,0],[0.5,0,0],[0.855,0.145,0],[1,0.5,0],[0.855,0.855,0],[0.5,1,0],[0.145,0.855,0],[0,0.5,0]];shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=end;symbol=terminate2;" parent="7-BmSt7ds8ixRX1NIojl-2" vertex="1">
+          <mxGeometry x="932" y="80" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="7yL8rX3Vels8Bw5li_ok-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="7-BmSt7ds8ixRX1NIojl-2" source="IRvMULToC-g_w9jJsOeI-3" target="7yL8rX3Vels8Bw5li_ok-1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7yL8rX3Vels8Bw5li_ok-3" value="" style="points=[[0.145,0.145,0],[0.5,0,0],[0.855,0.145,0],[1,0.5,0],[0.855,0.855,0],[0.5,1,0],[0.145,0.855,0],[0,0.5,0]];shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=end;symbol=terminate2;" parent="7-BmSt7ds8ixRX1NIojl-2" vertex="1">
+          <mxGeometry x="932" y="220" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="7yL8rX3Vels8Bw5li_ok-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="7-BmSt7ds8ixRX1NIojl-2" source="IRvMULToC-g_w9jJsOeI-1" target="7yL8rX3Vels8Bw5li_ok-3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7yL8rX3Vels8Bw5li_ok-6" value="&lt;ul&gt;&lt;li&gt;Check if&amp;nbsp;transaction&amp;nbsp;exists, according&amp;nbsp;transaction&amp;nbsp;_token&lt;/li&gt;&lt;ul&gt;&lt;li&gt;Remove according user_access, &quot;is_active&quot; = false&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/ul&gt;" style="points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];shape=mxgraph.bpmn.task;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=1;expand=0;collapsible=0;taskMarker=businessRule;verticalAlign=top;align=left;" parent="7-BmSt7ds8ixRX1NIojl-2" vertex="1">
+          <mxGeometry x="613" y="690.25" width="268" height="97.5" as="geometry" />
+        </mxCell>
+        <mxCell id="7yL8rX3Vels8Bw5li_ok-7" value="" style="points=[[0.145,0.145,0],[0.5,0,0],[0.855,0.145,0],[1,0.5,0],[0.855,0.855,0],[0.5,1,0],[0.145,0.855,0],[0,0.5,0]];shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=end;symbol=terminate2;" parent="7-BmSt7ds8ixRX1NIojl-2" vertex="1">
+          <mxGeometry x="951" y="714" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="7yL8rX3Vels8Bw5li_ok-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="7-BmSt7ds8ixRX1NIojl-2" source="7yL8rX3Vels8Bw5li_ok-6" target="7yL8rX3Vels8Bw5li_ok-7" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7-BmSt7ds8ixRX1NIojl-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;" parent="1" target="7-BmSt7ds8ixRX1NIojl-3" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="284" y="140" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="atiy2CbxPg1WyYbGPmXs-1" value="&lt;b&gt;Documentation&lt;/b&gt;:&lt;br&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://developer.paddle.com/webhooks/overview&quot;&gt;Webhooks - Paddle Developer&lt;/a&gt;&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#fff2cc;strokeColor=#d6b656;verticalAlign=top;align=left;spacing=12;" parent="1" vertex="1">
+          <mxGeometry x="310" y="170" width="180" height="100" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="nMlxxcc2HKuu8JX5vRd8" name="3 - Cancel Subscription">
+    <mxGraphModel dx="1247" dy="757" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="uYysnP_P6Rp6c0caHOOg-1" value="User" style="swimlane;startSize=20;horizontal=0;html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="430" y="295" width="916" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="uYysnP_P6Rp6c0caHOOg-2" value="Cancel Subscription" style="points=[[0.145,0.145,0],[0.5,0,0],[0.855,0.145,0],[1,0.5,0],[0.855,0.855,0],[0.5,1,0],[0.145,0.855,0],[0,0.5,0]];shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=catching;symbol=link;" parent="uYysnP_P6Rp6c0caHOOg-1" vertex="1">
+          <mxGeometry x="96" y="35" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="_FGgT-0uB0OA8X6KLaZx-1" value="User confirm cancel of subscription" style="points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];shape=mxgraph.bpmn.task;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=1;expand=0;collapsible=0;taskMarker=user;" parent="uYysnP_P6Rp6c0caHOOg-1" vertex="1">
+          <mxGeometry x="238.5" y="20" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="_FGgT-0uB0OA8X6KLaZx-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="uYysnP_P6Rp6c0caHOOg-1" source="uYysnP_P6Rp6c0caHOOg-2" target="_FGgT-0uB0OA8X6KLaZx-1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Agc65S2K3-Gcr-dQCaYr-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="uYysnP_P6Rp6c0caHOOg-1" source="_FGgT-0uB0OA8X6KLaZx-1" target="Agc65S2K3-Gcr-dQCaYr-6" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="471" y="60" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Agc65S2K3-Gcr-dQCaYr-6" value="" style="points=[[0.145,0.145,0],[0.5,0,0],[0.855,0.145,0],[1,0.5,0],[0.855,0.855,0],[0.5,1,0],[0.145,0.855,0],[0,0.5,0]];shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=throwing;symbol=signal;" parent="uYysnP_P6Rp6c0caHOOg-1" vertex="1">
+          <mxGeometry x="471" y="35" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="8piMeDyBYfvCyb12Mt0A-1" value="Allow Subscription of current price for user again." style="points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];shape=mxgraph.bpmn.task;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=1;expand=0;collapsible=0;taskMarker=script;" parent="uYysnP_P6Rp6c0caHOOg-1" vertex="1">
+          <mxGeometry x="593" y="20" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="8piMeDyBYfvCyb12Mt0A-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="uYysnP_P6Rp6c0caHOOg-1" source="Agc65S2K3-Gcr-dQCaYr-6" target="8piMeDyBYfvCyb12Mt0A-1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8piMeDyBYfvCyb12Mt0A-3" value="" style="points=[[0.145,0.145,0],[0.5,0,0],[0.855,0.145,0],[1,0.5,0],[0.855,0.855,0],[0.5,1,0],[0.145,0.855,0],[0,0.5,0]];shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=end;symbol=terminate2;" parent="uYysnP_P6Rp6c0caHOOg-1" vertex="1">
+          <mxGeometry x="796" y="35" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="8piMeDyBYfvCyb12Mt0A-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="uYysnP_P6Rp6c0caHOOg-1" source="8piMeDyBYfvCyb12Mt0A-1" target="8piMeDyBYfvCyb12Mt0A-3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="IKXJYzBQVgIHPbUpJfPm-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="WLLS3LKw8jktTJXUzv-3-1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="722" y="755" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WLLS3LKw8jktTJXUzv-3-1" value="&lt;ul&gt;&lt;li&gt;Check requested price&lt;/li&gt;&lt;li&gt;Get active user subscriptions, according requested price&lt;/li&gt;&lt;ul&gt;&lt;li&gt;cancel all active subscriptions&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Update subscription status&lt;/span&gt;&lt;br&gt;&lt;/li&gt;&lt;ul&gt;&lt;li&gt;Log fails, if cancelation fails&lt;/li&gt;&lt;/ul&gt;&lt;/ul&gt;&lt;/ul&gt;" style="points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];shape=mxgraph.bpmn.task;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=1;expand=0;collapsible=0;taskMarker=businessRule;verticalAlign=top;align=left;" parent="1" vertex="1">
+          <mxGeometry x="631" y="570" width="365" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="WLLS3LKw8jktTJXUzv-3-2" value="Get &quot;/user-cancel-subscription&lt;span style=&quot;background-color: initial;&quot;&gt;&quot;&lt;/span&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="631" y="495" width="195" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XfHMjs0Y22EN5xQ7_tSY-4" value="price_token: string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="WLLS3LKw8jktTJXUzv-3-2" vertex="1">
+          <mxGeometry y="30" width="195" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="XfHMjs0Y22EN5xQ7_tSY-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;dashed=1;" parent="1" source="_FGgT-0uB0OA8X6KLaZx-1" target="WLLS3LKw8jktTJXUzv-3-2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="IKXJYzBQVgIHPbUpJfPm-1" value="Paddle API" style="swimlane;startSize=20;horizontal=0;html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="436" y="755" width="660" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="eIiDu6JOGaJeZ6Oq8gpV-1" value="&quot;auth:api&lt;span style=&quot;background-color: initial;&quot;&gt;&quot;&lt;/span&gt;" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+          <mxGeometry x="430" y="475" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="eIiDu6JOGaJeZ6Oq8gpV-2" value="&quot;email_verified&lt;span style=&quot;background-color: initial;&quot;&gt;&quot;&lt;/span&gt;" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+          <mxGeometry x="430" y="435" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="eIiDu6JOGaJeZ6Oq8gpV-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;" parent="1" target="WLLS3LKw8jktTJXUzv-3-1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="905" y="755" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Agc65S2K3-Gcr-dQCaYr-1" value="Response" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="856" y="495" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Agc65S2K3-Gcr-dQCaYr-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;" parent="1" source="Agc65S2K3-Gcr-dQCaYr-1" target="Agc65S2K3-Gcr-dQCaYr-6" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="926" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

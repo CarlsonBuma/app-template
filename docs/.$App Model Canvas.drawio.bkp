@@ -1,0 +1,319 @@
+<mxfile host="Electron" modified="2025-01-09T15:43:50.447Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.15 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="JKK32qaPoS-WC0_1ZYZW" version="22.1.15" type="device" pages="2">
+  <diagram id="07fea595-8f29-1299-0266-81d95cde20df" name="AMC">
+    <mxGraphModel dx="4287" dy="-1158" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="q8ubCS3UPAsnNKlZQyiB-722" value="" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;labelBackgroundColor=none;strokeColor=none;strokeWidth=3;fillColor=#e8edf0;fontSize=60;fontColor=#2F5B7C;align=left;" parent="1" vertex="1">
+          <mxGeometry x="-2860" y="2090" width="2250" height="1598" as="geometry" />
+        </mxCell>
+        <mxCell id="q8ubCS3UPAsnNKlZQyiB-723" value="&lt;div style=&quot;font-size: 26px&quot;&gt;Value Proposition&lt;/div&gt;&lt;div&gt;&amp;nbsp;&lt;/div&gt;&lt;div&gt;Why using our app?&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 10px&quot;&gt;&lt;font style=&quot;font-size: 10px&quot;&gt;&lt;b&gt;Definition&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 10px&quot;&gt;Statement that explains how your product, service, or app solves a problem, fulfills a need, or provides specific benefits to your target audience.&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;labelBackgroundColor=none;strokeColor=#e8edf0;strokeWidth=5;fillColor=#ffffff;fontSize=12;fontColor=#2F5B7C;align=left;verticalAlign=top;spacing=30;" parent="1" vertex="1">
+          <mxGeometry x="-1520" y="2278" width="420" height="450" as="geometry" />
+        </mxCell>
+        <mxCell id="q8ubCS3UPAsnNKlZQyiB-724" value="&lt;font style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 26px;&quot;&gt;Stakeholders&lt;br&gt;&lt;/span&gt;&lt;br style=&quot;font-size: 12px&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;Who are our Key Stakeholders?&lt;br style=&quot;font-size: 12px&quot;&gt;&lt;/font&gt;&lt;br style=&quot;font-size: 12px&quot;&gt;&lt;/font&gt;&lt;div style=&quot;font-size: 10px&quot;&gt;&lt;b&gt;Definition:&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 10px&quot;&gt;Stakeholders represent all the individuals, groups, or organizations that have an interest in or can influence the success of your app&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px&quot;&gt;&lt;br style=&quot;font-size: 12px&quot;&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;labelBackgroundColor=none;strokeColor=#e8edf0;strokeWidth=5;fillColor=#ffffff;fontSize=12;fontColor=#2F5B7C;align=left;verticalAlign=top;spacing=30;" parent="1" vertex="1">
+          <mxGeometry x="-2780" y="2278" width="420" height="900" as="geometry" />
+        </mxCell>
+        <mxCell id="q8ubCS3UPAsnNKlZQyiB-725" value="&lt;font&gt;&lt;font style=&quot;font-size: 26px&quot;&gt;Roles &amp;amp; Access&lt;/font&gt;&lt;br style=&quot;font-size: 12px&quot;&gt;&lt;/font&gt;&lt;font&gt;&lt;br&gt;What roles do exist, and how they gain access within our app?&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/font&gt;&lt;div style=&quot;font-size: 10px&quot;&gt;&lt;div&gt;&lt;b&gt;Definition&lt;/b&gt;&lt;/div&gt;&lt;div&gt;Permissions and responsibilities assigned to different users or groups within the app.&lt;br&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;labelBackgroundColor=none;strokeColor=#e8edf0;strokeWidth=5;fillColor=#ffffff;fontSize=12;fontColor=#2F5B7C;align=left;verticalAlign=top;spacing=30;" parent="1" vertex="1">
+          <mxGeometry x="-2360" y="2278" width="420" height="450" as="geometry" />
+        </mxCell>
+        <mxCell id="q8ubCS3UPAsnNKlZQyiB-726" value="&lt;div&gt;&lt;span style=&quot;font-size: 26px;&quot;&gt;Operational Stack&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;What stack is required to run our app successfully?&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 10px&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;b&gt;Definition:&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 10px&quot;&gt;Tools, processes, and technologies used to manage the deployment, operation, and maintenance of software applications.&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;labelBackgroundColor=none;strokeColor=#e8edf0;strokeWidth=5;fillColor=#ffffff;fontSize=12;fontColor=#2F5B7C;align=left;verticalAlign=top;spacing=30;" parent="1" vertex="1">
+          <mxGeometry x="-2360" y="2728" width="420" height="450" as="geometry" />
+        </mxCell>
+        <mxCell id="q8ubCS3UPAsnNKlZQyiB-727" value="&lt;div style=&quot;font-size: 26px&quot;&gt;Key Features&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;What are our key feature, we provide within our app?&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 10px&quot;&gt;&lt;font style=&quot;font-size: 10px&quot;&gt;&lt;b&gt;Definition:&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 10px&quot;&gt;Core functionalities and tools that directly address user needs and align with the app’s value proposition.&lt;br&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 10px&quot;&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;labelBackgroundColor=none;strokeColor=#e8edf0;strokeWidth=5;fillColor=#ffffff;fontSize=12;fontColor=#2F5B7C;align=left;verticalAlign=top;spacing=30;" parent="1" vertex="1">
+          <mxGeometry x="-1940" y="2278" width="420" height="900" as="geometry" />
+        </mxCell>
+        <mxCell id="q8ubCS3UPAsnNKlZQyiB-728" value="&lt;font style=&quot;border-color: var(--border-color); font-size: 26px;&quot;&gt;Key Values&lt;br&gt;&lt;/font&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;What are key values for a sustainable application development?&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 10px&quot;&gt;&lt;b&gt;Definition:&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 10px&quot;&gt;Fundamental principles or standards that guide the development, design, and management of an app or project&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;labelBackgroundColor=none;strokeColor=#e8edf0;strokeWidth=5;fillColor=#ffffff;fontSize=12;fontColor=#2F5B7C;align=left;verticalAlign=top;spacing=30;" parent="1" vertex="1">
+          <mxGeometry x="-1100" y="2278" width="420" height="900" as="geometry" />
+        </mxCell>
+        <mxCell id="q8ubCS3UPAsnNKlZQyiB-729" value="&lt;div&gt;&lt;span style=&quot;font-size: 26px;&quot;&gt;Microservices&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;What microservices does our app uses, that are provided by Third-Parties?&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 10px&quot;&gt;&lt;font style=&quot;font-size: 10px&quot;&gt;&lt;b&gt;Definition:&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 10px&quot;&gt;Each service in a microservices architecture focuses on a specific business functionality, operates independently, and communicates with other services via lightweight protocols, often using APIs.&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 10px&quot;&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;labelBackgroundColor=none;strokeColor=#e8edf0;strokeWidth=5;fillColor=#ffffff;fontSize=12;fontColor=#2F5B7C;align=left;verticalAlign=top;spacing=30;" parent="1" vertex="1">
+          <mxGeometry x="-1520" y="2728" width="420" height="450" as="geometry" />
+        </mxCell>
+        <mxCell id="q8ubCS3UPAsnNKlZQyiB-730" value="&lt;div style=&quot;font-size: 26px&quot;&gt;&lt;font style=&quot;font-size: 26px&quot;&gt;Cost Structure&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;What are the most important costs inherent in our app?&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 10px&quot;&gt;&lt;font style=&quot;font-size: 10px&quot;&gt;&lt;b&gt;Definition:&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 10px&quot;&gt;&lt;font style=&quot;font-size: 10px&quot;&gt;Fixed Costs (salaries, rents, utilities),&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Variable costs&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;labelBackgroundColor=none;strokeColor=#e8edf0;strokeWidth=5;fillColor=#ffffff;fontSize=12;fontColor=#2F5B7C;align=left;verticalAlign=top;spacing=30;" parent="1" vertex="1">
+          <mxGeometry x="-2780" y="3178" width="1050" height="502" as="geometry" />
+        </mxCell>
+        <mxCell id="q8ubCS3UPAsnNKlZQyiB-731" value="&lt;div style=&quot;font-size: 26px&quot;&gt;Market Establishment&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;How we reach them and how do we sell our product? What are key values of our users?&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Definition:&lt;/div&gt;&lt;div&gt;The process of introducing our app into a market and securing a position where it gains recognition, customer adoption, and competitive advantage.&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;labelBackgroundColor=none;strokeColor=#e8edf0;strokeWidth=5;fillColor=#ffffff;fontSize=12;fontColor=#2F5B7C;align=left;verticalAlign=top;spacing=30;" parent="1" vertex="1">
+          <mxGeometry x="-1730" y="3178" width="1050" height="502" as="geometry" />
+        </mxCell>
+        <mxCell id="q8ubCS3UPAsnNKlZQyiB-732" value="The App Model Canvas" style="text;html=1;resizable=0;points=[];autosize=1;align=left;verticalAlign=top;spacingTop=-4;fontSize=60;fontColor=#2F5B7C;" parent="1" vertex="1">
+          <mxGeometry x="-2780" y="2168" width="650" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="q8ubCS3UPAsnNKlZQyiB-733" value="" style="html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;shadow=0;dashed=0;strokeWidth=4;shape=mxgraph.ios7.misc.check;strokeColor=#2F5B7C;fillColor=#ffffff;gradientColor=none;fontSize=12;fontColor=#2F5B7C;align=left;" parent="1" vertex="1">
+          <mxGeometry x="-750" y="2313.5" width="30" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="q8ubCS3UPAsnNKlZQyiB-734" value="" style="shape=mxgraph.signs.travel.present;html=1;fillColor=#2F5B7C;strokeColor=none;verticalLabelPosition=bottom;verticalAlign=top;align=center;shadow=0;labelBackgroundColor=none;fontSize=12;fontColor=#2F5B7C;" parent="1" vertex="1">
+          <mxGeometry x="-1575" y="2293" width="31" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="q8ubCS3UPAsnNKlZQyiB-735" value="" style="html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=3;strokeColor=none;fillColor=#2F5B7C;shadow=0;dashed=0;shape=mxgraph.ios7.icons.heart;fontSize=12;fontColor=#2F5B7C;align=left;" parent="1" vertex="1">
+          <mxGeometry x="-1164.9999999999995" y="2300" width="41" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="q8ubCS3UPAsnNKlZQyiB-739" value="" style="shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.mscae.cloud.data_factory;fillColor=#2F5B7C;labelBackgroundColor=none;fontSize=10;fontColor=#2F5B7C;align=left;" parent="1" vertex="1">
+          <mxGeometry x="-2010" y="2748" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="q8ubCS3UPAsnNKlZQyiB-740" value="" style="shape=mxgraph.signs.transportation.truck_6;html=1;fillColor=#2F5B7C;strokeColor=none;verticalLabelPosition=bottom;verticalAlign=top;align=center;shadow=0;labelBackgroundColor=none;fontSize=10;fontColor=#2F5B7C;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="-1160" y="2748" width="40" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="q8ubCS3UPAsnNKlZQyiB-741" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn4.iconfinder.com/data/icons/evil-icons-user-interface/64/price-128.png;shadow=0;strokeColor=#e8edf0;strokeWidth=3;fillColor=#2F5B7C;gradientColor=none;fontSize=10;fontColor=#2F5B7C;align=left;" parent="1" vertex="1">
+          <mxGeometry x="-1796" y="3198" width="58" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="q8ubCS3UPAsnNKlZQyiB-742" value="" style="dashed=0;html=1;shape=mxgraph.aws3.checklist_cost;fillColor=#2F5B7C;gradientColor=none;shadow=0;labelBackgroundColor=none;strokeColor=none;strokeWidth=3;fontSize=10;fontColor=#2F5B7C;align=left;" parent="1" vertex="1">
+          <mxGeometry x="-773.5" y="3189.5" width="67.5" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="q8ubCS3UPAsnNKlZQyiB-743" value="" style="shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#2F5B7C;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;shape=mxgraph.office.concepts.link;labelBackgroundColor=none;fontSize=10;fontColor=#000000;align=left;" parent="1" vertex="1">
+          <mxGeometry x="-2441" y="2299" width="61" height="21" as="geometry" />
+        </mxCell>
+        <mxCell id="q8ubCS3UPAsnNKlZQyiB-744" value="" style="group" parent="1" vertex="1" connectable="0">
+          <mxGeometry x="-2030" y="2300" width="50" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="q8ubCS3UPAsnNKlZQyiB-745" value="" style="shadow=0;dashed=0;html=1;strokeColor=#FFFFFF;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;shape=mxgraph.office.users.user;fillColor=#2F5B7C;labelBackgroundColor=none;fontSize=10;fontColor=#000000;align=left;strokeWidth=2;" parent="q8ubCS3UPAsnNKlZQyiB-744" vertex="1">
+          <mxGeometry x="22.463768115942027" y="-4" width="33.333333333333336" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="q8ubCS3UPAsnNKlZQyiB-746" value="" style="shadow=0;dashed=0;html=1;strokeColor=#FFFFFF;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;shape=mxgraph.office.users.user;fillColor=#2F5B7C;labelBackgroundColor=none;fontSize=10;fontColor=#000000;align=left;strokeWidth=2;" parent="q8ubCS3UPAsnNKlZQyiB-744" vertex="1">
+          <mxGeometry width="33.333333333333336" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="q8ubCS3UPAsnNKlZQyiB-747" value="Full Stak Webapp&lt;br&gt;Developers" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="-2660" y="2480" width="160" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="lBGvVB8ArlER4a5Iz0_V-1" value="VueJS Frontend&lt;br&gt;Developers" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="-2560" y="2580" width="160" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="lBGvVB8ArlER4a5Iz0_V-2" value="Laravel Backend&lt;br&gt;Developers" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="-2752" y="2580" width="160" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="lBGvVB8ArlER4a5Iz0_V-3" value="Students&lt;br&gt;&amp;amp; Independant Learners" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+          <mxGeometry x="-2591" y="2739.5" width="150" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="lBGvVB8ArlER4a5Iz0_V-4" value="Visitor" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="-2320" y="2458" width="108" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="lBGvVB8ArlER4a5Iz0_V-5" value="&lt;b&gt;User&lt;/b&gt;&lt;br&gt;&quot;Access to default features&quot;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="-2320" y="2548" width="148" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="lBGvVB8ArlER4a5Iz0_V-6" value="&lt;b&gt;Cockpit&lt;/b&gt;&lt;br&gt;&quot;Access to cockpit features&quot;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+          <mxGeometry x="-2210" y="2600" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="lBGvVB8ArlER4a5Iz0_V-7" value="&lt;b&gt;Admin&lt;/b&gt;&lt;br&gt;&quot;Manages certain Data within App&quot;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="-2120" y="2458" width="148" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="lBGvVB8ArlER4a5Iz0_V-10" value="&lt;b&gt;Database&lt;/b&gt;&lt;br&gt;PSQL/pgVector" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="-2240" y="3000" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="lBGvVB8ArlER4a5Iz0_V-11" value="Github&lt;br&gt;Code Management" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="-2130" y="3090" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lBGvVB8ArlER4a5Iz0_V-12" value="User Account Management" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+          <mxGeometry x="-1890" y="2464.5" width="140" height="85.5" as="geometry" />
+        </mxCell>
+        <mxCell id="lBGvVB8ArlER4a5Iz0_V-14" value="User-access-request&lt;br&gt;verification" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="-1840" y="2668" width="130" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="lBGvVB8ArlER4a5Iz0_V-15" value="Roles &amp;amp; Accesses" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="-1796" y="2532.25" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="lBGvVB8ArlER4a5Iz0_V-16" value="Draw.io&lt;br&gt;Documentation" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="-2320" y="3090" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lBGvVB8ArlER4a5Iz0_V-17" value="Software&lt;br&gt;Environment" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="-2160" y="2885" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lBGvVB8ArlER4a5Iz0_V-8" value="&lt;b&gt;Backend&lt;/b&gt;&lt;br&gt;PHP 8.3, Laravel 11 Framework" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="-2250" y="2940" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lBGvVB8ArlER4a5Iz0_V-9" value="&lt;b&gt;Frontend&lt;/b&gt;&lt;br&gt;VueJS, Quasar Framework" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="-2080" y="2940" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lBGvVB8ArlER4a5Iz0_V-18" value="Prototype of a Scalable App Setup" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+          <mxGeometry x="-1370" y="2432.88" width="120" height="64.75" as="geometry" />
+        </mxCell>
+        <mxCell id="lBGvVB8ArlER4a5Iz0_V-20" value="Learning-by-doing" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="-1285" y="2610" width="120" height="64.75" as="geometry" />
+        </mxCell>
+        <mxCell id="lBGvVB8ArlER4a5Iz0_V-22" value="Performant SPA &lt;br&gt;Applications" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="-1490" y="2612" width="120" height="64.75" as="geometry" />
+        </mxCell>
+        <UserObject label="Google Geolocation API" link="https://developers.google.com/maps/documentation/geocoding/start" id="lBGvVB8ArlER4a5Iz0_V-24">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+            <mxGeometry x="-1470.5" y="2973.12" width="120" height="64.75" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Paddle Payment Gateway" link="https://www.paddle.com/" id="lBGvVB8ArlER4a5Iz0_V-25">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+            <mxGeometry x="-1320" y="3037.87" width="120" height="64.75" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="lBGvVB8ArlER4a5Iz0_V-26" value="Ngrok&amp;nbsp;&lt;br&gt;&quot;Reverse Proxy&quot; testing" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="-2106" y="3020" width="120" height="52.62" as="geometry" />
+        </mxCell>
+        <mxCell id="lBGvVB8ArlER4a5Iz0_V-28" value="Scalable Feature Enahcements" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="-840" y="2674.75" width="120" height="64.75" as="geometry" />
+        </mxCell>
+        <mxCell id="lBGvVB8ArlER4a5Iz0_V-31" value="Error &amp;amp; Exception Handling" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="-1020" y="2781.5" width="120" height="64.75" as="geometry" />
+        </mxCell>
+        <mxCell id="lBGvVB8ArlER4a5Iz0_V-32" value="Call-to-Actions &amp;amp; Restrictions" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="-1010" y="2674.75" width="120" height="64.75" as="geometry" />
+        </mxCell>
+        <UserObject label="Google Geolocation API&lt;br&gt;Up to 10k Requests for free (+/-)" link="https://mapsplatform.google.com/access/?hl=de" id="lBGvVB8ArlER4a5Iz0_V-33">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+            <mxGeometry x="-2160" y="3360" width="170" height="64.75" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Paddle Payment Gateway&lt;br&gt;5% + 50c per Transaction)" link="https://www.paddle.com/access" id="lBGvVB8ArlER4a5Iz0_V-34">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+            <mxGeometry x="-2160" y="3280" width="170" height="64.75" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="lBGvVB8ArlER4a5Iz0_V-35" value="MVP &lt;br&gt;Principles" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="-1242.75" y="2503.76" width="105.5" height="58.62" as="geometry" />
+        </mxCell>
+        <mxCell id="lBGvVB8ArlER4a5Iz0_V-37" value="High Performance" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="-870" y="2880.4900000000002" width="120" height="64.75" as="geometry" />
+        </mxCell>
+        <mxCell id="lBGvVB8ArlER4a5Iz0_V-39" value="Rest-APIs&lt;br&gt;Calls" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="-880" y="2977.87" width="120" height="64.75" as="geometry" />
+        </mxCell>
+        <mxCell id="lBGvVB8ArlER4a5Iz0_V-40" value="Quality Assurance" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="-1072" y="2547.25" width="120" height="64.75" as="geometry" />
+        </mxCell>
+        <UserObject label="Live" id="lBGvVB8ArlER4a5Iz0_V-41">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+            <mxGeometry x="-1350.5" y="3090" width="80" height="42.62" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Sandbox" id="lBGvVB8ArlER4a5Iz0_V-42">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+            <mxGeometry x="-1230" y="3090" width="80" height="42.62" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="lBGvVB8ArlER4a5Iz0_V-43" value="Open Source Template" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="-1640" y="3350" width="120" height="64.75" as="geometry" />
+        </mxCell>
+        <mxCell id="lBGvVB8ArlER4a5Iz0_V-45" value="Advanced Webapp Development Guide" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="-1400" y="3344.75" width="130" height="75.25" as="geometry" />
+        </mxCell>
+        <mxCell id="lBGvVB8ArlER4a5Iz0_V-46" value="Provide Tutorials&lt;br&gt;&amp;amp; Guideance" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="-1650" y="3460" width="130" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="lBGvVB8ArlER4a5Iz0_V-47" value="Sustainable App Approach" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="-1190" y="3407.63" width="120" height="64.75" as="geometry" />
+        </mxCell>
+        <mxCell id="lBGvVB8ArlER4a5Iz0_V-48" value="Focus on whole App-Life-Cycle, instead of Softwaredevelopment only!" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="-960" y="3392.38" width="160" height="80" as="geometry" />
+        </mxCell>
+        <UserObject label="Github&lt;br&gt;0 - 4USD per User / Month" link="https://github.com/access" id="lBGvVB8ArlER4a5Iz0_V-49">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+            <mxGeometry x="-2490" y="3327.63" width="170" height="64.75" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Server&lt;br&gt;Depending on provider" id="lBGvVB8ArlER4a5Iz0_V-50">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+            <mxGeometry x="-2700" y="3400" width="170" height="64.75" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Domain&lt;br&gt;Depending on provider" id="lBGvVB8ArlER4a5Iz0_V-51">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+            <mxGeometry x="-2700" y="3327.63" width="170" height="64.75" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="UI: Cookie Consent&lt;br&gt;GDPR" id="lBGvVB8ArlER4a5Iz0_V-52">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+            <mxGeometry x="-1738" y="2970" width="120" height="64.75" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="UI: Server&lt;br&gt;Response Handling" id="lBGvVB8ArlER4a5Iz0_V-55">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+            <mxGeometry x="-1880" y="2970" width="120" height="64.75" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="7FOcymX67m-cCyJudOTW-1" value="Collaboration &amp;amp; Communication" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="-910" y="2548.62" width="110" height="61.38" as="geometry" />
+        </mxCell>
+        <mxCell id="7FOcymX67m-cCyJudOTW-2" value="Architecture &amp;amp; Structure" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="-1060" y="2880.49" width="110" height="55.37" as="geometry" />
+        </mxCell>
+        <mxCell id="vKAiGrFiaG_Dv00owzDu-1" value="Product Managers &amp;amp; Requirements Engineers" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+          <mxGeometry x="-2730" y="2854.75" width="150" height="80" as="geometry" />
+        </mxCell>
+        <UserObject label="Google &lt;br&gt;Geolocation" id="vKAiGrFiaG_Dv00owzDu-2">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+            <mxGeometry x="-1880" y="3042.6200000000003" width="120" height="64.75" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="vKAiGrFiaG_Dv00owzDu-3" value="Documentation" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="-1500" y="2497.63" width="120" height="64.75" as="geometry" />
+        </mxCell>
+        <mxCell id="lBGvVB8ArlER4a5Iz0_V-23" value="Assistance for understanding strategical approach of Softwaredevelopment" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+          <mxGeometry x="-1404.5" y="2548" width="184.5" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="vKAiGrFiaG_Dv00owzDu-4" value="Definitions" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="-913" y="2445.75" width="113" height="57.63" as="geometry" />
+        </mxCell>
+        <mxCell id="lBGvVB8ArlER4a5Iz0_V-38" value="Split&lt;br&gt;Front- &amp;amp; Backend" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="-1070" y="2973.12" width="120" height="64.75" as="geometry" />
+        </mxCell>
+        <mxCell id="lBGvVB8ArlER4a5Iz0_V-27" value="Lean&lt;br&gt;UX / UI Design" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+          <mxGeometry x="-929" y="2731.5" width="120" height="64.75" as="geometry" />
+        </mxCell>
+        <mxCell id="lBGvVB8ArlER4a5Iz0_V-29" value="Minimal Viable Documentation" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+          <mxGeometry x="-1008" y="2491.88" width="120" height="64.75" as="geometry" />
+        </mxCell>
+        <mxCell id="lBGvVB8ArlER4a5Iz0_V-36" value="Scalable Single-Page&lt;br&gt;Applications" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+          <mxGeometry x="-970" y="2925" width="120" height="64.75" as="geometry" />
+        </mxCell>
+        <mxCell id="vKAiGrFiaG_Dv00owzDu-6" value="Knowledge Assurance" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="-1090" y="2445.75" width="110" height="57.37" as="geometry" />
+        </mxCell>
+        <mxCell id="vKAiGrFiaG_Dv00owzDu-7" value="Payments &amp;amp; Webhooks" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="-890" y="3077.38" width="120" height="64.75" as="geometry" />
+        </mxCell>
+        <mxCell id="vKAiGrFiaG_Dv00owzDu-5" value="Access &lt;br&gt;Managment" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+          <mxGeometry x="-980" y="3025.25" width="120" height="64.75" as="geometry" />
+        </mxCell>
+        <mxCell id="lBGvVB8ArlER4a5Iz0_V-44" value="Refine our template and create a comprehensive sample application" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+          <mxGeometry x="-1544" y="3400" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="evHeU8QpnvDGgPheJPAr-1" value="Access Management&lt;br&gt;by Admin" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="-1660" y="2670" width="130" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="lBGvVB8ArlER4a5Iz0_V-13" value="User Access &lt;br&gt;Management" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+          <mxGeometry x="-1730" y="2597.38" width="160" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="yDQsg-MDDgFwZiC9E1O0-1" value="Product scope refers to the specific features, functionalities, and requirements of a particular software product. It focuses on what the product will do and the boundaries of its capabilities." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="-2770" y="2240" width="1140" height="30" as="geometry" />
+        </mxCell>
+        <UserObject label="Laravel Passport&lt;br&gt;OAuth 2.0" id="8jWBtEDcyu7fYKxTIBnw-1">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+            <mxGeometry x="-2350" y="2897" width="115" height="55" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="8jWBtEDcyu7fYKxTIBnw-2" value="MVP Documentation Approach" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="-1220" y="3520" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="8jWBtEDcyu7fYKxTIBnw-3" value="Performant &lt;br&gt;App Development" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+          <mxGeometry x="-1092" y="3460" width="160" height="80" as="geometry" />
+        </mxCell>
+        <UserObject label="Translation Package&lt;br&gt;Setup" id="Fs_XKt9m75n2JtnmExOm-1">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+            <mxGeometry x="-1738" y="3042.6200000000003" width="120" height="64.75" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="p5ptJ_ZMFBeHu1_czWJr-1" value="Legal &lt;br&gt;&amp;amp;&amp;nbsp;Data Privacy" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="-840" y="2790" width="120" height="64.75" as="geometry" />
+        </mxCell>
+        <mxCell id="p5ptJ_ZMFBeHu1_czWJr-2" value="Delete Actions" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+          <mxGeometry x="-730" y="2846.25" width="120" height="64.75" as="geometry" />
+        </mxCell>
+        <mxCell id="p5ptJ_ZMFBeHu1_czWJr-3" value="Cookie Consent" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="-730" y="2750" width="120" height="64.75" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="Bav2oq8mXFuTR9LEcAUd" name="App Architecture">
+    <mxGraphModel dx="1793" dy="1088" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
