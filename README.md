@@ -1,7 +1,5 @@
 # Webapp Template
-by Carlson, 2025-02-14
-- Documentation: see "\docs"
-- Tutorial: https://www.youtube.com/watch?v=Jdg9x3BDT38
+by Carlson, 2025-06-25
 
 ## Folder Structure
 Root folder:
