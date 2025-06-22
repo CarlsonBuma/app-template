@@ -2,7 +2,7 @@
 
     <PageWrapper>
         <CardSimple
-            class="w-card q-my-lg"
+            class="w-card"
             title="Transfer Account"
             iconHeader="switch_account"
             note="After verify your account, you will be able to login with your new credentials."

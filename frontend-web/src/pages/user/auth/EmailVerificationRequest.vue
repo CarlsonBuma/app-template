@@ -2,7 +2,7 @@
 
     <PageWrapper>
         <CardSimple 
-            class="w-card q-my-lg" 
+            class="w-card" 
             title="Email Verification"
             note="*We send the verification token to the provided email. After successful verification you are able to login."
         >

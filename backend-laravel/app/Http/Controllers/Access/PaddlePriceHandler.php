@@ -15,7 +15,7 @@ class PaddlePriceHandler
      *  - Webhook: "\Listeners\PaddleWebhookListener"
      * 
      * Setup:
-     *  1. Implement price-access-token within function "updatePriceByWebhook()"
+     *  1. Implement price-access-token within "updatePriceByWebhook()"
      *      - Define new access-tokens in "\Access\AccessHandler"
      *      - May add logic to handle new access-token accordingly within app
      *  2. Set Price and its attributes within Paddle
@@ -24,6 +24,7 @@ class PaddlePriceHandler
      *          > 'limit_quantity: (int, required)
      *          > 'limit_storage: (int, required)
      *          > 'duration_months' (int, optional): Defines the period of access
+     *              > Userful in case of One-Time-Purchase Expiration Date
      *              > Note: This is overridden by the subscription.billing_period.ends_at value
      *
      * @param array $contentData
@@ -37,6 +38,7 @@ class PaddlePriceHandler
             // Price is available and defined within app
             // Add other prices tokens here...
             $accessTokenByPaddle === AccessHandler::$accessCockpitToken
+            
         )) { 
             
             $this->price = PaddlePrices::updateOrCreate([

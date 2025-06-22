@@ -22,15 +22,17 @@
             @refresh="(done) => refresh(done)" 
         >
             <!-- Header -->
-            <slot name="header" />
+            <div class="q-py-lg">
+                <slot name="header" />
+            </div>
 
             <!-- Content -->
-            <div class="w-100 flex justify-center" >
+            <div class="w-100 flex justify-center q-pb-md" >
                 
                 <!-- Rendering -->
                 <LoadingData 
                     v-if="rendering"
-                    class="q-my-lg"
+                    class=""
                     text="Processing data..."
                     :colorIcon="bgDesign ? 'white' : 'primary'"
                     :colorText="bgDesign ? 'text-white' : 'text-grey'"
@@ -92,7 +94,6 @@ export default {
         
         // Design
         bgDesign: Boolean,
-        noMargin: Boolean,
         navBottomClass: String,
     },
 

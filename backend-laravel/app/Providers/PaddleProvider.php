@@ -8,17 +8,15 @@ use GuzzleHttp\Client;
 class PaddleProvider
 {
     /**
-     * Undocumented variable
+     * Paddle API Calls
+     * https://developer.paddle.com/api-reference/overview
      *
      * @var Client|null
      */
     public ?Client $client;
 
     /**
-     * 
-     * Setup Client API Call
-     * > https://developer.paddle.com/api-reference/overview
-     * 
+     * Set Client
      */
     function __construct() 
     {

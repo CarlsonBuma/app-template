@@ -4,14 +4,14 @@
 
         <!-- Header -->
         <template #header>
-            <q-tabs v-model="tab" class="q-pt-lg" >
+            <q-tabs v-model="tab" >
                 <q-tab name="access" label="App Access" />
                 <q-tab name="transactions" label="Payment History" />
             </q-tabs>
             <q-separator class="w-100" />
         </template>
 
-        <q-tab-panels class="bg-transparent w-content-md q-py-lg" v-model="tab" animated>
+        <q-tab-panels class="bg-transparent w-content-md" v-model="tab" animated>
 
             <!-- Prices -->
             <q-tab-panel name="access" class="flex justify-center q-pa-none">

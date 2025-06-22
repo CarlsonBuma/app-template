@@ -7,7 +7,8 @@ use GuzzleHttp\Client;
 class GeolocationProvider
 {
     /**
-     * Undocumented variable
+     * Google Maps: Geolocation
+     * https://developers.google.com/maps/documentation/geocoding/start
      *
      * @var Client|null
      */
@@ -21,8 +22,7 @@ class GeolocationProvider
     private $googleMapsUrl = 'https://maps.googleapis.com/maps/api/geocode/json?address=';
 
     /**
-     * Google Maps: Geolocation
-     * https://developers.google.com/maps/documentation/geocoding/
+     * Set Client
      */
     function __construct()
     {

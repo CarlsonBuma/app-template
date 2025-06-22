@@ -35,10 +35,8 @@ class AppGeolocations extends Model
     }
 
     /**
-     * Seed database
-     * Add new geolocation entry
-     *  > Google API Location
-     *  > https://developers.google.com/maps/documentation/geocoding/start
+     * DB Seed Geolocation
+     * https://developers.google.com/maps/documentation/geocoding/start
      *
      * @param array $data
      * @return int

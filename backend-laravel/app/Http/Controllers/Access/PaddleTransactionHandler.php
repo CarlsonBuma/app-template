@@ -58,14 +58,10 @@ class PaddleTransactionHandler
      * Sets attributes, to verify transaction and define user access
      * Docs: https://developer.paddle.com/webhooks/overview
      * 
-     * Logic: User access
-     * User gains access, according transaction data
-     *  - Important: The transaction-price-object defines the user access
-     *      - Ref.: "\Access\PaddlePriceHandler"
-     * 
-     * Logic: User access expiration
-     * Access expiration will be defined either by quantity or expiration_date
-     *  - ref. "\Controllers\Access\AccessHandler"
+     * Logic:
+     * User gains access, according transaction data-object by Paddle
+     *  > The transaction-price-object defines the user access
+     *  > Custom Price Data Handling see: "Access\PaddlePriceHandler"
      *
      * @param array $contentData
      * @return void

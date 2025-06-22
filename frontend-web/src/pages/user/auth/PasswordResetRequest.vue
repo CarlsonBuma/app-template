@@ -2,7 +2,7 @@
 
     <PageWrapper>
         <CardSimple
-            class="w-card q-my-lg"
+            class="w-card"
             title="Reset Password"
             note="You will receive the link to reset your password via provided email."
             goBack

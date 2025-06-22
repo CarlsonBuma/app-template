@@ -53,8 +53,7 @@ class AccessHandler
      * Add user app access
      * 
      * Note: 
-     * For transpirancy purpose, we always create new access,
-     * instead of updating existing access.
+     * For peroformance purpose, we update current access.
      *
      * @param integer $userID
      * @param string $accessToken

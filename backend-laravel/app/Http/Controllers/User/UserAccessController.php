@@ -20,7 +20,44 @@ use App\Http\Controllers\Access\PaddleTransactionHandler;
 class UserAccessController extends Controller
 {
     /**
-     * Undocumented function
+     * Check user access by "access_token"
+     *
+     * @param string $access_token
+     * @return void
+     */
+    public function checkUserAccess(string $access_token)
+    {
+        $userAccess = AccessHandler::getUserAccessByToken(Auth::id(), $access_token);
+        return response()->json([
+            'access' => $userAccess,
+            'access_token' => $access_token,
+            'message' => 'Latest access token.',
+        ], 200);
+    }
+
+    /**
+     * Load prices, transactions and access
+     *
+     * @return void
+     */
+    public function loadUserTransactions()
+    {
+        $userTransactions = PaddleTransactions::where('user_id', Auth::id())
+            ->orderBy('created_at', 'desc')
+            ->get()
+            ->map(function($transaction) {
+                return AccessCollection::render_user_transaction($transaction);
+            });
+
+        return response()->json([
+            'transactions' => $userTransactions,
+            'message' => 'Transactions loaded.',
+        ], 200);
+    }
+    
+    /**
+     * Loads User Pricing Plan against token
+     * and Checks if User already has a subscription
      *
      * @param string $access_token
      * @return void
@@ -63,75 +100,7 @@ class UserAccessController extends Controller
             'storage_usage' => $storageSizeGB
         ], 200);
     }
-
-    /**
-     * Load prices, transactions and access
-     *
-     * @return void
-     */
-    public function loadUserTransactions()
-    {
-        $userTransactions = PaddleTransactions::where('user_id', Auth::id())
-            ->orderBy('created_at', 'desc')
-            ->get()
-            ->map(function($transaction) {
-                return AccessCollection::render_user_transaction($transaction);
-            });
-
-        return response()->json([
-            'transactions' => $userTransactions,
-            'message' => 'Transactions loaded.',
-        ], 200);
-    }
-
-    /**
-     * Check user access by "access_token"
-     *
-     * @param string $access_token
-     * @return void
-     */
-    public function checkUserAccess(string $access_token)
-    {
-        $userAccess = AccessHandler::getUserAccessByToken(Auth::id(), $access_token);
-        return response()->json([
-            'access' => $userAccess,
-            'access_token' => $access_token,
-            'message' => 'Latest access token.',
-        ], 200);
-    }
-
-    /**
-     * Undocumented function
-     *
-     * @return void
-     */
-    public function createFreeCommunityAccess()
-    {
-        // Check already issued
-        if($userAccess = AccessHandler::getUserAccessByToken(Auth::id(), AccessHandler::$accessCockpitToken)) {
-            return response()->json([
-                'message' => 'Access already issued.',
-            ], 422);
-        }
-
-        // Create free Access
-        $userAccess = AccessHandler::addUserAccess(
-            Auth::id(),
-            AccessHandler::$accessCockpitToken,
-            AccessHandler::$accessCockpitFreeQuantity,            // Event Limit
-            AccessHandler::$accessCockpitFreeStorage,      // Storage Limit
-            null,
-            null,
-            null,
-            'created.by.free.access'
-        );
-
-        return response()->json([
-            'access' => AccessCollection::render_user_access($userAccess),
-            'message' => 'Free access has been granted.',
-        ], 200);
-    }
-
+    
     /**
      * Initialize user's client checkout.
      * 
@@ -205,6 +174,38 @@ class UserAccessController extends Controller
 
         return response()->json([
             'message' => 'Access verification may takes a few seconds.',
+        ], 200);
+    }
+
+    /**
+     * Undocumented function
+     *
+     * @return void
+     */
+    public function createFreeCommunityAccess()
+    {
+        // Check already issued
+        if($userAccess = AccessHandler::getUserAccessByToken(Auth::id(), AccessHandler::$accessCockpitToken)) {
+            return response()->json([
+                'message' => 'Access already issued.',
+            ], 422);
+        }
+
+        // Create free Access
+        $userAccess = AccessHandler::addUserAccess(
+            Auth::id(),
+            AccessHandler::$accessCockpitToken,
+            AccessHandler::$accessCockpitFreeQuantity,            // Event Limit
+            AccessHandler::$accessCockpitFreeStorage,      // Storage Limit
+            null,
+            null,
+            null,
+            'created.by.free.access'
+        );
+
+        return response()->json([
+            'access' => AccessCollection::render_user_access($userAccess),
+            'message' => 'Free access has been granted.',
         ], 200);
     }
 

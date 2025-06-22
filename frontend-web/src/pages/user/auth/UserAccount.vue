@@ -4,13 +4,13 @@
 
         <!-- Header -->
         <template #header>
-            <q-tabs v-model="tab" class="q-pt-lg" >
+            <q-tabs v-model="tab" >
                 <q-tab name="settings" label="Account Settings" />
             </q-tabs>
             <q-separator class="w-100" />
         </template>
         
-        <div class="row w-100 flex justify-center q-py-lg">
+        <div class="row w-100 flex justify-center">
             <div class="w-card-sm">
 
                 <!-- Avatar -->

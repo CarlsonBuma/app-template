@@ -3,14 +3,14 @@
     <PageWrapper :rendering="rendering">
 
         <template #header>
-            <q-tabs v-model="tab" class="q-pt-lg" >
+            <q-tabs v-model="tab">
                 <q-tab name="newsfeed" label="App Newsfeed" />
             </q-tabs>
             <q-separator class="w-100"/>
         </template>
 
         <!-- Add Entries -->
-        <div class="row w-content flex justify-center q-py-lg">
+        <div class="row w-content flex justify-center">
             <CardSimple title="Create Feed" class="w-card">
                 <template #actions>
                     <q-btn label="Publish" outline size="sm" color="primary" @click="createNewNewsfeed(newEntry)"/>
@@ -25,13 +25,13 @@
         </div>
         
         <!-- Read, Update, Delete Entries -->
-        <q-separator class="w-content" />
+        <q-separator class="w-content q-my-md" />
         <q-table
             title="Newsfeed"
             :rows="newsfeed"
             :columns="columns"
             row-key="id"
-            class="w-content q-my-lg"
+            class="w-content "
         >
             <template v-slot:body="props">
                 <q-tr :props="props">

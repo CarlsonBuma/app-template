@@ -1,7 +1,7 @@
 <template>
 
     <PageWrapper>
-        <CardSimple goBack class="w-card q-my-lg" title="Create Account" >
+        <CardSimple goBack class="w-card" title="Create Account" >
             
             <!-- Registration -->
             <q-card-section>

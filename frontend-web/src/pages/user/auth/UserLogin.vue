@@ -1,7 +1,7 @@
 <template>
 
     <PageWrapper>
-        <CardSimple goBack class="w-card q-my-lg" title="Login" >
+        <CardSimple goBack class="w-card" title="Login" >
 
             <q-card-section class="flex justify-center">
                 <q-btn 

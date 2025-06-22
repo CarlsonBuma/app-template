@@ -4,14 +4,14 @@
 
         <!-- Header -->
         <template #header>
-            <q-tabs v-model="tab" class="q-pt-lg" >
+            <q-tabs v-model="tab" >
                 <q-tab name="impressum" label="Impressum" />
             </q-tabs>
             <q-separator class="w-100" />
         </template>
 
         <!-- Impressum -->
-        <div class="flex w-content-lg justify-center q-my-lg">
+        <div class="flex w-content-lg justify-center">
             <div class="w-card">
                 <!-- Logo -->
                 <ImageUpload 

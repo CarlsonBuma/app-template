@@ -1,7 +1,13 @@
 <template>
     <q-layout view="lHh LpR lff">
         
-        <q-header elevated>
+        <q-header 
+            elevated
+            :class="{
+                'bg-dark': $q.dark.isActive,
+                'bg-header-bright-mode': !$q.dark.isActive,
+            }"
+        >
             <q-toolbar>
                 <NavHead
                     @logoClick="toggleLeftDrawer"
@@ -22,7 +28,13 @@
         </q-drawer>
 
         <!-- Content -->
-        <q-page-container>
+        <q-page-container
+            id="app-content"
+            :class="{
+                'background': !$q.dark.isActive,
+                'background-dark': $q.dark.isActive
+            }"
+        >
             <router-view 
                 @setSession="(route) => $emit('setSession', route)"
                 @removeSession="$emit('removeSession')"

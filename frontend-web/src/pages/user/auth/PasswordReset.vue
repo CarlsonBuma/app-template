@@ -2,7 +2,7 @@
 
     <PageWrapper>
         <CardSimple
-            class="w-card q-my-lg"
+            class="w-card"
             title="Password Reset"
             iconHeader="lock_person"
         >

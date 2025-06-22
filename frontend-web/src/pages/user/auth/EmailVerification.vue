@@ -1,7 +1,7 @@
 <template>
     <PageWrapper>
         <CardSimple 
-            class="w-card q-my-lg" 
+            class="w-card" 
             title="Email Verification"
             note="*After verify your email, you will be logged into your account."
         >

@@ -6,17 +6,15 @@ use App\Http\Controllers\Admin\AdminAccessController;
 
 Route::middleware(['auth:api', 'email_verified'])->group(function () {
 
-    // Load Price Tokens
+    //* Initialize Client Checkout
     Route::get('/user-load-pricing-plans', [UserAccessController::class, 'loadUserPricingPlans']);
-
+    Route::post('/user-initialize-checkout', [UserAccessController::class, 'initializeClientCheckout']);
+    Route::post('/user-verify-checkout', [UserAccessController::class, 'verifyUserTransaction']);
+    
     //* User access
     Route::get('/user-load-transactions', [UserAccessController::class, 'loadUserTransactions']);
     Route::get('/user-check-access/{access_token}', [UserAccessController::class, 'checkUserAccess']);
     Route::put('/user-free-community-access', [UserAccessController::class, 'createFreeCommunityAccess']);
-    
-    // Process Paddle Client Checkout
-    Route::post('/user-initialize-checkout', [UserAccessController::class, 'initializeClientCheckout']);
-    Route::post('/user-verify-checkout', [UserAccessController::class, 'verifyUserTransaction']);
     
     // Cancel Paddle subscription
     Route::post('/user-cancel-subscription', [UserAccessController::class, 'cancelSubscription'])

@@ -1,7 +1,7 @@
 <template>
 
     <PageWrapper>
-        <CardSimple title="Verify Access" class="w-card q-my-lg">
+        <CardSimple title="Verify Access" class="w-card">
             <q-card-section>
                 {{ this.email 
                     ? 'Verification in progress...' 

@@ -1,9 +1,9 @@
 <template>
 
-    <div class="w-100 flex justify-center q-py-md">
-        <q-spinner-bars :size="size ? size : '64px'" :color="colorIcon ? colorIcon : 'primary'" /><br>
+    <div class="w-100 flex justify-center q-pt-sm">
+        <q-spinner-bars :size="size ? size : 'xl'" :color="colorIcon ? colorIcon : 'primary'" /><br>
         <div class="w-100 flex justify-center q-mt-sm">
-            <span class="text-overline" :class="colorText ? colorText : 'text-grey'">{{ text ?? 'Processing data...' }}</span>
+            <span class="text-overline" :class="colorText ? colorText : 'text-grey'">{{ text ?? 'Loading' }}</span>
         </div>
     </div>
     

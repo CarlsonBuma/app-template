@@ -3,14 +3,14 @@
     <PageWrapper :rendering="loading" >
 
         <template #header>
-            <q-tabs v-model="tab" class="q-pt-lg" >
+            <q-tabs v-model="tab" >
                 <q-tab name="access" label="Access Management" />
             </q-tabs>
             <q-separator class="w-100"/>
         </template>
 
         <!-- Price -->
-        <div class="w-content q-my-lg">
+        <div class="w-content">
             <PricesTable 
                 class="w-100"
                 title="App Prices"
@@ -24,9 +24,9 @@
         </div>
 
         <!-- Access -->
-        <q-separator class="w-content" />
+        <q-separator class="w-content q-mb-md" />
         <AccessTable 
-            class="w-content q-my-lg"
+            class="w-content"
             title="User Access"
             :access="userAccess"
             @search="(email) => searchUser(email)"

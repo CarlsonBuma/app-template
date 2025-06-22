@@ -18,26 +18,16 @@ class PaddleWebhookListener extends Controller
      * Webhookhandling via Paddle Service Provider
      * See Docs: https://developer.paddle.com/webhooks/overview
      * 
-     ** Webhook Triggers:
-     *  - Completed transaction (ref. payment)
-     *  - Canceled / failed transaction
-     *  - Updated price (ref. access)
-     *  - Updated subscription
+     * Webhook Data Handling
+     *  > "Controllers\Access"
+     *  > "Middleware\PaddleWebhookVerification"
      * 
-     ** Setup: Webhook App Access Management
-     *  1. Initialize Paddle price
-     *      - Users is able to gain access to app features by defined price tokens
-     *          > see "\Controllers\Access\PaddlePriceHandler" 
-     *  2. Define Webhooks:
-     *      - Set up the Webhook Gateway in Paddle Cockpit:
-     *          > Webhook URL: https://sandbox-vendors.paddle.com/notifications
-     *          > Endpoint: https://{URL}/access/webhook
-     *              - See "routes\web.php"
-     *  4. Set access:
-     *      - Add access token to "\Controllers\Access\AccessHandler.php"
-     *      - Set up Middleware to validate feature access:
-     *          > Example: "\Middleware\AccessCockpit.php"
-     *      - Define app logic, according access token
+     * Setup: Webhook Gateway in Paddle Cockpit
+     * https://sandbox-vendors.paddle.com/notifications
+     *  > Webhook URL: 
+     *      > Endpoint: https://{URL}/access/webhook
+     *      > See "routes\web.php"
+     *  > Set .env Keys 
      * 
      * @param Request $request
      * @return void
