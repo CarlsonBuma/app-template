@@ -6,14 +6,14 @@
  *  > Access: this.$toast()
  *
  * CTA:
- *  > loading(): waiting for response
+ *  > loading: global response rendering
  *  > done(): close waiting notification
  *  > success(): response is successful
  *  > error(): there was an error
  *      > UI Error vs. Server Error 
  *      > errorHandling(): process accordingly     
  */
-
+import { ref } from 'vue';
 import { Loading, QSpinnerGears, Notify } from 'quasar';
 import store from "src/stores/user.js";
 
@@ -27,19 +27,111 @@ export default class ResponseHandler {
      * @param {Object} app 
      */
     constructor(router, app) {
-        this.loading = false;
+        
+        // Global Page Rendering Controll
+        this.loadingGlobally = ref(false);
+
+        // Quasar Notify
+        this.showNotify = (message, type, duration) => {
+            return Notify.create({
+                classes: this.class,
+                position: this.position,
+                type: type,
+                message: message,
+                timeout: duration,
+            });
+        }
+
+        // Setup
         this.app = app;
-        this.message = '';
         this.router = router;
         this.progressBar = null;
-        this.notify = null;
+        this.class = "toaster-container"
         this.position = 'bottom-right';
         this.durationSuccess = 1900;
         this.durationError = 5500;
-        this.class = "toaster-container"
+        this.message = '';
         this.defaultLoadMessage = "Processing data. Please wait..."
         this.defaultSuccessMessage = "Success.";
         this.defaultErrorMessage = "Ops, some error occured.";
+    }
+
+    get loading() {
+        return this.loadingGlobally.value;
+    }
+
+    set loading(val) {
+        this.loadingGlobally.value = val;
+    }
+
+    load(message = this.defaultLoadMessage) {
+        Loading.show({
+            boxClass: 'page-loading-block',
+            spinner: QSpinnerGears,
+            message: message,
+        })
+        return true;
+    }
+
+    done() {
+        Loading.hide();
+        return false;
+    }
+
+    success(successMessage = this.defaultSuccessMessage) {
+        this.done();
+        this.showNotify(successMessage, 'positive', this.durationSuccess)
+        return successMessage;
+    }
+
+    /**
+     * Handle error
+     *  > String (UI error) 
+     *  > Object (Serverresponse)
+     *      > Handle Response Error Status
+     *
+     * @param {*} responseError String | Object
+     * @return { String } 
+     */
+    error(responseError, redirect = true) {
+        try {
+
+            // END
+            this.done();
+
+            // UI error
+            if (typeof responseError === 'string') 
+                this.message = responseError
+            
+            // Error by response
+            else if (typeof responseError === 'object') {
+                // Error response by server
+                if(responseError.data) {
+                    this.errorHandling(responseError, this.router, redirect);
+                    this.message = responseError.data.message 
+                        ?  responseError.data.message
+                        :  responseError.status
+                            ? responseError.status
+                            : this.defaultErrorMessage;
+                } 
+                
+                // Error response by client
+                else if (responseError.message) {
+                    this.message = responseError.message;
+                }
+            }
+        } catch (error) {
+            this.message = error.message ?? error;
+        } finally {
+            try {
+                this.showNotify(this.message, 'negative', this.durationError)
+            } catch (error) {
+                console.log('response.handling.error', error)
+            }
+        }
+        
+        console.log('response.error', this.message)
+        return this.message;
     }
 
     /**
@@ -91,89 +183,5 @@ export default class ResponseHandler {
                 ?? serverResponse.statusText 
                     ?? 'Hmm, some error occured. Please try again.'
         }
-    }
-
-    showNotify(message, type, duration) {
-        this.notify = Notify.create({
-            position: this.position,
-            type: type,
-            message: message,
-            timeout: duration,
-            classes: this.class
-        });
-    }
-
-    load(message = this.defaultLoadMessage) {
-        this.loading = true;
-        Loading.show({
-            boxClass: 'page-loading-block',
-            spinner: QSpinnerGears,
-            message: message,
-        })
-        return true;
-    }
-
-    done() {
-        this.loading = false;
-        Loading.hide();
-        return false;
-    }
-
-    success(successMessage = this.defaultSuccessMessage) {
-        this.loading = false;
-        this.done();
-        if(this.notify) this.notify();
-        this.showNotify(successMessage, 'positive', this.durationSuccess)
-        return successMessage;
-    }
-
-    /**
-     * Handle error
-     *  > String (UI error) 
-     *  > Object (Serverresponse)
-     *      > Handle Response Error Status
-     *
-     * @param {*} responseError String | Object
-     * @return { String } 
-     */
-    error(responseError, redirect = true) {
-        try {
-            this.loading = false;
-            this.done();
-
-            // UI error
-            if (typeof responseError === 'string') 
-                this.message = responseError
-            
-            // Error by response
-            else if (typeof responseError === 'object') {
-                // Error response by server
-                if(responseError.data) {
-                    this.errorHandling(responseError, this.router, redirect);
-                    this.message = responseError.data.message 
-                        ?  responseError.data.message
-                        :  responseError.status
-                            ? responseError.status
-                            : this.defaultErrorMessage;
-                } 
-                
-                // Error response by client
-                else if (responseError.message) {
-                    this.message = responseError.message;
-                }
-            }
-        } catch (error) {
-            this.message = error.message ?? error;
-        } finally {
-            try {
-                if(this.notify) this.notify();
-                this.showNotify(this.message, 'negative', this.durationError)
-            } catch (error) {
-                console.log('response.handling.error', error)
-            }
-        }
-        
-        console.log('response.error', this.message)
-        return this.message;
     }
 }

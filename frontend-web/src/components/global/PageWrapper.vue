@@ -47,8 +47,12 @@
         <slot name="bottom" />
 
         <!-- Fixed Navigation -->
-        <div class="fixed-bottom page-wrapper-navigation-fixed">
-            <slot name="navigation-fixed" />
+        <div class="w-100 flex justify-center">
+            <div class="fixed-bottom w-100 page-wrapper-navigation-fixed">
+                <div class="row flex justify-center w-100">
+                    <slot name="navigation-fixed" />
+                </div>
+            </div>
         </div>
 
         <!-- Footer -->

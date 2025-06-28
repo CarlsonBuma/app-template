@@ -8,7 +8,7 @@ return [
      * 
      */
     'gcs' => [
-        'key_file_path' => base_path(env('GOOGLE_CLOUD_KEY_FILE', 'keys/google-cloud-storage.json')),
+        'key_file_path' => base_path(env('GOOGLE_CLOUD_KEY_FILE', 'keys/google-cloud-services.json')),
         'project_id' => env('GOOGLE_PROJECT_ID', 'your-project-id'),
         'bucket' => env('GOOGLE_CLOUD_STORAGE_BUCKET', 'localhost'),
     ],

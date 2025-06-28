@@ -18,10 +18,10 @@ class AccessCockpit
      */
     public function handle(Request $request, Closure $next)
     {   
-        if($cockpit = Auth::user()->has_cockpit) {
-            $request->attributes->set('cockpit', $cockpit);
+        if($user = Auth::guard('api')->user()) {
+            $request->attributes->set('cockpit', $user->has_cockpit);
             return $next($request);  
-        } 
+        }
 
         return response()->json([
             'status' => 'no_access_to_feature',
