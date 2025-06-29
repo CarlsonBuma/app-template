@@ -27,11 +27,14 @@ class PaddleNoActiveSubscriptions
      */
     public function handle(Request $request, Closure $next)
     {  
-        if(!PaddleSubscriptions::where([
-                'user_id' => Auth::id(),
-                'canceled_at' => null,
-            ])->exists()
-        ) return $next($request); 
+        if($user = Auth::guard('api')->user()) {
+            if(!PaddleSubscriptions::where([
+                    'user_id' => $user->id,
+                    'canceled_at' => null,
+                ])->exists()
+            ) return $next($request);
+        }
+         
 
         return response()->json([
             'status' => 'active_subscriptions',

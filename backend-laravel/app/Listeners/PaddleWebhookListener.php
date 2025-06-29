@@ -1,9 +1,10 @@
 <?php
  
- namespace App\Listeners;
+namespace App\Listeners;
 
 use Exception;
 use Illuminate\Http\Request;
+use Illuminate\Http\JsonResponse;
 use App\Models\PaddleTransactions;
 use Illuminate\Support\Facades\Log;
 use App\Http\Controllers\Controller;
@@ -28,23 +29,24 @@ class PaddleWebhookListener extends Controller
      *      > Endpoint: https://{URL}/access/webhook
      *      > See "routes\web.php"
      *  > Set .env Keys 
-     * 
+     *
      * @param Request $request
-     * @return void
+     * @return JsonResponse
      */
-    public function handleWebhook(Request $request): void
+    public function handleWebhook(Request $request): JsonResponse
     {
         try {
             // Prepare
             $payload = $request->json()->all();
             $contentData = $payload['data'];
-            if(empty($contentData)) return;
-            $paddleStatus = $payload['event_type'] ?? null;
-
-            // Logs
-            Log::channel('webhooks')->info("Webhook received: $paddleStatus, " . now(), ['data' => $contentData]);
+            if(empty($contentData)) {
+                return response()->json([
+                    'message' => 'No data error.',
+                ], 422);
+            };
 
             // Handle accoring webhook type
+            $paddleStatus = $payload['event_type'] ?? null;
             if ($paddleStatus === 'transaction.completed') {
                 $this->initiateUserAccess($contentData);
             } 
@@ -64,8 +66,14 @@ class PaddleWebhookListener extends Controller
             }
         } catch (Exception $e) {
             Log::channel('webhooks')->error("WebhookHandler error: " . now(), ['error' => $e->getMessage()]);
-            return;
+            return response()->json([
+                'message' => 'Webhook error.',
+            ], 422);
         }
+
+        return response()->json([
+            'message' => 'Webhook processed.',
+        ], 200);
     }
 
     /**

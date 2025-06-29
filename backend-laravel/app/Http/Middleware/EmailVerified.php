@@ -2,6 +2,7 @@
 
 namespace App\Http\Middleware;
 
+use App\Models\User;
 use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -19,15 +20,16 @@ class EmailVerified
     public function handle(Request $request, Closure $next)
     {  
         // E-Mail must be verified
-        $user = (object) Auth::user(); 
-        if($user->email_verified_at)
-            return $next($request);
+        if($user = (object) Auth::guard('api')->user()) {
+            if($user->email_verified_at)
+                return $next($request);
 
-        // Remove user-access, in case email has been 'unverified' by actions
-        // May caused by new user's 'email-transactions-verification'
-        else if($user && !$user->email_verified_at) {
-            // @intelephense-ignore next-line
-            $user->token()->delete();
+            // Remove user-access, in case email has been 'unverified' by actions
+            // May caused by new user's 'email-transactions-verification'
+            else if(!$user->email_verified_at) {
+                // @intelephense-ignore next-line
+                $user->token()->delete();
+            }
         }
 
         // Email not verified
